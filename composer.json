@@ -1,0 +1,15 @@
+{
+	"name": "spysystem/dhl-express",
+	"description": "PHP library for DHLExpress Web Services",
+	"license": "proprietary",
+	"require": {
+		"php": ">=7.1",
+		"ext-soap": "*",
+		"ext-simplexml": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"DHLExpress\\": "src/"
+		}
+	}
+}
