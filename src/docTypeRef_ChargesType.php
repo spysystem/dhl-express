@@ -2,18 +2,23 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_ChargesType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_ChargesType
 {
 
 	/**
 	 * @var string $Currency
 	 */
-	protected $Currency = null;
+	protected $Currency;
 
 	/**
 	 * @var docTypeRef_ChargeType[] $Charge
 	 */
-	protected $Charge = null;
+	protected $Charge;
 
 	/**
 	 * @param string $Currency

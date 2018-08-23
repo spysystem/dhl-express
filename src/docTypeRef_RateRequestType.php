@@ -2,18 +2,23 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_RateRequestType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_RateRequestType
 {
 
 	/**
 	 * @var docTypeRef_ClientDetailType3 $ClientDetail
 	 */
-	protected $ClientDetail = null;
+	protected $ClientDetail;
 
 	/**
 	 * @var docTypeRef_RequestedShipmentType2 $RequestedShipment
 	 */
-	protected $RequestedShipment = null;
+	protected $RequestedShipment;
 
 	/**
 	 * @param docTypeRef_RequestedShipmentType2 $RequestedShipment

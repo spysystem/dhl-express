@@ -2,63 +2,68 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_RequestedShipmentType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_RequestedShipmentType
 {
 
 	/**
 	 * @var docTypeRef_ShipmentInfoType $ShipmentInfo
 	 */
-	protected $ShipmentInfo = null;
+	protected $ShipmentInfo;
 
 	/**
 	 * @var ShipTimestamp $ShipTimestamp
 	 */
-	protected $ShipTimestamp = null;
+	protected $ShipTimestamp;
 
 	/**
 	 * @var PickupLocationCloseTime $PickupLocationCloseTime
 	 */
-	protected $PickupLocationCloseTime = null;
+	protected $PickupLocationCloseTime;
 
 	/**
 	 * @var SpecialPickupInstruction $SpecialPickupInstruction
 	 */
-	protected $SpecialPickupInstruction = null;
+	protected $SpecialPickupInstruction;
 
 	/**
 	 * @var PickupLocation $PickupLocation
 	 */
-	protected $PickupLocation = null;
+	protected $PickupLocation;
 
 	/**
 	 * @var PaymentInfo $PaymentInfo
 	 */
-	protected $PaymentInfo = null;
+	protected $PaymentInfo;
 
 	/**
 	 * @var docTypeRef_InternationDetailType $InternationalDetail
 	 */
-	protected $InternationalDetail = null;
+	protected $InternationalDetail;
 
 	/**
 	 * @var docTypeRef_OnDemandDeliveryOptions $OnDemandDeliveryOptions
 	 */
-	protected $OnDemandDeliveryOptions = null;
+	protected $OnDemandDeliveryOptions;
 
 	/**
 	 * @var docTypeRef_ShipType $Ship
 	 */
-	protected $Ship = null;
+	protected $Ship;
 
 	/**
 	 * @var docTypeRef_PackagesType $Packages
 	 */
-	protected $Packages = null;
+	protected $Packages;
 
 	/**
 	 * @var docTypeRef_DangerousGoods $DangerousGoods
 	 */
-	protected $DangerousGoods = null;
+	protected $DangerousGoods;
 
 	/**
 	 * @param docTypeRef_ShipmentInfoType $ShipmentInfo

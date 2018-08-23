@@ -2,18 +2,23 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_ClientDetailType3
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_ClientDetailType3
 {
 
 	/**
-	 * @var sso2 $sso
+	 * @var string $sso
 	 */
-	protected $sso = null;
+	protected $sso;
 
 	/**
-	 * @var plant2 $plant
+	 * @var string $plant
 	 */
-	protected $plant = null;
+	protected $plant;
 
 	
 	public function __construct()
@@ -22,7 +27,7 @@ class docTypeRef_ClientDetailType3
 	}
 
 	/**
-	 * @return sso2
+	 * @return string
 	 */
 	public function getSso()
 	{
@@ -30,7 +35,7 @@ class docTypeRef_ClientDetailType3
 	}
 
 	/**
-	 * @param sso2 $sso
+	 * @param string $sso
 	 * @return \DHLExpress\docTypeRef_ClientDetailType3
 	 */
 	public function setSso($sso)
@@ -40,7 +45,7 @@ class docTypeRef_ClientDetailType3
 	}
 
 	/**
-	 * @return plant2
+	 * @return string
 	 */
 	public function getPlant()
 	{
@@ -48,7 +53,7 @@ class docTypeRef_ClientDetailType3
 	}
 
 	/**
-	 * @param plant2 $plant
+	 * @param string $plant
 	 * @return \DHLExpress\docTypeRef_ClientDetailType3
 	 */
 	public function setPlant($plant)

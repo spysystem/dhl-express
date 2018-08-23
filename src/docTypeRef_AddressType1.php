@@ -2,74 +2,79 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_AddressType1
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_AddressType1
 {
 
 	/**
-	 * @var StreetLines $StreetLines
+	 * @var string $StreetLines
 	 */
-	protected $StreetLines = null;
+	protected $StreetLines;
 
 	/**
-	 * @var StreetName $StreetName
+	 * @var string $StreetName
 	 */
-	protected $StreetName = null;
+	protected $StreetName;
 
 	/**
-	 * @var BuildingName $BuildingName
+	 * @var string $BuildingName
 	 */
-	protected $BuildingName = null;
+	protected $BuildingName;
 
 	/**
-	 * @var StreetNumber $StreetNumber
+	 * @var string $StreetNumber
 	 */
-	protected $StreetNumber = null;
+	protected $StreetNumber;
 
 	/**
-	 * @var StreetLines2 $StreetLines2
+	 * @var string $StreetLines2
 	 */
-	protected $StreetLines2 = null;
+	protected $StreetLines2;
 
 	/**
-	 * @var StreetLines3 $StreetLines3
+	 * @var string $StreetLines3
 	 */
-	protected $StreetLines3 = null;
+	protected $StreetLines3;
 
 	/**
-	 * @var CityDistrict $CityDistrict
+	 * @var string $CityDistrict
 	 */
-	protected $CityDistrict = null;
+	protected $CityDistrict;
 
 	/**
-	 * @var City $City
+	 * @var string $City
 	 */
-	protected $City = null;
+	protected $City;
 
 	/**
-	 * @var StateOrProvinceCode $StateOrProvinceCode
+	 * @var string $StateOrProvinceCode
 	 */
-	protected $StateOrProvinceCode = null;
+	protected $StateOrProvinceCode;
 
 	/**
-	 * @var PostalCode $PostalCode
+	 * @var string $PostalCode
 	 */
-	protected $PostalCode = null;
+	protected $PostalCode;
 
 	/**
-	 * @var CountryName $CountryName
+	 * @var string $CountryName
 	 */
-	protected $CountryName = null;
+	protected $CountryName;
 
 	/**
-	 * @var CountryCode $CountryCode
+	 * @var string $CountryCode
 	 */
-	protected $CountryCode = null;
+	protected $CountryCode;
 
 	/**
-	 * @param StreetLines $StreetLines
-	 * @param City $City
-	 * @param PostalCode $PostalCode
-	 * @param CountryCode $CountryCode
+	 * @param string $StreetLines
+	 * @param string $City
+	 * @param string $PostalCode
+	 * @param string $CountryCode
 	 */
 	public function __construct($StreetLines, $City, $PostalCode, $CountryCode)
 	{
@@ -80,7 +85,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @return StreetLines
+	 * @return string
 	 */
 	public function getStreetLines()
 	{
@@ -88,7 +93,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @param StreetLines $StreetLines
+	 * @param string $StreetLines
 	 * @return \DHLExpress\docTypeRef_AddressType1
 	 */
 	public function setStreetLines($StreetLines)
@@ -98,7 +103,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @return StreetName
+	 * @return string
 	 */
 	public function getStreetName()
 	{
@@ -106,7 +111,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @param StreetName $StreetName
+	 * @param string $StreetName
 	 * @return \DHLExpress\docTypeRef_AddressType1
 	 */
 	public function setStreetName($StreetName)
@@ -116,7 +121,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @return BuildingName
+	 * @return string
 	 */
 	public function getBuildingName()
 	{
@@ -124,7 +129,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @param BuildingName $BuildingName
+	 * @param string $BuildingName
 	 * @return \DHLExpress\docTypeRef_AddressType1
 	 */
 	public function setBuildingName($BuildingName)
@@ -134,7 +139,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @return StreetNumber
+	 * @return string
 	 */
 	public function getStreetNumber()
 	{
@@ -142,7 +147,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @param StreetNumber $StreetNumber
+	 * @param string $StreetNumber
 	 * @return \DHLExpress\docTypeRef_AddressType1
 	 */
 	public function setStreetNumber($StreetNumber)
@@ -152,7 +157,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @return StreetLines2
+	 * @return string
 	 */
 	public function getStreetLines2()
 	{
@@ -160,7 +165,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @param StreetLines2 $StreetLines2
+	 * @param string $StreetLines2
 	 * @return \DHLExpress\docTypeRef_AddressType1
 	 */
 	public function setStreetLines2($StreetLines2)
@@ -170,7 +175,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @return StreetLines3
+	 * @return string
 	 */
 	public function getStreetLines3()
 	{
@@ -178,7 +183,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @param StreetLines3 $StreetLines3
+	 * @param string $StreetLines3
 	 * @return \DHLExpress\docTypeRef_AddressType1
 	 */
 	public function setStreetLines3($StreetLines3)
@@ -188,7 +193,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @return CityDistrict
+	 * @return string
 	 */
 	public function getCityDistrict()
 	{
@@ -196,7 +201,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @param CityDistrict $CityDistrict
+	 * @param string $CityDistrict
 	 * @return \DHLExpress\docTypeRef_AddressType1
 	 */
 	public function setCityDistrict($CityDistrict)
@@ -206,7 +211,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @return City
+	 * @return string
 	 */
 	public function getCity()
 	{
@@ -214,7 +219,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @param City $City
+	 * @param string $City
 	 * @return \DHLExpress\docTypeRef_AddressType1
 	 */
 	public function setCity($City)
@@ -224,7 +229,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @return StateOrProvinceCode
+	 * @return string
 	 */
 	public function getStateOrProvinceCode()
 	{
@@ -232,7 +237,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @param StateOrProvinceCode $StateOrProvinceCode
+	 * @param string $StateOrProvinceCode
 	 * @return \DHLExpress\docTypeRef_AddressType1
 	 */
 	public function setStateOrProvinceCode($StateOrProvinceCode)
@@ -242,7 +247,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @return PostalCode
+	 * @return string
 	 */
 	public function getPostalCode()
 	{
@@ -250,7 +255,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @param PostalCode $PostalCode
+	 * @param string $PostalCode
 	 * @return \DHLExpress\docTypeRef_AddressType1
 	 */
 	public function setPostalCode($PostalCode)
@@ -260,7 +265,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @return CountryName
+	 * @return string
 	 */
 	public function getCountryName()
 	{
@@ -268,7 +273,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @param CountryName $CountryName
+	 * @param string $CountryName
 	 * @return \DHLExpress\docTypeRef_AddressType1
 	 */
 	public function setCountryName($CountryName)
@@ -278,7 +283,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @return CountryCode
+	 * @return string
 	 */
 	public function getCountryCode()
 	{
@@ -286,7 +291,7 @@ class docTypeRef_AddressType1
 	}
 
 	/**
-	 * @param CountryCode $CountryCode
+	 * @param string $CountryCode
 	 * @return \DHLExpress\docTypeRef_AddressType1
 	 */
 	public function setCountryCode($CountryCode)

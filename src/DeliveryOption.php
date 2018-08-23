@@ -2,12 +2,17 @@
 
 namespace DHLExpress;
 
+/**
+ * Class DeliveryOption
+ *
+ * @package DHLExpress
+ */
 class DeliveryOption
 {
-	const __default = 'TV';
-	const TV = 'TV';
-	const SW = 'SW';
-	const SX = 'SX';
+	public const __default = 'TV';
+	public const TV        = 'TV';
+	public const SW        = 'SW';
+	public const SX        = 'SX';
 
 
 }

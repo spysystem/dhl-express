@@ -2,13 +2,18 @@
 
 namespace DHLExpress;
 
+/**
+ * Class LabelType
+ *
+ * @package DHLExpress
+ */
 class LabelType
 {
-	const __default = 'PDF';
-	const PDF = 'PDF';
-	const ZPL = 'ZPL';
-	const EPL = 'EPL';
-	const LP2 = 'LP2';
+	public const __default = 'PDF';
+	public const PDF       = 'PDF';
+	public const ZPL       = 'ZPL';
+	public const EPL       = 'EPL';
+	public const LP2       = 'LP2';
 
 
 }

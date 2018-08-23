@@ -2,23 +2,28 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_DimensionsType2
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_DimensionsType2
 {
 
 	/**
 	 * @var Length2 $Length
 	 */
-	protected $Length = null;
+	protected $Length;
 
 	/**
 	 * @var Width2 $Width
 	 */
-	protected $Width = null;
+	protected $Width;
 
 	/**
 	 * @var Height2 $Height
 	 */
-	protected $Height = null;
+	protected $Height;
 
 	/**
 	 * @param Length2 $Length

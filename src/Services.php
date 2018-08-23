@@ -2,13 +2,18 @@
 
 namespace DHLExpress;
 
+/**
+ * Class Services
+ *
+ * @package DHLExpress
+ */
 class Services
 {
 
 	/**
 	 * @var Service[] $Service
 	 */
-	protected $Service = null;
+	protected $Service;
 
 	/**
 	 * @param Service[] $Service

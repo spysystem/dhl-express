@@ -2,58 +2,63 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_OnDemandDeliveryOptions
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_OnDemandDeliveryOptions
 {
 
 	/**
 	 * @var DeliveryOption $DeliveryOption
 	 */
-	protected $DeliveryOption = null;
+	protected $DeliveryOption;
 
 	/**
 	 * @var Location $Location
 	 */
-	protected $Location = null;
+	protected $Location;
 
 	/**
 	 * @var Instructions $Instructions
 	 */
-	protected $Instructions = null;
+	protected $Instructions;
 
 	/**
 	 * @var GateCode $GateCode
 	 */
-	protected $GateCode = null;
+	protected $GateCode;
 
 	/**
 	 * @var LWNTypeCode $LWNTypeCode
 	 */
-	protected $LWNTypeCode = null;
+	protected $LWNTypeCode;
 
 	/**
 	 * @var NeighbourName $NeighbourName
 	 */
-	protected $NeighbourName = null;
+	protected $NeighbourName;
 
 	/**
 	 * @var NeighbourHouseNumber $NeighbourHouseNumber
 	 */
-	protected $NeighbourHouseNumber = null;
+	protected $NeighbourHouseNumber;
 
 	/**
 	 * @var AuthorizerName $AuthorizerName
 	 */
-	protected $AuthorizerName = null;
+	protected $AuthorizerName;
 
 	/**
 	 * @var SelectedServicePointID $SelectedServicePointID
 	 */
-	protected $SelectedServicePointID = null;
+	protected $SelectedServicePointID;
 
 	/**
 	 * @var RequestedDeliveryDate $RequestedDeliveryDate
 	 */
-	protected $RequestedDeliveryDate = null;
+	protected $RequestedDeliveryDate;
 
 	/**
 	 * @param DeliveryOption $DeliveryOption

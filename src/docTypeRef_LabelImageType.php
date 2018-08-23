@@ -2,23 +2,28 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_LabelImageType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_LabelImageType
 {
 
 	/**
 	 * @var LabelImageFormat $LabelImageFormat
 	 */
-	protected $LabelImageFormat = null;
+	protected $LabelImageFormat;
 
 	/**
 	 * @var base64Binary $GraphicImage
 	 */
-	protected $GraphicImage = null;
+	protected $GraphicImage;
 
 	/**
 	 * @var base64Binary $HTMLImage
 	 */
-	protected $HTMLImage = null;
+	protected $HTMLImage;
 
 	/**
 	 * @param LabelImageFormat $LabelImageFormat

@@ -2,12 +2,17 @@
 
 namespace DHLExpress;
 
+/**
+ * Class ShipmentPaymentType
+ *
+ * @package DHLExpress
+ */
 class ShipmentPaymentType
 {
-	const __default = 'S';
-	const S = 'S';
-	const R = 'R';
-	const T = 'T';
+	public const __default = 'S';
+	public const S         = 'S';
+	public const R         = 'R';
+	public const T         = 'T';
 
 
 }

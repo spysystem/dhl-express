@@ -2,23 +2,28 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_Content
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_Content
 {
 
 	/**
 	 * @var ContentID $ContentID
 	 */
-	protected $ContentID = null;
+	protected $ContentID;
 
 	/**
 	 * @var DryIceTotalNetWeight $DryIceTotalNetWeight
 	 */
-	protected $DryIceTotalNetWeight = null;
+	protected $DryIceTotalNetWeight;
 
 	/**
 	 * @var UNCode $UNCode
 	 */
-	protected $UNCode = null;
+	protected $UNCode;
 
 	/**
 	 * @param ContentID $ContentID

@@ -2,23 +2,28 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_ChargeType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_ChargeType
 {
 
 	/**
-	 * @var ChargeCode $ChargeCode
+	 * @var string $ChargeCode
 	 */
-	protected $ChargeCode = null;
+	protected $ChargeCode;
 
 	/**
 	 * @var string $ChargeType
 	 */
-	protected $ChargeType = null;
+	protected $ChargeType;
 
 	/**
 	 * @var string $ChargeAmount
 	 */
-	protected $ChargeAmount = null;
+	protected $ChargeAmount;
 
 	/**
 	 * @param string $ChargeType
@@ -31,7 +36,7 @@ class docTypeRef_ChargeType
 	}
 
 	/**
-	 * @return ChargeCode
+	 * @return string
 	 */
 	public function getChargeCode()
 	{
@@ -39,7 +44,7 @@ class docTypeRef_ChargeType
 	}
 
 	/**
-	 * @param ChargeCode $ChargeCode
+	 * @param string $ChargeCode
 	 * @return \DHLExpress\docTypeRef_ChargeType
 	 */
 	public function setChargeCode($ChargeCode)

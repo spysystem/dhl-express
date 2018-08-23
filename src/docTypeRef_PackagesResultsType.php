@@ -2,13 +2,18 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_PackagesResultsType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_PackagesResultsType
 {
 
 	/**
 	 * @var docTypeRef_PackageResultType[] $PackageResult
 	 */
-	protected $PackageResult = null;
+	protected $PackageResult;
 
 	/**
 	 * @param docTypeRef_PackageResultType[] $PackageResult

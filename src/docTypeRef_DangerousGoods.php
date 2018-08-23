@@ -2,13 +2,18 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_DangerousGoods
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_DangerousGoods
 {
 
 	/**
 	 * @var docTypeRef_Content $Content
 	 */
-	protected $Content = null;
+	protected $Content;
 
 	/**
 	 * @param docTypeRef_Content $Content

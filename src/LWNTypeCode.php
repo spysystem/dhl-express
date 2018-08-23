@@ -2,11 +2,16 @@
 
 namespace DHLExpress;
 
+/**
+ * Class LWNTypeCode
+ *
+ * @package DHLExpress
+ */
 class LWNTypeCode
 {
-	const __default = 'N';
-	const N = 'N';
-	const C = 'C';
+	public const __default = 'N';
+	public const N         = 'N';
+	public const C         = 'C';
 
 
 }

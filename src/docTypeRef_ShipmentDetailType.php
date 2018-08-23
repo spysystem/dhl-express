@@ -2,33 +2,38 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_ShipmentDetailType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_ShipmentDetailType
 {
 
 	/**
 	 * @var docTypeRef_NotificationType2[] $Notification
 	 */
-	protected $Notification = null;
+	protected $Notification;
 
 	/**
 	 * @var docTypeRef_PackagesResultsType $PackagesResult
 	 */
-	protected $PackagesResult = null;
+	protected $PackagesResult;
 
 	/**
 	 * @var docTypeRef_LabelImageType[] $LabelImage
 	 */
-	protected $LabelImage = null;
+	protected $LabelImage;
 
 	/**
 	 * @var ShipmentIdentificationNumber3 $ShipmentIdentificationNumber
 	 */
-	protected $ShipmentIdentificationNumber = null;
+	protected $ShipmentIdentificationNumber;
 
 	/**
 	 * @var string $DispatchConfirmationNumber
 	 */
-	protected $DispatchConfirmationNumber = null;
+	protected $DispatchConfirmationNumber;
 
 	/**
 	 * @param docTypeRef_NotificationType2[] $Notification

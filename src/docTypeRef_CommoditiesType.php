@@ -2,43 +2,48 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_CommoditiesType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_CommoditiesType
 {
 
 	/**
 	 * @var NumberOfPieces $NumberOfPieces
 	 */
-	protected $NumberOfPieces = null;
+	protected $NumberOfPieces;
 
 	/**
 	 * @var Description $Description
 	 */
-	protected $Description = null;
+	protected $Description;
 
 	/**
-	 * @var CountryOfManufacture $CountryOfManufacture
+	 * @var string $CountryOfManufacture
 	 */
-	protected $CountryOfManufacture = null;
+	protected $CountryOfManufacture;
 
 	/**
 	 * @var Quantity $Quantity
 	 */
-	protected $Quantity = null;
+	protected $Quantity;
 
 	/**
 	 * @var UnitPrice $UnitPrice
 	 */
-	protected $UnitPrice = null;
+	protected $UnitPrice;
 
 	/**
 	 * @var CustomsValue $CustomsValue
 	 */
-	protected $CustomsValue = null;
+	protected $CustomsValue;
 
 	/**
 	 * @var USFilingTypeValue $USFilingTypeValue
 	 */
-	protected $USFilingTypeValue = null;
+	protected $USFilingTypeValue;
 
 	/**
 	 * @param Description $Description
@@ -85,7 +90,7 @@ class docTypeRef_CommoditiesType
 	}
 
 	/**
-	 * @return CountryOfManufacture
+	 * @return string
 	 */
 	public function getCountryOfManufacture()
 	{
@@ -93,7 +98,7 @@ class docTypeRef_CommoditiesType
 	}
 
 	/**
-	 * @param CountryOfManufacture $CountryOfManufacture
+	 * @param string $CountryOfManufacture
 	 * @return \DHLExpress\docTypeRef_CommoditiesType
 	 */
 	public function setCountryOfManufacture($CountryOfManufacture)

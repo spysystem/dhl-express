@@ -2,93 +2,98 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_ShipmentInfoType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_ShipmentInfoType
 {
 
 	/**
 	 * @var DropOffType $DropOffType
 	 */
-	protected $DropOffType = null;
+	protected $DropOffType;
 
 	/**
-	 * @var ServiceType $ServiceType
+	 * @var string $ServiceType
 	 */
-	protected $ServiceType = null;
+	protected $ServiceType;
 
 	/**
-	 * @var Account $Account
+	 * @var string $Account
 	 */
-	protected $Account = null;
+	protected $Account;
 
 	/**
 	 * @var Billing $Billing
 	 */
-	protected $Billing = null;
+	protected $Billing;
 
 	/**
 	 * @var Services $SpecialServices
 	 */
-	protected $SpecialServices = null;
+	protected $SpecialServices;
 
 	/**
-	 * @var Currency $Currency
+	 * @var string $Currency
 	 */
-	protected $Currency = null;
+	protected $Currency;
 
 	/**
 	 * @var UnitOfMeasurement $UnitOfMeasurement
 	 */
-	protected $UnitOfMeasurement = null;
+	protected $UnitOfMeasurement;
 
 	/**
 	 * @var ShipmentIdentificationNumber2 $ShipmentIdentificationNumber
 	 */
-	protected $ShipmentIdentificationNumber = null;
+	protected $ShipmentIdentificationNumber;
 
 	/**
 	 * @var UseOwnShipmentIdentificationNumber $UseOwnShipmentIdentificationNumber
 	 */
-	protected $UseOwnShipmentIdentificationNumber = null;
+	protected $UseOwnShipmentIdentificationNumber;
 
 	/**
 	 * @var PackagesCount $PackagesCount
 	 */
-	protected $PackagesCount = null;
+	protected $PackagesCount;
 
 	/**
 	 * @var SendPackage $SendPackage
 	 */
-	protected $SendPackage = null;
+	protected $SendPackage;
 
 	/**
 	 * @var LabelType $LabelType
 	 */
-	protected $LabelType = null;
+	protected $LabelType;
 
 	/**
 	 * @var LabelTemplate $LabelTemplate
 	 */
-	protected $LabelTemplate = null;
+	protected $LabelTemplate;
 
 	/**
 	 * @var ArchiveLabelTemplate $ArchiveLabelTemplate
 	 */
-	protected $ArchiveLabelTemplate = null;
+	protected $ArchiveLabelTemplate;
 
 	/**
 	 * @var boolean $PaperlessTradeEnabled
 	 */
-	protected $PaperlessTradeEnabled = null;
+	protected $PaperlessTradeEnabled;
 
 	/**
 	 * @var base64Binary $PaperlessTradeImage
 	 */
-	protected $PaperlessTradeImage = null;
+	protected $PaperlessTradeImage;
 
 	/**
 	 * @param DropOffType $DropOffType
-	 * @param ServiceType $ServiceType
-	 * @param Currency $Currency
+	 * @param string $ServiceType
+	 * @param string $Currency
 	 * @param UnitOfMeasurement $UnitOfMeasurement
 	 */
 	public function __construct($DropOffType, $ServiceType, $Currency, $UnitOfMeasurement)
@@ -118,7 +123,7 @@ class docTypeRef_ShipmentInfoType
 	}
 
 	/**
-	 * @return ServiceType
+	 * @return string
 	 */
 	public function getServiceType()
 	{
@@ -126,7 +131,7 @@ class docTypeRef_ShipmentInfoType
 	}
 
 	/**
-	 * @param ServiceType $ServiceType
+	 * @param string $ServiceType
 	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
 	 */
 	public function setServiceType($ServiceType)
@@ -136,7 +141,7 @@ class docTypeRef_ShipmentInfoType
 	}
 
 	/**
-	 * @return Account
+	 * @return string
 	 */
 	public function getAccount()
 	{
@@ -144,7 +149,7 @@ class docTypeRef_ShipmentInfoType
 	}
 
 	/**
-	 * @param Account $Account
+	 * @param string $Account
 	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
 	 */
 	public function setAccount($Account)
@@ -190,7 +195,7 @@ class docTypeRef_ShipmentInfoType
 	}
 
 	/**
-	 * @return Currency
+	 * @return string
 	 */
 	public function getCurrency()
 	{
@@ -198,7 +203,7 @@ class docTypeRef_ShipmentInfoType
 	}
 
 	/**
-	 * @param Currency $Currency
+	 * @param string $Currency
 	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
 	 */
 	public function setCurrency($Currency)

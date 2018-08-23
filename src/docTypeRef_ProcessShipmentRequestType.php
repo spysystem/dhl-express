@@ -2,23 +2,28 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_ProcessShipmentRequestType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_ProcessShipmentRequestType
 {
 
 	/**
 	 * @var MessageId $MessageId
 	 */
-	protected $MessageId = null;
+	protected $MessageId;
 
 	/**
 	 * @var docTypeRef_ClientDetailType2 $ClientDetail
 	 */
-	protected $ClientDetail = null;
+	protected $ClientDetail;
 
 	/**
 	 * @var docTypeRef_RequestedShipmentType $RequestedShipment
 	 */
-	protected $RequestedShipment = null;
+	protected $RequestedShipment;
 
 	/**
 	 * @param docTypeRef_RequestedShipmentType $RequestedShipment

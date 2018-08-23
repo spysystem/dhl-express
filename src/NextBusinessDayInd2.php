@@ -2,11 +2,16 @@
 
 namespace DHLExpress;
 
+/**
+ * Class NextBusinessDayInd2
+ *
+ * @package DHLExpress
+ */
 class NextBusinessDayInd2
 {
-	const __default = 'Y';
-	const Y = 'Y';
-	const N = 'N';
+	public const __default = 'Y';
+	public const Y         = 'Y';
+	public const N         = 'N';
 
 
 }

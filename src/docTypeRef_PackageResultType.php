@@ -2,22 +2,27 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_PackageResultType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_PackageResultType
 {
 
 	/**
 	 * @var TrackingNumber $TrackingNumber
 	 */
-	protected $TrackingNumber = null;
+	protected $TrackingNumber;
 
 	/**
-	 * @var _x0040_number2 $number
+	 * @var int $number
 	 */
-	protected $number = null;
+	protected $number;
 
 	/**
 	 * @param TrackingNumber $TrackingNumber
-	 * @param _x0040_number2 $number
+	 * @param int $number
 	 */
 	public function __construct($TrackingNumber, $number)
 	{
@@ -44,7 +49,7 @@ class docTypeRef_PackageResultType
 	}
 
 	/**
-	 * @return _x0040_number2
+	 * @return int
 	 */
 	public function getNumber()
 	{
@@ -52,7 +57,7 @@ class docTypeRef_PackageResultType
 	}
 
 	/**
-	 * @param _x0040_number2 $number
+	 * @param int $number
 	 * @return \DHLExpress\docTypeRef_PackageResultType
 	 */
 	public function setNumber($number)

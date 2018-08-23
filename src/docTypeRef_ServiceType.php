@@ -2,48 +2,55 @@
 
 namespace DHLExpress;
 
+use DateTime;
+
+/**
+ * Class docTypeRef_ServiceType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_ServiceType
 {
 
 	/**
 	 * @var docTypeRef_TotalNetType $TotalNet
 	 */
-	protected $TotalNet = null;
+	protected $TotalNet;
 
 	/**
 	 * @var docTypeRef_ChargesType $Charges
 	 */
-	protected $Charges = null;
+	protected $Charges;
 
 	/**
-	 * @var \DateTime $DeliveryTime
+	 * @var DateTime $DeliveryTime
 	 */
-	protected $DeliveryTime = null;
+	protected $DeliveryTime;
 
 	/**
-	 * @var \DateTime $CutoffTime
+	 * @var DateTime $CutoffTime
 	 */
-	protected $CutoffTime = null;
+	protected $CutoffTime;
 
 	/**
 	 * @var NextBusinessDayInd2 $NextBusinessDayInd
 	 */
-	protected $NextBusinessDayInd = null;
+	protected $NextBusinessDayInd;
 
 	/**
-	 * @var _x0040_type $type
+	 * @var string $type
 	 */
-	protected $type = null;
+	protected $type;
 
 	/**
-	 * @var _x0040_account $account
+	 * @var string $account enum:RateType
 	 */
-	protected $account = null;
+	protected $account;
 
 	/**
 	 * @param docTypeRef_TotalNetType $TotalNet
-	 * @param _x0040_type $type
-	 * @param _x0040_account $account
+	 * @param string                  $type
+	 * @param string                  $account enum:RateType
 	 */
 	public function __construct($TotalNet, $type, $account)
 	{
@@ -89,79 +96,75 @@ class docTypeRef_ServiceType
 	}
 
 	/**
-	 * @return \DateTime
+	 * @return DateTime|null|false
 	 */
 	public function getDeliveryTime()
 	{
-		if ($this->DeliveryTime == null)
+		if ($this->DeliveryTime === null)
 		{
 			return null;
 		}
-		else
+
+		try
 		{
-			try
-			{
-				return new \DateTime($this->DeliveryTime);
-			}
-			catch (\Exception $oException)
-			{
-				return false;
-			}
+			return new DateTime($this->DeliveryTime);
+		}
+		catch (\Exception $oException)
+		{
+			return false;
 		}
 	}
 
 	/**
-	 * @param \DateTime $DeliveryTime
+	 * @param DateTime $DeliveryTime
 	 * @return \DHLExpress\docTypeRef_ServiceType
 	 */
-	public function setDeliveryTime(\DateTime $DeliveryTime = null)
+	public function setDeliveryTime(DateTime $DeliveryTime = null)
 	{
-		if ($DeliveryTime == null)
+		if ($DeliveryTime === null)
 		{
 			$this->DeliveryTime = null;
 		}
 		else
 		{
-			$this->DeliveryTime = $DeliveryTime->format(\DateTime::ATOM);
+			$this->DeliveryTime = $DeliveryTime->format(DateTime::ATOM);
 		}
 		return $this;
 	}
 
 	/**
-	 * @return \DateTime
+	 * @return DateTime|null|false
 	 */
 	public function getCutoffTime()
 	{
-		if ($this->CutoffTime == null)
+		if ($this->CutoffTime === null)
 		{
 			return null;
 		}
-		else
+
+		try
 		{
-			try
-			{
-				return new \DateTime($this->CutoffTime);
-			}
-			catch (\Exception $oException)
-			{
-				return false;
-			}
+			return new DateTime($this->CutoffTime);
+		}
+		catch (\Exception $oException)
+		{
+			return false;
 		}
 	}
 
 	/**
-	 * @param \DateTime $CutoffTime
+	 * @param DateTime $CutoffTime
 	 * @return \DHLExpress\docTypeRef_ServiceType
 	 */
-	public function setCutoffTime(\DateTime $CutoffTime = null)
+	public function setCutoffTime(DateTime $CutoffTime = null)
 	{
-		if ($CutoffTime == null)
+		if ($CutoffTime === null)
 		{
 			$this->CutoffTime = null;
 		}
 		else
 		{
-			$this->CutoffTime = $CutoffTime->format(\DateTime::ATOM);
+			$this->CutoffTime = $CutoffTime->format(DateTime::ATOM);
 		}
 		return $this;
 	}
@@ -185,7 +188,7 @@ class docTypeRef_ServiceType
 	}
 
 	/**
-	 * @return _x0040_type
+	 * @return string
 	 */
 	public function getType()
 	{
@@ -193,7 +196,7 @@ class docTypeRef_ServiceType
 	}
 
 	/**
-	 * @param _x0040_type $type
+	 * @param string $type
 	 * @return \DHLExpress\docTypeRef_ServiceType
 	 */
 	public function setType($type)
@@ -203,7 +206,7 @@ class docTypeRef_ServiceType
 	}
 
 	/**
-	 * @return _x0040_account
+	 * @return string enum:RateType
 	 */
 	public function getAccount()
 	{
@@ -211,7 +214,8 @@ class docTypeRef_ServiceType
 	}
 
 	/**
-	 * @param _x0040_account $account
+	 * @param string $account enum:RateType
+	 *
 	 * @return \DHLExpress\docTypeRef_ServiceType
 	 */
 	public function setAccount($account)

@@ -2,23 +2,28 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_ContactInfoType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_ContactInfoType
 {
 
 	/**
 	 * @var docTypeRef_ContactType $Contact
 	 */
-	protected $Contact = null;
+	protected $Contact;
 
 	/**
 	 * @var docTypeRef_AddressType $Address
 	 */
-	protected $Address = null;
+	protected $Address;
 
 	/**
 	 * @var docTypeRef_RegistrationNumbers $RegistrationNumbers
 	 */
-	protected $RegistrationNumbers = null;
+	protected $RegistrationNumbers;
 
 	/**
 	 * @param docTypeRef_ContactType $Contact

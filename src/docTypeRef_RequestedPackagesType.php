@@ -2,54 +2,59 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_RequestedPackagesType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_RequestedPackagesType
 {
 
 	/**
 	 * @var InsuredValue $InsuredValue
 	 */
-	protected $InsuredValue = null;
+	protected $InsuredValue;
 
 	/**
 	 * @var Weight $Weight
 	 */
-	protected $Weight = null;
+	protected $Weight;
 
 	/**
 	 * @var PieceIdentificationNumber $PieceIdentificationNumber
 	 */
-	protected $PieceIdentificationNumber = null;
+	protected $PieceIdentificationNumber;
 
 	/**
 	 * @var UseOwnPieceIdentificationNumber $UseOwnPieceIdentificationNumber
 	 */
-	protected $UseOwnPieceIdentificationNumber = null;
+	protected $UseOwnPieceIdentificationNumber;
 
 	/**
 	 * @var PackageContentDescription $PackageContentDescription
 	 */
-	protected $PackageContentDescription = null;
+	protected $PackageContentDescription;
 
 	/**
 	 * @var docTypeRef_DimensionsType $Dimensions
 	 */
-	protected $Dimensions = null;
+	protected $Dimensions;
 
 	/**
 	 * @var CustomerReferences $CustomerReferences
 	 */
-	protected $CustomerReferences = null;
+	protected $CustomerReferences;
 
 	/**
-	 * @var _x0040_number $number
+	 * @var int $number
 	 */
-	protected $number = null;
+	protected $number;
 
 	/**
 	 * @param Weight $Weight
 	 * @param docTypeRef_DimensionsType $Dimensions
 	 * @param CustomerReferences $CustomerReferences
-	 * @param _x0040_number $number
+	 * @param int $number
 	 */
 	public function __construct($Weight, $Dimensions, $CustomerReferences, $number)
 	{
@@ -186,7 +191,7 @@ class docTypeRef_RequestedPackagesType
 	}
 
 	/**
-	 * @return _x0040_number
+	 * @return int
 	 */
 	public function getNumber()
 	{
@@ -194,7 +199,7 @@ class docTypeRef_RequestedPackagesType
 	}
 
 	/**
-	 * @param _x0040_number $number
+	 * @param int $number
 	 * @return \DHLExpress\docTypeRef_RequestedPackagesType
 	 */
 	public function setNumber($number)

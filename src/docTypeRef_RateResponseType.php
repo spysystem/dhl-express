@@ -2,13 +2,18 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_RateResponseType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_RateResponseType
 {
 
 	/**
 	 * @var docTypeRef_ProviderType[] $Provider
 	 */
-	protected $Provider = null;
+	protected $Provider;
 
 	
 	public function __construct()

@@ -2,13 +2,18 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_DeleteResponseType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_DeleteResponseType
 {
 
 	/**
 	 * @var docTypeRef_NotificationType $Notification
 	 */
-	protected $Notification = null;
+	protected $Notification;
 
 	/**
 	 * @param docTypeRef_NotificationType $Notification

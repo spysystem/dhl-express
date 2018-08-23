@@ -2,23 +2,28 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_InternationDetailType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_InternationDetailType
 {
 
 	/**
 	 * @var docTypeRef_CommoditiesType $Commodities
 	 */
-	protected $Commodities = null;
+	protected $Commodities;
 
 	/**
 	 * @var Content $Content
 	 */
-	protected $Content = null;
+	protected $Content;
 
 	/**
 	 * @var ExportReference $ExportReference
 	 */
-	protected $ExportReference = null;
+	protected $ExportReference;
 
 	/**
 	 * @param docTypeRef_CommoditiesType $Commodities

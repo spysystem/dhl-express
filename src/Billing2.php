@@ -2,26 +2,31 @@
 
 namespace DHLExpress;
 
+/**
+ * Class Billing2
+ *
+ * @package DHLExpress
+ */
 class Billing2
 {
 
 	/**
-	 * @var Account2 $ShipperAccountNumber
+	 * @var string $ShipperAccountNumber
 	 */
-	protected $ShipperAccountNumber = null;
+	protected $ShipperAccountNumber;
 
 	/**
 	 * @var ShipmentPaymentType2 $ShippingPaymentType
 	 */
-	protected $ShippingPaymentType = null;
+	protected $ShippingPaymentType;
 
 	/**
-	 * @var Account2 $BillingAccountNumber
+	 * @var string $BillingAccountNumber
 	 */
-	protected $BillingAccountNumber = null;
+	protected $BillingAccountNumber;
 
 	/**
-	 * @param Account2 $ShipperAccountNumber
+	 * @param string $ShipperAccountNumber
 	 * @param ShipmentPaymentType2 $ShippingPaymentType
 	 */
 	public function __construct($ShipperAccountNumber, $ShippingPaymentType)
@@ -31,7 +36,7 @@ class Billing2
 	}
 
 	/**
-	 * @return Account2
+	 * @return string
 	 */
 	public function getShipperAccountNumber()
 	{
@@ -39,7 +44,7 @@ class Billing2
 	}
 
 	/**
-	 * @param Account2 $ShipperAccountNumber
+	 * @param string $ShipperAccountNumber
 	 * @return \DHLExpress\Billing2
 	 */
 	public function setShipperAccountNumber($ShipperAccountNumber)
@@ -67,7 +72,7 @@ class Billing2
 	}
 
 	/**
-	 * @return Account2
+	 * @return string
 	 */
 	public function getBillingAccountNumber()
 	{
@@ -75,7 +80,7 @@ class Billing2
 	}
 
 	/**
-	 * @param Account2 $BillingAccountNumber
+	 * @param string $BillingAccountNumber
 	 * @return \DHLExpress\Billing2
 	 */
 	public function setBillingAccountNumber($BillingAccountNumber)

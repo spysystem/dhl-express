@@ -2,27 +2,32 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_ProviderType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_ProviderType
 {
 
 	/**
 	 * @var docTypeRef_NotificationType3 $Notification
 	 */
-	protected $Notification = null;
+	protected $Notification;
 
 	/**
 	 * @var docTypeRef_ServiceType[] $Service
 	 */
-	protected $Service = null;
+	protected $Service;
 
 	/**
-	 * @var _x0040_code3 $code
+	 * @var int $code
 	 */
-	protected $code = null;
+	protected $code;
 
 	/**
 	 * @param docTypeRef_NotificationType3 $Notification
-	 * @param _x0040_code3 $code
+	 * @param int $code
 	 */
 	public function __construct($Notification, $code)
 	{
@@ -67,7 +72,7 @@ class docTypeRef_ProviderType
 	}
 
 	/**
-	 * @return _x0040_code3
+	 * @return int
 	 */
 	public function getCode()
 	{
@@ -75,7 +80,7 @@ class docTypeRef_ProviderType
 	}
 
 	/**
-	 * @param _x0040_code3 $code
+	 * @param int $code
 	 * @return \DHLExpress\docTypeRef_ProviderType
 	 */
 	public function setCode($code)

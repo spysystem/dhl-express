@@ -2,46 +2,51 @@
 
 namespace DHLExpress;
 
+/**
+ * Class Service2
+ *
+ * @package DHLExpress
+ */
 class Service2
 {
 
 	/**
-	 * @var ServiceType2 $ServiceType
+	 * @var string $ServiceType
 	 */
-	protected $ServiceType = null;
+	protected $ServiceType;
 
 	/**
-	 * @var Money2 $ServiceValue
+	 * @var string $ServiceValue
 	 */
-	protected $ServiceValue = null;
+	protected $ServiceValue;
 
 	/**
-	 * @var CurrencyCode2 $CurrencyCode
+	 * @var string $CurrencyCode
 	 */
-	protected $CurrencyCode = null;
+	protected $CurrencyCode;
 
 	/**
-	 * @var PaymentCode2 $PaymentCode
+	 * @var string $PaymentCode
 	 */
-	protected $PaymentCode = null;
+	protected $PaymentCode;
 
 	/**
-	 * @var date $StartDate
+	 * @var string $StartDate
 	 */
-	protected $StartDate = null;
+	protected $StartDate;
 
 	/**
-	 * @var date $EndDate
+	 * @var string $EndDate
 	 */
-	protected $EndDate = null;
+	protected $EndDate;
 
 	/**
-	 * @var TextType2 $TextInstruction
+	 * @var string  $TextInstruction
 	 */
-	protected $TextInstruction = null;
+	protected $TextInstruction;
 
 	/**
-	 * @param ServiceType2 $ServiceType
+	 * @param string $ServiceType
 	 */
 	public function __construct($ServiceType)
 	{
@@ -49,7 +54,7 @@ class Service2
 	}
 
 	/**
-	 * @return ServiceType2
+	 * @return string
 	 */
 	public function getServiceType()
 	{
@@ -57,7 +62,7 @@ class Service2
 	}
 
 	/**
-	 * @param ServiceType2 $ServiceType
+	 * @param string $ServiceType
 	 * @return \DHLExpress\Service2
 	 */
 	public function setServiceType($ServiceType)
@@ -67,7 +72,7 @@ class Service2
 	}
 
 	/**
-	 * @return Money2
+	 * @return string
 	 */
 	public function getServiceValue()
 	{
@@ -75,7 +80,7 @@ class Service2
 	}
 
 	/**
-	 * @param Money2 $ServiceValue
+	 * @param string $ServiceValue
 	 * @return \DHLExpress\Service2
 	 */
 	public function setServiceValue($ServiceValue)
@@ -85,7 +90,7 @@ class Service2
 	}
 
 	/**
-	 * @return CurrencyCode2
+	 * @return string
 	 */
 	public function getCurrencyCode()
 	{
@@ -93,7 +98,7 @@ class Service2
 	}
 
 	/**
-	 * @param CurrencyCode2 $CurrencyCode
+	 * @param string $CurrencyCode
 	 * @return \DHLExpress\Service2
 	 */
 	public function setCurrencyCode($CurrencyCode)
@@ -103,7 +108,7 @@ class Service2
 	}
 
 	/**
-	 * @return PaymentCode2
+	 * @return string
 	 */
 	public function getPaymentCode()
 	{
@@ -111,7 +116,7 @@ class Service2
 	}
 
 	/**
-	 * @param PaymentCode2 $PaymentCode
+	 * @param string $PaymentCode
 	 * @return \DHLExpress\Service2
 	 */
 	public function setPaymentCode($PaymentCode)
@@ -121,7 +126,7 @@ class Service2
 	}
 
 	/**
-	 * @return date
+	 * @return string
 	 */
 	public function getStartDate()
 	{
@@ -129,7 +134,7 @@ class Service2
 	}
 
 	/**
-	 * @param date $StartDate
+	 * @param string $StartDate
 	 * @return \DHLExpress\Service2
 	 */
 	public function setStartDate($StartDate)
@@ -139,7 +144,7 @@ class Service2
 	}
 
 	/**
-	 * @return date
+	 * @return string
 	 */
 	public function getEndDate()
 	{
@@ -147,7 +152,7 @@ class Service2
 	}
 
 	/**
-	 * @param date $EndDate
+	 * @param string $EndDate
 	 * @return \DHLExpress\Service2
 	 */
 	public function setEndDate($EndDate)
@@ -157,7 +162,7 @@ class Service2
 	}
 
 	/**
-	 * @return TextType2
+	 * @return string
 	 */
 	public function getTextInstruction()
 	{
@@ -165,7 +170,7 @@ class Service2
 	}
 
 	/**
-	 * @param TextType2 $TextInstruction
+	 * @param string  $TextInstruction
 	 * @return \DHLExpress\Service2
 	 */
 	public function setTextInstruction($TextInstruction)

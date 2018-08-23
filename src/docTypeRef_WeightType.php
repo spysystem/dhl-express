@@ -2,16 +2,21 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_WeightType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_WeightType
 {
 
 	/**
-	 * @var Value $Value
+	 * @var string $Value
 	 */
-	protected $Value = null;
+	protected $Value;
 
 	/**
-	 * @param Value $Value
+	 * @param string $Value
 	 */
 	public function __construct($Value)
 	{
@@ -19,7 +24,7 @@ class docTypeRef_WeightType
 	}
 
 	/**
-	 * @return Value
+	 * @return string
 	 */
 	public function getValue()
 	{
@@ -27,7 +32,7 @@ class docTypeRef_WeightType
 	}
 
 	/**
-	 * @param Value $Value
+	 * @param string $Value
 	 * @return \DHLExpress\docTypeRef_WeightType
 	 */
 	public function setValue($Value)

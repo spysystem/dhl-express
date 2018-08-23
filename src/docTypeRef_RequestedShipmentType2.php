@@ -2,78 +2,83 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_RequestedShipmentType2
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_RequestedShipmentType2
 {
 
 	/**
 	 * @var DropOffType2 $DropOffType
 	 */
-	protected $DropOffType = null;
+	protected $DropOffType;
 
 	/**
 	 * @var NextBusinessDay2 $NextBusinessDay
 	 */
-	protected $NextBusinessDay = null;
+	protected $NextBusinessDay;
 
 	/**
 	 * @var docTypeRef_ShipType2 $Ship
 	 */
-	protected $Ship = null;
+	protected $Ship;
 
 	/**
 	 * @var docTypeRef_PackagesType2 $Packages
 	 */
-	protected $Packages = null;
+	protected $Packages;
 
 	/**
 	 * @var ShipTimestamp2 $ShipTimestamp
 	 */
-	protected $ShipTimestamp = null;
+	protected $ShipTimestamp;
 
 	/**
 	 * @var UnitOfMeasurement2 $UnitOfMeasurement
 	 */
-	protected $UnitOfMeasurement = null;
+	protected $UnitOfMeasurement;
 
 	/**
 	 * @var Content2 $Content
 	 */
-	protected $Content = null;
+	protected $Content;
 
 	/**
 	 * @var DeclaredValue $DeclaredValue
 	 */
-	protected $DeclaredValue = null;
+	protected $DeclaredValue;
 
 	/**
 	 * @var DeclaredValueCurrencyCode $DeclaredValueCurrencyCode
 	 */
-	protected $DeclaredValueCurrencyCode = null;
+	protected $DeclaredValueCurrencyCode;
 
 	/**
 	 * @var PaymentInfo2 $PaymentInfo
 	 */
-	protected $PaymentInfo = null;
+	protected $PaymentInfo;
 
 	/**
-	 * @var Account2 $Account
+	 * @var string $Account
 	 */
-	protected $Account = null;
+	protected $Account;
 
 	/**
 	 * @var Billing2 $Billing
 	 */
-	protected $Billing = null;
+	protected $Billing;
 
 	/**
 	 * @var Services2 $SpecialServices
 	 */
-	protected $SpecialServices = null;
+	protected $SpecialServices;
 
 	/**
 	 * @var RequestValueAddedServices $RequestValueAddedServices
 	 */
-	protected $RequestValueAddedServices = null;
+	protected $RequestValueAddedServices;
 
 	/**
 	 * @param DropOffType2 $DropOffType
@@ -272,7 +277,7 @@ class docTypeRef_RequestedShipmentType2
 	}
 
 	/**
-	 * @return Account2
+	 * @return string
 	 */
 	public function getAccount()
 	{
@@ -280,7 +285,7 @@ class docTypeRef_RequestedShipmentType2
 	}
 
 	/**
-	 * @param Account2 $Account
+	 * @param string $Account
 	 * @return \DHLExpress\docTypeRef_RequestedShipmentType2
 	 */
 	public function setAccount($Account)

@@ -2,11 +2,16 @@
 
 namespace DHLExpress;
 
+/**
+ * Class UnitOfMeasurement2
+ *
+ * @package DHLExpress
+ */
 class UnitOfMeasurement2
 {
-	const __default = 'SI';
-	const SI = 'SI';
-	const SU = 'SU';
+	public const __default = 'SI';
+	public const SI        = 'SI';
+	public const SU        = 'SU';
 
 
 }

@@ -2,13 +2,18 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_RegistrationNumbers
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_RegistrationNumbers
 {
 
 	/**
 	 * @var docTypeRef_RegistrationNumber[] $RegistrationNumber
 	 */
-	protected $RegistrationNumber = null;
+	protected $RegistrationNumber;
 
 	/**
 	 * @param docTypeRef_RegistrationNumber[] $RegistrationNumber

@@ -2,11 +2,16 @@
 
 namespace DHLExpress;
 
+/**
+ * Class Content
+ *
+ * @package DHLExpress
+ */
 class Content
 {
-	const __default = 'DOCUMENTS';
-	const DOCUMENTS = 'DOCUMENTS';
-	const NON_DOCUMENTS = 'NON_DOCUMENTS';
+	public const __default     = 'DOCUMENTS';
+	public const DOCUMENTS     = 'DOCUMENTS';
+	public const NON_DOCUMENTS = 'NON_DOCUMENTS';
 
 
 }

@@ -2,42 +2,47 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_DeleteRequestType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_DeleteRequestType
 {
 
 	/**
 	 * @var docTypeRef_ClientDetailType $ClientDetail
 	 */
-	protected $ClientDetail = null;
+	protected $ClientDetail;
 
 	/**
-	 * @var date $PickupDate
+	 * @var string $PickupDate
 	 */
-	protected $PickupDate = null;
+	protected $PickupDate;
 
 	/**
-	 * @var CountryCode $PickupCountry
+	 * @var string $PickupCountry
 	 */
-	protected $PickupCountry = null;
+	protected $PickupCountry;
 
 	/**
 	 * @var ConfirmationNumberType $DispatchConfirmationNumber
 	 */
-	protected $DispatchConfirmationNumber = null;
+	protected $DispatchConfirmationNumber;
 
 	/**
 	 * @var PersonName3 $RequestorName
 	 */
-	protected $RequestorName = null;
+	protected $RequestorName;
 
 	/**
 	 * @var CustomerReferences $Reason
 	 */
-	protected $Reason = null;
+	protected $Reason;
 
 	/**
-	 * @param date $PickupDate
-	 * @param CountryCode $PickupCountry
+	 * @param string $PickupDate
+	 * @param string $PickupCountry
 	 * @param ConfirmationNumberType $DispatchConfirmationNumber
 	 * @param PersonName3 $RequestorName
 	 */
@@ -68,7 +73,7 @@ class docTypeRef_DeleteRequestType
 	}
 
 	/**
-	 * @return date
+	 * @return string
 	 */
 	public function getPickupDate()
 	{
@@ -76,7 +81,7 @@ class docTypeRef_DeleteRequestType
 	}
 
 	/**
-	 * @param date $PickupDate
+	 * @param string $PickupDate
 	 * @return \DHLExpress\docTypeRef_DeleteRequestType
 	 */
 	public function setPickupDate($PickupDate)
@@ -86,7 +91,7 @@ class docTypeRef_DeleteRequestType
 	}
 
 	/**
-	 * @return CountryCode
+	 * @return string
 	 */
 	public function getPickupCountry()
 	{
@@ -94,7 +99,7 @@ class docTypeRef_DeleteRequestType
 	}
 
 	/**
-	 * @param CountryCode $PickupCountry
+	 * @param string $PickupCountry
 	 * @return \DHLExpress\docTypeRef_DeleteRequestType
 	 */
 	public function setPickupCountry($PickupCountry)

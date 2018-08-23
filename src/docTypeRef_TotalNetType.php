@@ -2,18 +2,23 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_TotalNetType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_TotalNetType
 {
 
 	/**
 	 * @var string $Currency
 	 */
-	protected $Currency = null;
+	protected $Currency;
 
 	/**
 	 * @var string $Amount
 	 */
-	protected $Amount = null;
+	protected $Amount;
 
 	/**
 	 * @param string $Currency

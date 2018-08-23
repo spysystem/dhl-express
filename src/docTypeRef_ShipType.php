@@ -2,33 +2,38 @@
 
 namespace DHLExpress;
 
+/**
+ * Class docTypeRef_ShipType
+ *
+ * @package DHLExpress
+ */
 class docTypeRef_ShipType
 {
 
 	/**
 	 * @var docTypeRef_ContactInfoType $Shipper
 	 */
-	protected $Shipper = null;
+	protected $Shipper;
 
 	/**
 	 * @var docTypeRef_ContactInfoType $Pickup
 	 */
-	protected $Pickup = null;
+	protected $Pickup;
 
 	/**
 	 * @var docTypeRef_ContactInfoType $BookingRequestor
 	 */
-	protected $BookingRequestor = null;
+	protected $BookingRequestor;
 
 	/**
 	 * @var docTypeRef_ContactInfoType1 $Buyer
 	 */
-	protected $Buyer = null;
+	protected $Buyer;
 
 	/**
 	 * @var docTypeRef_ContactInfoType $Recipient
 	 */
-	protected $Recipient = null;
+	protected $Recipient;
 
 	/**
 	 * @param docTypeRef_ContactInfoType $Shipper
