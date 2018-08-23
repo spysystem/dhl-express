@@ -84,7 +84,7 @@ class GblExpressRateBook extends \SoapClient
 	 * @return GblExpressRateBook
 	 * @throws NoWsdlUrlFoundException
 	 */
-	public function Create(string $strUserName, string $strPassword, string $strAccountNo): GblExpressRateBook
+	public static function Create(string $strUserName, string $strPassword, string $strAccountNo): GblExpressRateBook
 	{
 		$oClient	= new static([
 			'trace'			=> true,
