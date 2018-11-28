@@ -9,7 +9,7 @@ class docTypeRef_RateResponseType
 {
 
 	/**
-	 * @var null|docTypeRef_ProviderType[] $Provider
+	 * @var null|docTypeRef_ProviderType[]|docTypeRef_ProviderType $Provider
 	 */
 	protected $Provider;
 
@@ -20,18 +20,18 @@ class docTypeRef_RateResponseType
 	}
 
 	/**
-	 * @return null|docTypeRef_ProviderType[]
+	 * @return null|docTypeRef_ProviderType[]|docTypeRef_ProviderType
 	 */
-	public function getProvider(): ?array
+	public function getProvider()
 	{
 		return $this->Provider;
 	}
 
 	/**
-	 * @param null|docTypeRef_ProviderType[] $Provider
+	 * @param null|docTypeRef_ProviderType[]|docTypeRef_ProviderType $Provider
 	 * @return docTypeRef_RateResponseType
 	 */
-	public function setProvider(?array $Provider = null): docTypeRef_RateResponseType
+	public function setProvider($Provider = null): docTypeRef_RateResponseType
 	{
 		$this->Provider = $Provider;
 		return $this;
