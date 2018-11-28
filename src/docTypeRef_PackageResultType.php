@@ -1,7 +1,6 @@
 <?php
 namespace DHLExpress;
 
-
 /**
  * Class docTypeRef_PackageResultType
  */

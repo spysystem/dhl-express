@@ -9,7 +9,7 @@ class docTypeRef_ShipmentDetailType
 {
 
 	/**
-	 * @var docTypeRef_NotificationType2[] $Notification
+	 * @var docTypeRef_NotificationType2[]|docTypeRef_NotificationType2 $Notification
 	 */
 	protected $Notification;
 
@@ -19,7 +19,7 @@ class docTypeRef_ShipmentDetailType
 	protected $PackagesResult;
 
 	/**
-	 * @var null|docTypeRef_LabelImageType[] $LabelImage
+	 * @var null|docTypeRef_LabelImageType[]|docTypeRef_LabelImageType $LabelImage
 	 */
 	protected $LabelImage;
 
@@ -34,26 +34,26 @@ class docTypeRef_ShipmentDetailType
 	protected $DispatchConfirmationNumber;
 
 	/**
-	 * @param docTypeRef_NotificationType2[] $Notification
+	 * @param docTypeRef_NotificationType2[]|docTypeRef_NotificationType2 $Notification
 	 */
-	public function __construct(array $Notification)
+	public function __construct($Notification)
 	{
 		$this->Notification = $Notification;
 	}
 
 	/**
-	 * @return docTypeRef_NotificationType2[]
+	 * @return docTypeRef_NotificationType2[]|docTypeRef_NotificationType2|null
 	 */
-	public function getNotification(): ?array
+	public function getNotification()
 	{
 		return $this->Notification;
 	}
 
 	/**
-	 * @param docTypeRef_NotificationType2[] $Notification
+	 * @param docTypeRef_NotificationType2[]|docTypeRef_NotificationType2 $Notification
 	 * @return docTypeRef_ShipmentDetailType
 	 */
-	public function setNotification(array $Notification): docTypeRef_ShipmentDetailType
+	public function setNotification($Notification): docTypeRef_ShipmentDetailType
 	{
 		$this->Notification = $Notification;
 		return $this;
@@ -78,18 +78,18 @@ class docTypeRef_ShipmentDetailType
 	}
 
 	/**
-	 * @return null|docTypeRef_LabelImageType[]
+	 * @return null|docTypeRef_LabelImageType[]|docTypeRef_LabelImageType
 	 */
-	public function getLabelImage(): ?array
+	public function getLabelImage()
 	{
 		return $this->LabelImage;
 	}
 
 	/**
-	 * @param null|docTypeRef_LabelImageType[] $LabelImage
+	 * @param null|docTypeRef_LabelImageType[]|docTypeRef_LabelImageType $LabelImage
 	 * @return docTypeRef_ShipmentDetailType
 	 */
-	public function setLabelImage(?array $LabelImage = null): docTypeRef_ShipmentDetailType
+	public function setLabelImage($LabelImage = null): docTypeRef_ShipmentDetailType
 	{
 		$this->LabelImage = $LabelImage;
 		return $this;
