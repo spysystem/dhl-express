@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class Service2
- *
- * @package DHLExpress
  */
 class Service2
 {
@@ -16,39 +14,39 @@ class Service2
 	protected $ServiceType;
 
 	/**
-	 * @var string $ServiceValue
+	 * @var null|string $ServiceValue
 	 */
 	protected $ServiceValue;
 
 	/**
-	 * @var string $CurrencyCode
+	 * @var null|string $CurrencyCode
 	 */
 	protected $CurrencyCode;
 
 	/**
-	 * @var string $PaymentCode
+	 * @var null|string $PaymentCode
 	 */
 	protected $PaymentCode;
 
 	/**
-	 * @var string $StartDate
+	 * @var null|string $StartDate
 	 */
 	protected $StartDate;
 
 	/**
-	 * @var string $EndDate
+	 * @var null|string $EndDate
 	 */
 	protected $EndDate;
 
 	/**
-	 * @var string  $TextInstruction
+	 * @var null|string $TextInstruction
 	 */
 	protected $TextInstruction;
 
 	/**
 	 * @param string $ServiceType
 	 */
-	public function __construct($ServiceType)
+	public function __construct(string $ServiceType)
 	{
 		$this->ServiceType = $ServiceType;
 	}
@@ -56,124 +54,124 @@ class Service2
 	/**
 	 * @return string
 	 */
-	public function getServiceType()
+	public function getServiceType(): ?string
 	{
 		return $this->ServiceType;
 	}
 
 	/**
 	 * @param string $ServiceType
-	 * @return \DHLExpress\Service2
+	 * @return Service2
 	 */
-	public function setServiceType($ServiceType)
+	public function setServiceType(string $ServiceType): Service2
 	{
 		$this->ServiceType = $ServiceType;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getServiceValue()
+	public function getServiceValue(): ?string
 	{
 		return $this->ServiceValue;
 	}
 
 	/**
-	 * @param string $ServiceValue
-	 * @return \DHLExpress\Service2
+	 * @param null|string $ServiceValue
+	 * @return Service2
 	 */
-	public function setServiceValue($ServiceValue)
+	public function setServiceValue(?string $ServiceValue = null): Service2
 	{
 		$this->ServiceValue = $ServiceValue;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getCurrencyCode()
+	public function getCurrencyCode(): ?string
 	{
 		return $this->CurrencyCode;
 	}
 
 	/**
-	 * @param string $CurrencyCode
-	 * @return \DHLExpress\Service2
+	 * @param null|string $CurrencyCode
+	 * @return Service2
 	 */
-	public function setCurrencyCode($CurrencyCode)
+	public function setCurrencyCode(?string $CurrencyCode = null): Service2
 	{
 		$this->CurrencyCode = $CurrencyCode;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getPaymentCode()
+	public function getPaymentCode(): ?string
 	{
 		return $this->PaymentCode;
 	}
 
 	/**
-	 * @param string $PaymentCode
-	 * @return \DHLExpress\Service2
+	 * @param null|string $PaymentCode
+	 * @return Service2
 	 */
-	public function setPaymentCode($PaymentCode)
+	public function setPaymentCode(?string $PaymentCode = null): Service2
 	{
 		$this->PaymentCode = $PaymentCode;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getStartDate()
+	public function getStartDate(): ?string
 	{
 		return $this->StartDate;
 	}
 
 	/**
-	 * @param string $StartDate
-	 * @return \DHLExpress\Service2
+	 * @param null|string $StartDate
+	 * @return Service2
 	 */
-	public function setStartDate($StartDate)
+	public function setStartDate(?string $StartDate = null): Service2
 	{
 		$this->StartDate = $StartDate;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getEndDate()
+	public function getEndDate(): ?string
 	{
 		return $this->EndDate;
 	}
 
 	/**
-	 * @param string $EndDate
-	 * @return \DHLExpress\Service2
+	 * @param null|string $EndDate
+	 * @return Service2
 	 */
-	public function setEndDate($EndDate)
+	public function setEndDate(?string $EndDate = null): Service2
 	{
 		$this->EndDate = $EndDate;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getTextInstruction()
+	public function getTextInstruction(): ?string
 	{
 		return $this->TextInstruction;
 	}
 
 	/**
-	 * @param string  $TextInstruction
-	 * @return \DHLExpress\Service2
+	 * @param null|string $TextInstruction
+	 * @return Service2
 	 */
-	public function setTextInstruction($TextInstruction)
+	public function setTextInstruction(?string $TextInstruction = null): Service2
 	{
 		$this->TextInstruction = $TextInstruction;
 		return $this;

@@ -1,68 +1,91 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_NotificationType3
- *
- * @package DHLExpress
  */
 class docTypeRef_NotificationType3
 {
 
 	/**
-	 * @var Message2 $Message
+	 * @var string $Message
 	 */
 	protected $Message;
 
 	/**
-	 * @var int $code
+	 * @var string $code
 	 */
 	protected $code;
 
 	/**
-	 * @param Message2 $Message
-	 * @param int $code
+	 * @var string $src
 	 */
-	public function __construct($Message, $code)
+	protected $src;
+
+	/**
+	 * @param string $Message
+	 * @param string $code
+	 * @param string $src
+	 */
+	public function __construct(string $Message, string $code, string $src)
 	{
 		$this->Message = $Message;
 		$this->code = $code;
+		$this->src = $src;
 	}
 
 	/**
-	 * @return Message2
+	 * @return string
 	 */
-	public function getMessage()
+	public function getMessage(): ?string
 	{
 		return $this->Message;
 	}
 
 	/**
-	 * @param Message2 $Message
-	 * @return \DHLExpress\docTypeRef_NotificationType3
+	 * @param string $Message
+	 * @return docTypeRef_NotificationType3
 	 */
-	public function setMessage($Message)
+	public function setMessage(string $Message): docTypeRef_NotificationType3
 	{
 		$this->Message = $Message;
 		return $this;
 	}
 
 	/**
-	 * @return int
+	 * @return string
 	 */
-	public function getCode()
+	public function getCode(): ?string
 	{
 		return $this->code;
 	}
 
 	/**
-	 * @param int $code
-	 * @return \DHLExpress\docTypeRef_NotificationType3
+	 * @param string $code
+	 * @return docTypeRef_NotificationType3
 	 */
-	public function setCode($code)
+	public function setCode(string $code): docTypeRef_NotificationType3
 	{
 		$this->code = $code;
+		return $this;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getSrc(): ?string
+	{
+		return $this->src;
+	}
+
+	/**
+	 * @param string $src
+	 * @return docTypeRef_NotificationType3
+	 */
+	public function setSrc(string $src): docTypeRef_NotificationType3
+	{
+		$this->src = $src;
 		return $this;
 	}
 

@@ -1,13 +1,11 @@
 <?php
-
 namespace DHLExpress;
 
 use DateTime;
+use Exception;
 
 /**
  * Class docTypeRef_ServiceType
- *
- * @package DHLExpress
  */
 class docTypeRef_ServiceType
 {
@@ -18,22 +16,27 @@ class docTypeRef_ServiceType
 	protected $TotalNet;
 
 	/**
-	 * @var docTypeRef_ChargesType $Charges
+	 * @var null|docTypeRef_ChargesType $Charges
 	 */
 	protected $Charges;
 
 	/**
-	 * @var DateTime $DeliveryTime
+	 * @var null|docTypeRef_ItemsType $Items
+	 */
+	protected $Items;
+
+	/**
+	 * @var null|DateTime $DeliveryTime
 	 */
 	protected $DeliveryTime;
 
 	/**
-	 * @var DateTime $CutoffTime
+	 * @var null|DateTime $CutoffTime
 	 */
 	protected $CutoffTime;
 
 	/**
-	 * @var NextBusinessDayInd2 $NextBusinessDayInd
+	 * @var null|string|NextBusinessDayInd2 $NextBusinessDayInd
 	 */
 	protected $NextBusinessDayInd;
 
@@ -43,16 +46,16 @@ class docTypeRef_ServiceType
 	protected $type;
 
 	/**
-	 * @var string $account enum:RateType
+	 * @var string|RateType $account
 	 */
 	protected $account;
 
 	/**
 	 * @param docTypeRef_TotalNetType $TotalNet
 	 * @param string                  $type
-	 * @param string                  $account enum:RateType
+	 * @param string|RateType         $account
 	 */
-	public function __construct($TotalNet, $type, $account)
+	public function __construct(docTypeRef_TotalNetType $TotalNet, string $type, $account)
 	{
 		$this->TotalNet = $TotalNet;
 		$this->type = $type;
@@ -62,64 +65,81 @@ class docTypeRef_ServiceType
 	/**
 	 * @return docTypeRef_TotalNetType
 	 */
-	public function getTotalNet()
+	public function getTotalNet(): ?docTypeRef_TotalNetType
 	{
 		return $this->TotalNet;
 	}
 
 	/**
 	 * @param docTypeRef_TotalNetType $TotalNet
-	 * @return \DHLExpress\docTypeRef_ServiceType
+	 * @return docTypeRef_ServiceType
 	 */
-	public function setTotalNet($TotalNet)
+	public function setTotalNet(docTypeRef_TotalNetType $TotalNet): docTypeRef_ServiceType
 	{
 		$this->TotalNet = $TotalNet;
 		return $this;
 	}
 
 	/**
-	 * @return docTypeRef_ChargesType
+	 * @return null|docTypeRef_ChargesType
 	 */
-	public function getCharges()
+	public function getCharges(): ?docTypeRef_ChargesType
 	{
 		return $this->Charges;
 	}
 
 	/**
-	 * @param docTypeRef_ChargesType $Charges
-	 * @return \DHLExpress\docTypeRef_ServiceType
+	 * @param null|docTypeRef_ChargesType $Charges
+	 * @return docTypeRef_ServiceType
 	 */
-	public function setCharges($Charges)
+	public function setCharges(?docTypeRef_ChargesType $Charges = null): docTypeRef_ServiceType
 	{
 		$this->Charges = $Charges;
 		return $this;
 	}
 
 	/**
-	 * @return DateTime|null|false
+	 * @return null|docTypeRef_ItemsType
 	 */
-	public function getDeliveryTime()
+	public function getItems(): ?docTypeRef_ItemsType
+	{
+		return $this->Items;
+	}
+
+	/**
+	 * @param null|docTypeRef_ItemsType $Items
+	 * @return docTypeRef_ServiceType
+	 */
+	public function setItems(?docTypeRef_ItemsType $Items = null): docTypeRef_ServiceType
+	{
+		$this->Items = $Items;
+		return $this;
+	}
+
+	/**
+	 * @return null|DateTime
+	 */
+	public function getDeliveryTime(): ?DateTime
 	{
 		if ($this->DeliveryTime === null)
 		{
 			return null;
 		}
-
 		try
 		{
 			return new DateTime($this->DeliveryTime);
 		}
-		catch (\Exception $oException)
+		catch (Exception $oException)
 		{
-			return false;
+			return null;
 		}
 	}
 
 	/**
-	 * @param DateTime $DeliveryTime
-	 * @return \DHLExpress\docTypeRef_ServiceType
+	 * @param null|DateTime $DeliveryTime
+	 * @return docTypeRef_ServiceType
 	 */
-	public function setDeliveryTime(DateTime $DeliveryTime = null)
+	public function setDeliveryTime(?DateTime $DeliveryTime = null): docTypeRef_ServiceType
 	{
 		if ($DeliveryTime === null)
 		{
@@ -133,30 +153,29 @@ class docTypeRef_ServiceType
 	}
 
 	/**
-	 * @return DateTime|null|false
+	 * @return null|DateTime
 	 */
-	public function getCutoffTime()
+	public function getCutoffTime(): ?DateTime
 	{
 		if ($this->CutoffTime === null)
 		{
 			return null;
 		}
-
 		try
 		{
 			return new DateTime($this->CutoffTime);
 		}
-		catch (\Exception $oException)
+		catch (Exception $oException)
 		{
-			return false;
+			return null;
 		}
 	}
 
 	/**
-	 * @param DateTime $CutoffTime
-	 * @return \DHLExpress\docTypeRef_ServiceType
+	 * @param null|DateTime $CutoffTime
+	 * @return docTypeRef_ServiceType
 	 */
-	public function setCutoffTime(DateTime $CutoffTime = null)
+	public function setCutoffTime(?DateTime $CutoffTime = null): docTypeRef_ServiceType
 	{
 		if ($CutoffTime === null)
 		{
@@ -170,7 +189,7 @@ class docTypeRef_ServiceType
 	}
 
 	/**
-	 * @return NextBusinessDayInd2
+	 * @return null|string|NextBusinessDayInd2
 	 */
 	public function getNextBusinessDayInd()
 	{
@@ -178,10 +197,10 @@ class docTypeRef_ServiceType
 	}
 
 	/**
-	 * @param NextBusinessDayInd2 $NextBusinessDayInd
-	 * @return \DHLExpress\docTypeRef_ServiceType
+	 * @param null|string|NextBusinessDayInd2 $NextBusinessDayInd
+	 * @return docTypeRef_ServiceType
 	 */
-	public function setNextBusinessDayInd($NextBusinessDayInd)
+	public function setNextBusinessDayInd($NextBusinessDayInd): docTypeRef_ServiceType
 	{
 		$this->NextBusinessDayInd = $NextBusinessDayInd;
 		return $this;
@@ -190,23 +209,23 @@ class docTypeRef_ServiceType
 	/**
 	 * @return string
 	 */
-	public function getType()
+	public function getType(): ?string
 	{
 		return $this->type;
 	}
 
 	/**
 	 * @param string $type
-	 * @return \DHLExpress\docTypeRef_ServiceType
+	 * @return docTypeRef_ServiceType
 	 */
-	public function setType($type)
+	public function setType(string $type): docTypeRef_ServiceType
 	{
 		$this->type = $type;
 		return $this;
 	}
 
 	/**
-	 * @return string enum:RateType
+	 * @return string|RateType
 	 */
 	public function getAccount()
 	{
@@ -214,11 +233,11 @@ class docTypeRef_ServiceType
 	}
 
 	/**
-	 * @param string $account enum:RateType
+	 * @param string|RateType $account
 	 *
-	 * @return \DHLExpress\docTypeRef_ServiceType
+	 * @return docTypeRef_ServiceType
 	 */
-	public function setAccount($account)
+	public function setAccount($account): docTypeRef_ServiceType
 	{
 		$this->account = $account;
 		return $this;

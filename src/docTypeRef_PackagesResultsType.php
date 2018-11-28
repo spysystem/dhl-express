@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_PackagesResultsType
- *
- * @package DHLExpress
  */
 class docTypeRef_PackagesResultsType
 {
@@ -26,16 +24,16 @@ class docTypeRef_PackagesResultsType
 	/**
 	 * @return docTypeRef_PackageResultType[]
 	 */
-	public function getPackageResult()
+	public function getPackageResult(): ?array
 	{
 		return $this->PackageResult;
 	}
 
 	/**
 	 * @param docTypeRef_PackageResultType[] $PackageResult
-	 * @return \DHLExpress\docTypeRef_PackagesResultsType
+	 * @return docTypeRef_PackagesResultsType
 	 */
-	public function setPackageResult(array $PackageResult)
+	public function setPackageResult(array $PackageResult): docTypeRef_PackagesResultsType
 	{
 		$this->PackageResult = $PackageResult;
 		return $this;

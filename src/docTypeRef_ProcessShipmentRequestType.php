@@ -1,22 +1,20 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_ProcessShipmentRequestType
- *
- * @package DHLExpress
  */
 class docTypeRef_ProcessShipmentRequestType
 {
 
 	/**
-	 * @var MessageId $MessageId
+	 * @var null|string $MessageId
 	 */
 	protected $MessageId;
 
 	/**
-	 * @var docTypeRef_ClientDetailType2 $ClientDetail
+	 * @var null|docTypeRef_ClientDetailType2 $ClientDetail
 	 */
 	protected $ClientDetail;
 
@@ -28,42 +26,42 @@ class docTypeRef_ProcessShipmentRequestType
 	/**
 	 * @param docTypeRef_RequestedShipmentType $RequestedShipment
 	 */
-	public function __construct($RequestedShipment)
+	public function __construct(docTypeRef_RequestedShipmentType $RequestedShipment)
 	{
 		$this->RequestedShipment = $RequestedShipment;
 	}
 
 	/**
-	 * @return MessageId
+	 * @return null|string
 	 */
-	public function getMessageId()
+	public function getMessageId(): ?string
 	{
 		return $this->MessageId;
 	}
 
 	/**
-	 * @param MessageId $MessageId
-	 * @return \DHLExpress\docTypeRef_ProcessShipmentRequestType
+	 * @param null|string $MessageId
+	 * @return docTypeRef_ProcessShipmentRequestType
 	 */
-	public function setMessageId($MessageId)
+	public function setMessageId(string $MessageId = null): docTypeRef_ProcessShipmentRequestType
 	{
 		$this->MessageId = $MessageId;
 		return $this;
 	}
 
 	/**
-	 * @return docTypeRef_ClientDetailType2
+	 * @return null|docTypeRef_ClientDetailType2
 	 */
-	public function getClientDetail()
+	public function getClientDetail(): ?docTypeRef_ClientDetailType2
 	{
 		return $this->ClientDetail;
 	}
 
 	/**
-	 * @param docTypeRef_ClientDetailType2 $ClientDetail
-	 * @return \DHLExpress\docTypeRef_ProcessShipmentRequestType
+	 * @param null|docTypeRef_ClientDetailType2 $ClientDetail
+	 * @return docTypeRef_ProcessShipmentRequestType
 	 */
-	public function setClientDetail($ClientDetail)
+	public function setClientDetail(?docTypeRef_ClientDetailType2 $ClientDetail = null): docTypeRef_ProcessShipmentRequestType
 	{
 		$this->ClientDetail = $ClientDetail;
 		return $this;
@@ -72,16 +70,16 @@ class docTypeRef_ProcessShipmentRequestType
 	/**
 	 * @return docTypeRef_RequestedShipmentType
 	 */
-	public function getRequestedShipment()
+	public function getRequestedShipment(): ?docTypeRef_RequestedShipmentType
 	{
 		return $this->RequestedShipment;
 	}
 
 	/**
 	 * @param docTypeRef_RequestedShipmentType $RequestedShipment
-	 * @return \DHLExpress\docTypeRef_ProcessShipmentRequestType
+	 * @return docTypeRef_ProcessShipmentRequestType
 	 */
-	public function setRequestedShipment($RequestedShipment)
+	public function setRequestedShipment(docTypeRef_RequestedShipmentType $RequestedShipment): docTypeRef_ProcessShipmentRequestType
 	{
 		$this->RequestedShipment = $RequestedShipment;
 		return $this;

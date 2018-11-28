@@ -1,66 +1,64 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_NotificationType
- *
- * @package DHLExpress
  */
 class docTypeRef_NotificationType
 {
 
 	/**
-	 * @var Message $Message
+	 * @var string $Message
 	 */
 	protected $Message;
 
 	/**
-	 * @var int $code
+	 * @var string $code
 	 */
 	protected $code;
 
 	/**
-	 * @param Message $Message
-	 * @param int $code
+	 * @param string $Message
+	 * @param string $code
 	 */
-	public function __construct($Message, $code)
+	public function __construct(string $Message, string $code)
 	{
 		$this->Message = $Message;
 		$this->code = $code;
 	}
 
 	/**
-	 * @return Message
+	 * @return string
 	 */
-	public function getMessage()
+	public function getMessage(): ?string
 	{
 		return $this->Message;
 	}
 
 	/**
-	 * @param Message $Message
-	 * @return \DHLExpress\docTypeRef_NotificationType
+	 * @param string $Message
+	 * @return docTypeRef_NotificationType
 	 */
-	public function setMessage($Message)
+	public function setMessage(string $Message): docTypeRef_NotificationType
 	{
 		$this->Message = $Message;
 		return $this;
 	}
 
 	/**
-	 * @return int
+	 * @return string
 	 */
-	public function getCode()
+	public function getCode(): ?string
 	{
 		return $this->code;
 	}
 
 	/**
-	 * @param int $code
-	 * @return \DHLExpress\docTypeRef_NotificationType
+	 * @param string $code
+	 * @return docTypeRef_NotificationType
 	 */
-	public function setCode($code)
+	public function setCode(string $code): docTypeRef_NotificationType
 	{
 		$this->code = $code;
 		return $this;

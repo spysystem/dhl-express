@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_RequestedShipmentType
- *
- * @package DHLExpress
  */
 class docTypeRef_RequestedShipmentType
 {
@@ -16,27 +14,27 @@ class docTypeRef_RequestedShipmentType
 	protected $ShipmentInfo;
 
 	/**
-	 * @var ShipTimestamp $ShipTimestamp
+	 * @var string $ShipTimestamp
 	 */
 	protected $ShipTimestamp;
 
 	/**
-	 * @var PickupLocationCloseTime $PickupLocationCloseTime
+	 * @var null|string $PickupLocationCloseTime
 	 */
 	protected $PickupLocationCloseTime;
 
 	/**
-	 * @var SpecialPickupInstruction $SpecialPickupInstruction
+	 * @var null|string $SpecialPickupInstruction
 	 */
 	protected $SpecialPickupInstruction;
 
 	/**
-	 * @var PickupLocation $PickupLocation
+	 * @var null|string $PickupLocation
 	 */
 	protected $PickupLocation;
 
 	/**
-	 * @var PaymentInfo $PaymentInfo
+	 * @var string|PaymentInfo $PaymentInfo
 	 */
 	protected $PaymentInfo;
 
@@ -46,7 +44,7 @@ class docTypeRef_RequestedShipmentType
 	protected $InternationalDetail;
 
 	/**
-	 * @var docTypeRef_OnDemandDeliveryOptions $OnDemandDeliveryOptions
+	 * @var null|docTypeRef_OnDemandDeliveryOptions $OnDemandDeliveryOptions
 	 */
 	protected $OnDemandDeliveryOptions;
 
@@ -61,19 +59,19 @@ class docTypeRef_RequestedShipmentType
 	protected $Packages;
 
 	/**
-	 * @var docTypeRef_DangerousGoods $DangerousGoods
+	 * @var null|docTypeRef_DangerousGoods $DangerousGoods
 	 */
 	protected $DangerousGoods;
 
 	/**
 	 * @param docTypeRef_ShipmentInfoType $ShipmentInfo
-	 * @param ShipTimestamp $ShipTimestamp
-	 * @param PaymentInfo $PaymentInfo
+	 * @param string $ShipTimestamp
+	 * @param string|PaymentInfo $PaymentInfo
 	 * @param docTypeRef_InternationDetailType $InternationalDetail
 	 * @param docTypeRef_ShipType $Ship
 	 * @param docTypeRef_PackagesType $Packages
 	 */
-	public function __construct($ShipmentInfo, $ShipTimestamp, $PaymentInfo, $InternationalDetail, $Ship, $Packages)
+	public function __construct(docTypeRef_ShipmentInfoType $ShipmentInfo, string $ShipTimestamp, $PaymentInfo, docTypeRef_InternationDetailType $InternationalDetail, docTypeRef_ShipType $Ship, docTypeRef_PackagesType $Packages)
 	{
 		$this->ShipmentInfo = $ShipmentInfo;
 		$this->ShipTimestamp = $ShipTimestamp;
@@ -86,95 +84,95 @@ class docTypeRef_RequestedShipmentType
 	/**
 	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function getShipmentInfo()
+	public function getShipmentInfo(): docTypeRef_ShipmentInfoType
 	{
 		return $this->ShipmentInfo;
 	}
 
 	/**
 	 * @param docTypeRef_ShipmentInfoType $ShipmentInfo
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType
+	 * @return docTypeRef_RequestedShipmentType
 	 */
-	public function setShipmentInfo($ShipmentInfo)
+	public function setShipmentInfo(docTypeRef_ShipmentInfoType $ShipmentInfo): docTypeRef_RequestedShipmentType
 	{
 		$this->ShipmentInfo = $ShipmentInfo;
 		return $this;
 	}
 
 	/**
-	 * @return ShipTimestamp
+	 * @return string
 	 */
-	public function getShipTimestamp()
+	public function getShipTimestamp(): ?string
 	{
 		return $this->ShipTimestamp;
 	}
 
 	/**
-	 * @param ShipTimestamp $ShipTimestamp
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType
+	 * @param string $ShipTimestamp
+	 * @return docTypeRef_RequestedShipmentType
 	 */
-	public function setShipTimestamp($ShipTimestamp)
+	public function setShipTimestamp(string $ShipTimestamp): docTypeRef_RequestedShipmentType
 	{
 		$this->ShipTimestamp = $ShipTimestamp;
 		return $this;
 	}
 
 	/**
-	 * @return PickupLocationCloseTime
+	 * @return null|string
 	 */
-	public function getPickupLocationCloseTime()
+	public function getPickupLocationCloseTime(): ?string
 	{
 		return $this->PickupLocationCloseTime;
 	}
 
 	/**
-	 * @param PickupLocationCloseTime $PickupLocationCloseTime
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType
+	 * @param null|string $PickupLocationCloseTime
+	 * @return docTypeRef_RequestedShipmentType
 	 */
-	public function setPickupLocationCloseTime($PickupLocationCloseTime)
+	public function setPickupLocationCloseTime(?string $PickupLocationCloseTime = null): docTypeRef_RequestedShipmentType
 	{
 		$this->PickupLocationCloseTime = $PickupLocationCloseTime;
 		return $this;
 	}
 
 	/**
-	 * @return SpecialPickupInstruction
+	 * @return null|string
 	 */
-	public function getSpecialPickupInstruction()
+	public function getSpecialPickupInstruction(): ?string
 	{
 		return $this->SpecialPickupInstruction;
 	}
 
 	/**
-	 * @param SpecialPickupInstruction $SpecialPickupInstruction
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType
+	 * @param null|string $SpecialPickupInstruction
+	 * @return docTypeRef_RequestedShipmentType
 	 */
-	public function setSpecialPickupInstruction($SpecialPickupInstruction)
+	public function setSpecialPickupInstruction(?string $SpecialPickupInstruction = null): docTypeRef_RequestedShipmentType
 	{
 		$this->SpecialPickupInstruction = $SpecialPickupInstruction;
 		return $this;
 	}
 
 	/**
-	 * @return PickupLocation
+	 * @return null|string
 	 */
-	public function getPickupLocation()
+	public function getPickupLocation(): ?string
 	{
 		return $this->PickupLocation;
 	}
 
 	/**
-	 * @param PickupLocation $PickupLocation
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType
+	 * @param null|string $PickupLocation
+	 * @return docTypeRef_RequestedShipmentType
 	 */
-	public function setPickupLocation($PickupLocation)
+	public function setPickupLocation(?string $PickupLocation = null): docTypeRef_RequestedShipmentType
 	{
 		$this->PickupLocation = $PickupLocation;
 		return $this;
 	}
 
 	/**
-	 * @return PaymentInfo
+	 * @return string|PaymentInfo
 	 */
 	public function getPaymentInfo()
 	{
@@ -182,10 +180,10 @@ class docTypeRef_RequestedShipmentType
 	}
 
 	/**
-	 * @param PaymentInfo $PaymentInfo
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType
+	 * @param string|PaymentInfo $PaymentInfo
+	 * @return docTypeRef_RequestedShipmentType
 	 */
-	public function setPaymentInfo($PaymentInfo)
+	public function setPaymentInfo($PaymentInfo): docTypeRef_RequestedShipmentType
 	{
 		$this->PaymentInfo = $PaymentInfo;
 		return $this;
@@ -194,34 +192,34 @@ class docTypeRef_RequestedShipmentType
 	/**
 	 * @return docTypeRef_InternationDetailType
 	 */
-	public function getInternationalDetail()
+	public function getInternationalDetail(): ?docTypeRef_InternationDetailType
 	{
 		return $this->InternationalDetail;
 	}
 
 	/**
 	 * @param docTypeRef_InternationDetailType $InternationalDetail
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType
+	 * @return docTypeRef_RequestedShipmentType
 	 */
-	public function setInternationalDetail($InternationalDetail)
+	public function setInternationalDetail(docTypeRef_InternationDetailType $InternationalDetail): docTypeRef_RequestedShipmentType
 	{
 		$this->InternationalDetail = $InternationalDetail;
 		return $this;
 	}
 
 	/**
-	 * @return docTypeRef_OnDemandDeliveryOptions
+	 * @return null|docTypeRef_OnDemandDeliveryOptions
 	 */
-	public function getOnDemandDeliveryOptions()
+	public function getOnDemandDeliveryOptions(): ?docTypeRef_OnDemandDeliveryOptions
 	{
 		return $this->OnDemandDeliveryOptions;
 	}
 
 	/**
-	 * @param docTypeRef_OnDemandDeliveryOptions $OnDemandDeliveryOptions
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType
+	 * @param null|docTypeRef_OnDemandDeliveryOptions $OnDemandDeliveryOptions
+	 * @return docTypeRef_RequestedShipmentType
 	 */
-	public function setOnDemandDeliveryOptions($OnDemandDeliveryOptions)
+	public function setOnDemandDeliveryOptions(?docTypeRef_OnDemandDeliveryOptions $OnDemandDeliveryOptions = null): docTypeRef_RequestedShipmentType
 	{
 		$this->OnDemandDeliveryOptions = $OnDemandDeliveryOptions;
 		return $this;
@@ -230,16 +228,16 @@ class docTypeRef_RequestedShipmentType
 	/**
 	 * @return docTypeRef_ShipType
 	 */
-	public function getShip()
+	public function getShip(): ?docTypeRef_ShipType
 	{
 		return $this->Ship;
 	}
 
 	/**
 	 * @param docTypeRef_ShipType $Ship
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType
+	 * @return docTypeRef_RequestedShipmentType
 	 */
-	public function setShip($Ship)
+	public function setShip(docTypeRef_ShipType $Ship): docTypeRef_RequestedShipmentType
 	{
 		$this->Ship = $Ship;
 		return $this;
@@ -248,34 +246,34 @@ class docTypeRef_RequestedShipmentType
 	/**
 	 * @return docTypeRef_PackagesType
 	 */
-	public function getPackages()
+	public function getPackages(): ?docTypeRef_PackagesType
 	{
 		return $this->Packages;
 	}
 
 	/**
 	 * @param docTypeRef_PackagesType $Packages
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType
+	 * @return docTypeRef_RequestedShipmentType
 	 */
-	public function setPackages($Packages)
+	public function setPackages(docTypeRef_PackagesType $Packages): docTypeRef_RequestedShipmentType
 	{
 		$this->Packages = $Packages;
 		return $this;
 	}
 
 	/**
-	 * @return docTypeRef_DangerousGoods
+	 * @return null|docTypeRef_DangerousGoods
 	 */
-	public function getDangerousGoods()
+	public function getDangerousGoods(): ?docTypeRef_DangerousGoods
 	{
 		return $this->DangerousGoods;
 	}
 
 	/**
-	 * @param docTypeRef_DangerousGoods $DangerousGoods
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType
+	 * @param null|docTypeRef_DangerousGoods $DangerousGoods
+	 * @return docTypeRef_RequestedShipmentType
 	 */
-	public function setDangerousGoods($DangerousGoods)
+	public function setDangerousGoods(?docTypeRef_DangerousGoods $DangerousGoods = null): docTypeRef_RequestedShipmentType
 	{
 		$this->DangerousGoods = $DangerousGoods;
 		return $this;

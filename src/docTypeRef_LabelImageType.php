@@ -1,89 +1,87 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_LabelImageType
- *
- * @package DHLExpress
  */
 class docTypeRef_LabelImageType
 {
 
 	/**
-	 * @var LabelImageFormat $LabelImageFormat
+	 * @var string $LabelImageFormat
 	 */
 	protected $LabelImageFormat;
 
 	/**
-	 * @var base64Binary $GraphicImage
+	 * @var string $GraphicImage
 	 */
 	protected $GraphicImage;
 
 	/**
-	 * @var base64Binary $HTMLImage
+	 * @var null|string $HTMLImage
 	 */
 	protected $HTMLImage;
 
 	/**
-	 * @param LabelImageFormat $LabelImageFormat
-	 * @param base64Binary $GraphicImage
+	 * @param string $LabelImageFormat
+	 * @param string $GraphicImage
 	 */
-	public function __construct($LabelImageFormat, $GraphicImage)
+	public function __construct(string $LabelImageFormat, string $GraphicImage)
 	{
 		$this->LabelImageFormat = $LabelImageFormat;
 		$this->GraphicImage = $GraphicImage;
 	}
 
 	/**
-	 * @return LabelImageFormat
+	 * @return string
 	 */
-	public function getLabelImageFormat()
+	public function getLabelImageFormat(): ?string
 	{
 		return $this->LabelImageFormat;
 	}
 
 	/**
-	 * @param LabelImageFormat $LabelImageFormat
-	 * @return \DHLExpress\docTypeRef_LabelImageType
+	 * @param string $LabelImageFormat
+	 * @return docTypeRef_LabelImageType
 	 */
-	public function setLabelImageFormat($LabelImageFormat)
+	public function setLabelImageFormat(string $LabelImageFormat): docTypeRef_LabelImageType
 	{
 		$this->LabelImageFormat = $LabelImageFormat;
 		return $this;
 	}
 
 	/**
-	 * @return base64Binary
+	 * @return string
 	 */
-	public function getGraphicImage()
+	public function getGraphicImage(): ?string
 	{
 		return $this->GraphicImage;
 	}
 
 	/**
-	 * @param base64Binary $GraphicImage
-	 * @return \DHLExpress\docTypeRef_LabelImageType
+	 * @param string $GraphicImage
+	 * @return docTypeRef_LabelImageType
 	 */
-	public function setGraphicImage($GraphicImage)
+	public function setGraphicImage(string $GraphicImage): docTypeRef_LabelImageType
 	{
 		$this->GraphicImage = $GraphicImage;
 		return $this;
 	}
 
 	/**
-	 * @return base64Binary
+	 * @return null|string
 	 */
-	public function getHTMLImage()
+	public function getHTMLImage(): ?string
 	{
 		return $this->HTMLImage;
 	}
 
 	/**
-	 * @param base64Binary $HTMLImage
-	 * @return \DHLExpress\docTypeRef_LabelImageType
+	 * @param null|string $HTMLImage
+	 * @return docTypeRef_LabelImageType
 	 */
-	public function setHTMLImage($HTMLImage)
+	public function setHTMLImage(?string $HTMLImage = null): docTypeRef_LabelImageType
 	{
 		$this->HTMLImage = $HTMLImage;
 		return $this;

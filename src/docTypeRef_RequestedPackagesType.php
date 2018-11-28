@@ -1,37 +1,35 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_RequestedPackagesType
- *
- * @package DHLExpress
  */
 class docTypeRef_RequestedPackagesType
 {
 
 	/**
-	 * @var InsuredValue $InsuredValue
+	 * @var null|string $InsuredValue
 	 */
 	protected $InsuredValue;
 
 	/**
-	 * @var Weight $Weight
+	 * @var string $Weight
 	 */
 	protected $Weight;
 
 	/**
-	 * @var PieceIdentificationNumber $PieceIdentificationNumber
+	 * @var null|string $PieceIdentificationNumber
 	 */
 	protected $PieceIdentificationNumber;
 
 	/**
-	 * @var UseOwnPieceIdentificationNumber $UseOwnPieceIdentificationNumber
+	 * @var null|string $UseOwnPieceIdentificationNumber
 	 */
 	protected $UseOwnPieceIdentificationNumber;
 
 	/**
-	 * @var PackageContentDescription $PackageContentDescription
+	 * @var null|string $PackageContentDescription
 	 */
 	protected $PackageContentDescription;
 
@@ -41,7 +39,7 @@ class docTypeRef_RequestedPackagesType
 	protected $Dimensions;
 
 	/**
-	 * @var CustomerReferences $CustomerReferences
+	 * @var string $CustomerReferences
 	 */
 	protected $CustomerReferences;
 
@@ -51,12 +49,12 @@ class docTypeRef_RequestedPackagesType
 	protected $number;
 
 	/**
-	 * @param Weight $Weight
+	 * @param string $Weight
 	 * @param docTypeRef_DimensionsType $Dimensions
-	 * @param CustomerReferences $CustomerReferences
+	 * @param string $CustomerReferences
 	 * @param int $number
 	 */
-	public function __construct($Weight, $Dimensions, $CustomerReferences, $number)
+	public function __construct(string $Weight, docTypeRef_DimensionsType $Dimensions, string $CustomerReferences, int $number)
 	{
 		$this->Weight = $Weight;
 		$this->Dimensions = $Dimensions;
@@ -65,90 +63,90 @@ class docTypeRef_RequestedPackagesType
 	}
 
 	/**
-	 * @return InsuredValue
+	 * @return null|string
 	 */
-	public function getInsuredValue()
+	public function getInsuredValue(): ?string
 	{
 		return $this->InsuredValue;
 	}
 
 	/**
-	 * @param InsuredValue $InsuredValue
-	 * @return \DHLExpress\docTypeRef_RequestedPackagesType
+	 * @param null|string $InsuredValue
+	 * @return docTypeRef_RequestedPackagesType
 	 */
-	public function setInsuredValue($InsuredValue)
+	public function setInsuredValue(?string $InsuredValue = null): docTypeRef_RequestedPackagesType
 	{
 		$this->InsuredValue = $InsuredValue;
 		return $this;
 	}
 
 	/**
-	 * @return Weight
+	 * @return string
 	 */
-	public function getWeight()
+	public function getWeight(): ?string
 	{
 		return $this->Weight;
 	}
 
 	/**
-	 * @param Weight $Weight
-	 * @return \DHLExpress\docTypeRef_RequestedPackagesType
+	 * @param string $Weight
+	 * @return docTypeRef_RequestedPackagesType
 	 */
-	public function setWeight($Weight)
+	public function setWeight(string $Weight): docTypeRef_RequestedPackagesType
 	{
 		$this->Weight = $Weight;
 		return $this;
 	}
 
 	/**
-	 * @return PieceIdentificationNumber
+	 * @return null|string
 	 */
-	public function getPieceIdentificationNumber()
+	public function getPieceIdentificationNumber(): ?string
 	{
 		return $this->PieceIdentificationNumber;
 	}
 
 	/**
-	 * @param PieceIdentificationNumber $PieceIdentificationNumber
-	 * @return \DHLExpress\docTypeRef_RequestedPackagesType
+	 * @param null|string $PieceIdentificationNumber
+	 * @return docTypeRef_RequestedPackagesType
 	 */
-	public function setPieceIdentificationNumber($PieceIdentificationNumber)
+	public function setPieceIdentificationNumber(?string $PieceIdentificationNumber = null): docTypeRef_RequestedPackagesType
 	{
 		$this->PieceIdentificationNumber = $PieceIdentificationNumber;
 		return $this;
 	}
 
 	/**
-	 * @return UseOwnPieceIdentificationNumber
+	 * @return null|string
 	 */
-	public function getUseOwnPieceIdentificationNumber()
+	public function getUseOwnPieceIdentificationNumber(): ?string
 	{
 		return $this->UseOwnPieceIdentificationNumber;
 	}
 
 	/**
-	 * @param UseOwnPieceIdentificationNumber $UseOwnPieceIdentificationNumber
-	 * @return \DHLExpress\docTypeRef_RequestedPackagesType
+	 * @param null|string $UseOwnPieceIdentificationNumber
+	 * @return docTypeRef_RequestedPackagesType
 	 */
-	public function setUseOwnPieceIdentificationNumber($UseOwnPieceIdentificationNumber)
+	public function setUseOwnPieceIdentificationNumber(?string $UseOwnPieceIdentificationNumber = null): docTypeRef_RequestedPackagesType
 	{
 		$this->UseOwnPieceIdentificationNumber = $UseOwnPieceIdentificationNumber;
 		return $this;
 	}
 
 	/**
-	 * @return PackageContentDescription
+	 * @return null|string
 	 */
-	public function getPackageContentDescription()
+	public function getPackageContentDescription(): ?string
 	{
 		return $this->PackageContentDescription;
 	}
 
 	/**
-	 * @param PackageContentDescription $PackageContentDescription
-	 * @return \DHLExpress\docTypeRef_RequestedPackagesType
+	 * @param null|string $PackageContentDescription
+	 * @return docTypeRef_RequestedPackagesType
 	 */
-	public function setPackageContentDescription($PackageContentDescription)
+	public function setPackageContentDescription(?string $PackageContentDescription = null): docTypeRef_RequestedPackagesType
 	{
 		$this->PackageContentDescription = $PackageContentDescription;
 		return $this;
@@ -157,34 +155,34 @@ class docTypeRef_RequestedPackagesType
 	/**
 	 * @return docTypeRef_DimensionsType
 	 */
-	public function getDimensions()
+	public function getDimensions(): ?docTypeRef_DimensionsType
 	{
 		return $this->Dimensions;
 	}
 
 	/**
 	 * @param docTypeRef_DimensionsType $Dimensions
-	 * @return \DHLExpress\docTypeRef_RequestedPackagesType
+	 * @return docTypeRef_RequestedPackagesType
 	 */
-	public function setDimensions($Dimensions)
+	public function setDimensions(docTypeRef_DimensionsType $Dimensions): docTypeRef_RequestedPackagesType
 	{
 		$this->Dimensions = $Dimensions;
 		return $this;
 	}
 
 	/**
-	 * @return CustomerReferences
+	 * @return string
 	 */
-	public function getCustomerReferences()
+	public function getCustomerReferences(): ?string
 	{
 		return $this->CustomerReferences;
 	}
 
 	/**
-	 * @param CustomerReferences $CustomerReferences
-	 * @return \DHLExpress\docTypeRef_RequestedPackagesType
+	 * @param string $CustomerReferences
+	 * @return docTypeRef_RequestedPackagesType
 	 */
-	public function setCustomerReferences($CustomerReferences)
+	public function setCustomerReferences(string $CustomerReferences): docTypeRef_RequestedPackagesType
 	{
 		$this->CustomerReferences = $CustomerReferences;
 		return $this;
@@ -193,16 +191,16 @@ class docTypeRef_RequestedPackagesType
 	/**
 	 * @return int
 	 */
-	public function getNumber()
+	public function getNumber(): ?int
 	{
 		return $this->number;
 	}
 
 	/**
 	 * @param int $number
-	 * @return \DHLExpress\docTypeRef_RequestedPackagesType
+	 * @return docTypeRef_RequestedPackagesType
 	 */
-	public function setNumber($number)
+	public function setNumber(int $number): docTypeRef_RequestedPackagesType
 	{
 		$this->number = $number;
 		return $this;

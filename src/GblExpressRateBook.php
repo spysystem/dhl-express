@@ -1,16 +1,18 @@
 <?php
 namespace DHLExpress;
 
+use Exception;
+use SoapClient;
+use SoapFault;
 use SimpleXMLElement;
 use SoapHeader;
 use SoapVar;
-
 /**
  * Class GblExpressRateBook
  *
  * @package DHLExpress
  */
-class GblExpressRateBook extends \SoapClient
+class GblExpressRateBook extends SoapClient
 {
 	public const WsdlUrl						= 'https://wsbexpress.dhl.com/sndpt/expressRateBook?WSDL';
 	private const NS_WSS_WSSecurity_SecExt		= 'http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd';
@@ -46,8 +48,11 @@ class GblExpressRateBook extends \SoapClient
 		'Billing'								=> Billing::class,
 		'Services'								=> Services::class,
 		'Service'								=> Service::class,
+		'RateType'								=> RateType::class,
 		'docTypeRef_RateRequestType'			=> docTypeRef_RateRequestType::class,
 		'docTypeRef_ClientDetailType3'			=> docTypeRef_ClientDetailType3::class,
+		'RequestType'							=> RequestType::class,
+		'ServiceHeaderType'						=> ServiceHeaderType::class,
 		'docTypeRef_RequestedShipmentType2'		=> docTypeRef_RequestedShipmentType2::class,
 		'docTypeRef_ShipType2'					=> docTypeRef_ShipType2::class,
 		'docTypeRef_AddressType2'				=> docTypeRef_AddressType2::class,
@@ -58,6 +63,13 @@ class GblExpressRateBook extends \SoapClient
 		'Billing2'								=> Billing2::class,
 		'Services2'								=> Services2::class,
 		'Service2'								=> Service2::class,
+		'LandedCostType'						=> LandedCostType::class,
+		'ItemsType'								=> ItemsType::class,
+		'ItemType'								=> ItemType::class,
+		'GoodsCharacteristicsType'				=> GoodsCharacteristicsType::class,
+		'GoodsCharacteristicType'				=> GoodsCharacteristicType::class,
+		'ShipmentMonetaryAmountType'			=> ShipmentMonetaryAmountType::class,
+		'ChargesType'							=> ChargesType::class,
 		'docTypeRef_DeleteResponseType'			=> docTypeRef_DeleteResponseType::class,
 		'docTypeRef_NotificationType'			=> docTypeRef_NotificationType::class,
 		'docTypeRef_DeleteRequestType'			=> docTypeRef_DeleteRequestType::class,
@@ -69,6 +81,9 @@ class GblExpressRateBook extends \SoapClient
 		'docTypeRef_TotalNetType'				=> docTypeRef_TotalNetType::class,
 		'docTypeRef_ChargesType'				=> docTypeRef_ChargesType::class,
 		'docTypeRef_ChargeType'					=> docTypeRef_ChargeType::class,
+		'docTypeRef_ItemsType'					=> docTypeRef_ItemsType::class,
+		'docTypeRef_ItemType'					=> docTypeRef_ItemType::class,
+		'Notification'							=> Notification::class,
 		'docTypeRef_ShipmentDetailType'			=> docTypeRef_ShipmentDetailType::class,
 		'docTypeRef_NotificationType2'			=> docTypeRef_NotificationType2::class,
 		'docTypeRef_PackagesResultsType'		=> docTypeRef_PackagesResultsType::class,
@@ -77,12 +92,18 @@ class GblExpressRateBook extends \SoapClient
 	];
 
 	/**
+	 * @var string $request Last request made
+	 */
+	private  $request = '';
+
+	/**
 	 * @param string $strUserName
 	 * @param string $strPassword
 	 * @param string $strAccountNo
 	 *
 	 * @return GblExpressRateBook
 	 * @throws NoWsdlUrlFoundException
+	 * @throws Exception
 	 */
 	public static function Create(string $strUserName, string $strPassword, string $strAccountNo): GblExpressRateBook
 	{
@@ -119,33 +140,56 @@ class GblExpressRateBook extends \SoapClient
 	}
 
 	/**
-	 * @param docTypeRef_ProcessShipmentRequestType $oParameters
-	 *
-	 * @return docTypeRef_ShipmentDetailType
+	 * @param string $request
+	 * @param string $location
+	 * @param string $action
+	 * @param int $version
+	 * @param int $one_way
+	 * @return string|null
 	 */
-	public function createShipmentRequest(docTypeRef_ProcessShipmentRequestType $oParameters): docTypeRef_ShipmentDetailType
+	public function __doRequest($request, $location, $action, $version, $one_way = 0): ?string
 	{
-		return $this->__soapCall('createShipmentRequest', [$oParameters]);
+		$this->request	= $request;
+		
+		return parent::__doRequest($request, $location, $action, $version, $one_way);
 	}
 
 	/**
-	 * @param docTypeRef_RateRequestType $oParameters
-	 *
-	 * @return docTypeRef_RateResponseType
+	 * @return string
 	 */
-	public function getRateRequest(docTypeRef_RateRequestType $oParameters): docTypeRef_RateResponseType
+	public function __getLastRequest(): string
 	{
-		return $this->__soapCall('getRateRequest', [$oParameters]);
+			return $this->request ?? '';
 	}
 
 	/**
-	 * @param docTypeRef_DeleteRequestType $oParameters
-	 *
-	 * @return docTypeRef_DeleteResponseType
+	 * @param docTypeRef_ProcessShipmentRequestType $parameters
+	 * @throws SoapFault
+	 * @return docTypeRef_ShipmentDetailType|null
 	 */
-	public function deleteShipmentRequest(docTypeRef_DeleteRequestType $oParameters): docTypeRef_DeleteResponseType
+	public function createShipmentRequest(docTypeRef_ProcessShipmentRequestType $parameters): ?docTypeRef_ShipmentDetailType
 	{
-		return $this->__soapCall('deleteShipmentRequest', [$oParameters]);
+		return $this->__soapCall('createShipmentRequest', [$parameters]);
+	}
+
+	/**
+	 * @param docTypeRef_RateRequestType $parameters
+	 * @throws SoapFault
+	 * @return docTypeRef_RateResponseType|null
+	 */
+	public function getRateRequest(docTypeRef_RateRequestType $parameters): ?docTypeRef_RateResponseType
+	{
+		return $this->__soapCall('getRateRequest', [$parameters]);
+	}
+
+	/**
+	 * @param docTypeRef_DeleteRequestType $parameters
+	 * @throws SoapFault
+	 * @return docTypeRef_DeleteResponseType|null
+	 */
+	public function deleteShipmentRequest(docTypeRef_DeleteRequestType $parameters): ?docTypeRef_DeleteResponseType
+	{
+		return $this->__soapCall('deleteShipmentRequest', [$parameters]);
 	}
 
 	/**

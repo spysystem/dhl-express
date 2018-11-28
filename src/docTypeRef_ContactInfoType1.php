@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_ContactInfoType1
- *
- * @package DHLExpress
  */
 class docTypeRef_ContactInfoType1
 {
@@ -24,7 +22,7 @@ class docTypeRef_ContactInfoType1
 	 * @param docTypeRef_ContactType1 $Contact
 	 * @param docTypeRef_AddressType1 $Address
 	 */
-	public function __construct($Contact, $Address)
+	public function __construct(docTypeRef_ContactType1 $Contact, docTypeRef_AddressType1 $Address)
 	{
 		$this->Contact = $Contact;
 		$this->Address = $Address;
@@ -33,16 +31,16 @@ class docTypeRef_ContactInfoType1
 	/**
 	 * @return docTypeRef_ContactType1
 	 */
-	public function getContact()
+	public function getContact(): ?docTypeRef_ContactType1
 	{
 		return $this->Contact;
 	}
 
 	/**
 	 * @param docTypeRef_ContactType1 $Contact
-	 * @return \DHLExpress\docTypeRef_ContactInfoType1
+	 * @return docTypeRef_ContactInfoType1
 	 */
-	public function setContact($Contact)
+	public function setContact(docTypeRef_ContactType1 $Contact): docTypeRef_ContactInfoType1
 	{
 		$this->Contact = $Contact;
 		return $this;
@@ -51,16 +49,16 @@ class docTypeRef_ContactInfoType1
 	/**
 	 * @return docTypeRef_AddressType1
 	 */
-	public function getAddress()
+	public function getAddress(): ?docTypeRef_AddressType1
 	{
 		return $this->Address;
 	}
 
 	/**
 	 * @param docTypeRef_AddressType1 $Address
-	 * @return \DHLExpress\docTypeRef_ContactInfoType1
+	 * @return docTypeRef_ContactInfoType1
 	 */
-	public function setAddress($Address)
+	public function setAddress(docTypeRef_AddressType1 $Address): docTypeRef_ContactInfoType1
 	{
 		$this->Address = $Address;
 		return $this;

@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_ShipType2
- *
- * @package DHLExpress
  */
 class docTypeRef_ShipType2
 {
@@ -24,7 +22,7 @@ class docTypeRef_ShipType2
 	 * @param docTypeRef_AddressType2 $Shipper
 	 * @param docTypeRef_AddressType2 $Recipient
 	 */
-	public function __construct($Shipper, $Recipient)
+	public function __construct(docTypeRef_AddressType2 $Shipper, docTypeRef_AddressType2 $Recipient)
 	{
 		$this->Shipper = $Shipper;
 		$this->Recipient = $Recipient;
@@ -33,16 +31,16 @@ class docTypeRef_ShipType2
 	/**
 	 * @return docTypeRef_AddressType2
 	 */
-	public function getShipper()
+	public function getShipper(): ?docTypeRef_AddressType2
 	{
 		return $this->Shipper;
 	}
 
 	/**
 	 * @param docTypeRef_AddressType2 $Shipper
-	 * @return \DHLExpress\docTypeRef_ShipType2
+	 * @return docTypeRef_ShipType2
 	 */
-	public function setShipper($Shipper)
+	public function setShipper(docTypeRef_AddressType2 $Shipper): docTypeRef_ShipType2
 	{
 		$this->Shipper = $Shipper;
 		return $this;
@@ -51,16 +49,16 @@ class docTypeRef_ShipType2
 	/**
 	 * @return docTypeRef_AddressType2
 	 */
-	public function getRecipient()
+	public function getRecipient(): ?docTypeRef_AddressType2
 	{
 		return $this->Recipient;
 	}
 
 	/**
 	 * @param docTypeRef_AddressType2 $Recipient
-	 * @return \DHLExpress\docTypeRef_ShipType2
+	 * @return docTypeRef_ShipType2
 	 */
-	public function setRecipient($Recipient)
+	public function setRecipient(docTypeRef_AddressType2 $Recipient): docTypeRef_ShipType2
 	{
 		$this->Recipient = $Recipient;
 		return $this;

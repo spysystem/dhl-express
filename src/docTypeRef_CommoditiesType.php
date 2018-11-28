@@ -1,179 +1,177 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_CommoditiesType
- *
- * @package DHLExpress
  */
 class docTypeRef_CommoditiesType
 {
 
 	/**
-	 * @var NumberOfPieces $NumberOfPieces
+	 * @var null|string $NumberOfPieces
 	 */
 	protected $NumberOfPieces;
 
 	/**
-	 * @var Description $Description
+	 * @var string $Description
 	 */
 	protected $Description;
 
 	/**
-	 * @var string $CountryOfManufacture
+	 * @var null|string $CountryOfManufacture
 	 */
 	protected $CountryOfManufacture;
 
 	/**
-	 * @var Quantity $Quantity
+	 * @var null|string $Quantity
 	 */
 	protected $Quantity;
 
 	/**
-	 * @var UnitPrice $UnitPrice
+	 * @var null|string $UnitPrice
 	 */
 	protected $UnitPrice;
 
 	/**
-	 * @var CustomsValue $CustomsValue
+	 * @var null|string $CustomsValue
 	 */
 	protected $CustomsValue;
 
 	/**
-	 * @var USFilingTypeValue $USFilingTypeValue
+	 * @var null|string $USFilingTypeValue
 	 */
 	protected $USFilingTypeValue;
 
 	/**
-	 * @param Description $Description
+	 * @param string $Description
 	 */
-	public function __construct($Description)
+	public function __construct(string $Description)
 	{
 		$this->Description = $Description;
 	}
 
 	/**
-	 * @return NumberOfPieces
+	 * @return null|string
 	 */
-	public function getNumberOfPieces()
+	public function getNumberOfPieces(): ?string
 	{
 		return $this->NumberOfPieces;
 	}
 
 	/**
-	 * @param NumberOfPieces $NumberOfPieces
-	 * @return \DHLExpress\docTypeRef_CommoditiesType
+	 * @param null|string $NumberOfPieces
+	 * @return docTypeRef_CommoditiesType
 	 */
-	public function setNumberOfPieces($NumberOfPieces)
+	public function setNumberOfPieces(?string $NumberOfPieces = null): docTypeRef_CommoditiesType
 	{
 		$this->NumberOfPieces = $NumberOfPieces;
 		return $this;
 	}
 
 	/**
-	 * @return Description
+	 * @return string
 	 */
-	public function getDescription()
+	public function getDescription(): ?string
 	{
 		return $this->Description;
 	}
 
 	/**
-	 * @param Description $Description
-	 * @return \DHLExpress\docTypeRef_CommoditiesType
+	 * @param string $Description
+	 * @return docTypeRef_CommoditiesType
 	 */
-	public function setDescription($Description)
+	public function setDescription(string $Description): docTypeRef_CommoditiesType
 	{
 		$this->Description = $Description;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getCountryOfManufacture()
+	public function getCountryOfManufacture(): ?string
 	{
 		return $this->CountryOfManufacture;
 	}
 
 	/**
-	 * @param string $CountryOfManufacture
-	 * @return \DHLExpress\docTypeRef_CommoditiesType
+	 * @param null|string $CountryOfManufacture
+	 * @return docTypeRef_CommoditiesType
 	 */
-	public function setCountryOfManufacture($CountryOfManufacture)
+	public function setCountryOfManufacture(?string $CountryOfManufacture = null): docTypeRef_CommoditiesType
 	{
 		$this->CountryOfManufacture = $CountryOfManufacture;
 		return $this;
 	}
 
 	/**
-	 * @return Quantity
+	 * @return null|string
 	 */
-	public function getQuantity()
+	public function getQuantity(): ?string
 	{
 		return $this->Quantity;
 	}
 
 	/**
-	 * @param Quantity $Quantity
-	 * @return \DHLExpress\docTypeRef_CommoditiesType
+	 * @param null|string $Quantity
+	 * @return docTypeRef_CommoditiesType
 	 */
-	public function setQuantity($Quantity)
+	public function setQuantity(?string $Quantity = null): docTypeRef_CommoditiesType
 	{
 		$this->Quantity = $Quantity;
 		return $this;
 	}
 
 	/**
-	 * @return UnitPrice
+	 * @return null|string
 	 */
-	public function getUnitPrice()
+	public function getUnitPrice(): ?string
 	{
 		return $this->UnitPrice;
 	}
 
 	/**
-	 * @param UnitPrice $UnitPrice
-	 * @return \DHLExpress\docTypeRef_CommoditiesType
+	 * @param null|string $UnitPrice
+	 * @return docTypeRef_CommoditiesType
 	 */
-	public function setUnitPrice($UnitPrice)
+	public function setUnitPrice(?string $UnitPrice = null): docTypeRef_CommoditiesType
 	{
 		$this->UnitPrice = $UnitPrice;
 		return $this;
 	}
 
 	/**
-	 * @return CustomsValue
+	 * @return null|string
 	 */
-	public function getCustomsValue()
+	public function getCustomsValue(): ?string
 	{
 		return $this->CustomsValue;
 	}
 
 	/**
-	 * @param CustomsValue $CustomsValue
-	 * @return \DHLExpress\docTypeRef_CommoditiesType
+	 * @param null|string $CustomsValue
+	 * @return docTypeRef_CommoditiesType
 	 */
-	public function setCustomsValue($CustomsValue)
+	public function setCustomsValue(?string $CustomsValue = null): docTypeRef_CommoditiesType
 	{
 		$this->CustomsValue = $CustomsValue;
 		return $this;
 	}
 
 	/**
-	 * @return USFilingTypeValue
+	 * @return null|string
 	 */
-	public function getUSFilingTypeValue()
+	public function getUSFilingTypeValue(): ?string
 	{
 		return $this->USFilingTypeValue;
 	}
 
 	/**
-	 * @param USFilingTypeValue $USFilingTypeValue
-	 * @return \DHLExpress\docTypeRef_CommoditiesType
+	 * @param null|string $USFilingTypeValue
+	 * @return docTypeRef_CommoditiesType
 	 */
-	public function setUSFilingTypeValue($USFilingTypeValue)
+	public function setUSFilingTypeValue(?string $USFilingTypeValue = null): docTypeRef_CommoditiesType
 	{
 		$this->USFilingTypeValue = $USFilingTypeValue;
 		return $this;

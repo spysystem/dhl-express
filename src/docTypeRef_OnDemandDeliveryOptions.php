@@ -1,67 +1,65 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_OnDemandDeliveryOptions
- *
- * @package DHLExpress
  */
 class docTypeRef_OnDemandDeliveryOptions
 {
 
 	/**
-	 * @var DeliveryOption $DeliveryOption
+	 * @var string|DeliveryOption $DeliveryOption
 	 */
 	protected $DeliveryOption;
 
 	/**
-	 * @var Location $Location
+	 * @var null|string $Location
 	 */
 	protected $Location;
 
 	/**
-	 * @var Instructions $Instructions
+	 * @var null|string $Instructions
 	 */
 	protected $Instructions;
 
 	/**
-	 * @var GateCode $GateCode
+	 * @var null|string $GateCode
 	 */
 	protected $GateCode;
 
 	/**
-	 * @var LWNTypeCode $LWNTypeCode
+	 * @var null|string|LWNTypeCode $LWNTypeCode
 	 */
 	protected $LWNTypeCode;
 
 	/**
-	 * @var NeighbourName $NeighbourName
+	 * @var null|string $NeighbourName
 	 */
 	protected $NeighbourName;
 
 	/**
-	 * @var NeighbourHouseNumber $NeighbourHouseNumber
+	 * @var null|string $NeighbourHouseNumber
 	 */
 	protected $NeighbourHouseNumber;
 
 	/**
-	 * @var AuthorizerName $AuthorizerName
+	 * @var null|string $AuthorizerName
 	 */
 	protected $AuthorizerName;
 
 	/**
-	 * @var SelectedServicePointID $SelectedServicePointID
+	 * @var null|string $SelectedServicePointID
 	 */
 	protected $SelectedServicePointID;
 
 	/**
-	 * @var RequestedDeliveryDate $RequestedDeliveryDate
+	 * @var null|string $RequestedDeliveryDate
 	 */
 	protected $RequestedDeliveryDate;
 
 	/**
-	 * @param DeliveryOption $DeliveryOption
+	 * @param string|DeliveryOption $DeliveryOption
 	 */
 	public function __construct($DeliveryOption)
 	{
@@ -69,7 +67,7 @@ class docTypeRef_OnDemandDeliveryOptions
 	}
 
 	/**
-	 * @return DeliveryOption
+	 * @return string|DeliveryOption
 	 */
 	public function getDeliveryOption()
 	{
@@ -77,71 +75,71 @@ class docTypeRef_OnDemandDeliveryOptions
 	}
 
 	/**
-	 * @param DeliveryOption $DeliveryOption
-	 * @return \DHLExpress\docTypeRef_OnDemandDeliveryOptions
+	 * @param string|DeliveryOption $DeliveryOption
+	 * @return docTypeRef_OnDemandDeliveryOptions
 	 */
-	public function setDeliveryOption($DeliveryOption)
+	public function setDeliveryOption($DeliveryOption): docTypeRef_OnDemandDeliveryOptions
 	{
 		$this->DeliveryOption = $DeliveryOption;
 		return $this;
 	}
 
 	/**
-	 * @return Location
+	 * @return null|string
 	 */
-	public function getLocation()
+	public function getLocation(): ?string
 	{
 		return $this->Location;
 	}
 
 	/**
-	 * @param Location $Location
-	 * @return \DHLExpress\docTypeRef_OnDemandDeliveryOptions
+	 * @param null|string $Location
+	 * @return docTypeRef_OnDemandDeliveryOptions
 	 */
-	public function setLocation($Location)
+	public function setLocation(?string $Location = null): docTypeRef_OnDemandDeliveryOptions
 	{
 		$this->Location = $Location;
 		return $this;
 	}
 
 	/**
-	 * @return Instructions
+	 * @return null|string
 	 */
-	public function getInstructions()
+	public function getInstructions(): ?string
 	{
 		return $this->Instructions;
 	}
 
 	/**
-	 * @param Instructions $Instructions
-	 * @return \DHLExpress\docTypeRef_OnDemandDeliveryOptions
+	 * @param null|string $Instructions
+	 * @return docTypeRef_OnDemandDeliveryOptions
 	 */
-	public function setInstructions($Instructions)
+	public function setInstructions(?string $Instructions = null): docTypeRef_OnDemandDeliveryOptions
 	{
 		$this->Instructions = $Instructions;
 		return $this;
 	}
 
 	/**
-	 * @return GateCode
+	 * @return null|string
 	 */
-	public function getGateCode()
+	public function getGateCode(): ?string
 	{
 		return $this->GateCode;
 	}
 
 	/**
-	 * @param GateCode $GateCode
-	 * @return \DHLExpress\docTypeRef_OnDemandDeliveryOptions
+	 * @param null|string $GateCode
+	 * @return docTypeRef_OnDemandDeliveryOptions
 	 */
-	public function setGateCode($GateCode)
+	public function setGateCode(?string $GateCode = null): docTypeRef_OnDemandDeliveryOptions
 	{
 		$this->GateCode = $GateCode;
 		return $this;
 	}
 
 	/**
-	 * @return LWNTypeCode
+	 * @return null|string|LWNTypeCode
 	 */
 	public function getLWNTypeCode()
 	{
@@ -149,100 +147,100 @@ class docTypeRef_OnDemandDeliveryOptions
 	}
 
 	/**
-	 * @param LWNTypeCode $LWNTypeCode
-	 * @return \DHLExpress\docTypeRef_OnDemandDeliveryOptions
+	 * @param null|string|LWNTypeCode $LWNTypeCode
+	 * @return docTypeRef_OnDemandDeliveryOptions
 	 */
-	public function setLWNTypeCode($LWNTypeCode)
+	public function setLWNTypeCode($LWNTypeCode): docTypeRef_OnDemandDeliveryOptions
 	{
 		$this->LWNTypeCode = $LWNTypeCode;
 		return $this;
 	}
 
 	/**
-	 * @return NeighbourName
+	 * @return null|string
 	 */
-	public function getNeighbourName()
+	public function getNeighbourName(): ?string
 	{
 		return $this->NeighbourName;
 	}
 
 	/**
-	 * @param NeighbourName $NeighbourName
-	 * @return \DHLExpress\docTypeRef_OnDemandDeliveryOptions
+	 * @param null|string $NeighbourName
+	 * @return docTypeRef_OnDemandDeliveryOptions
 	 */
-	public function setNeighbourName($NeighbourName)
+	public function setNeighbourName(?string $NeighbourName = null): docTypeRef_OnDemandDeliveryOptions
 	{
 		$this->NeighbourName = $NeighbourName;
 		return $this;
 	}
 
 	/**
-	 * @return NeighbourHouseNumber
+	 * @return null|string
 	 */
-	public function getNeighbourHouseNumber()
+	public function getNeighbourHouseNumber(): ?string
 	{
 		return $this->NeighbourHouseNumber;
 	}
 
 	/**
-	 * @param NeighbourHouseNumber $NeighbourHouseNumber
-	 * @return \DHLExpress\docTypeRef_OnDemandDeliveryOptions
+	 * @param null|string $NeighbourHouseNumber
+	 * @return docTypeRef_OnDemandDeliveryOptions
 	 */
-	public function setNeighbourHouseNumber($NeighbourHouseNumber)
+	public function setNeighbourHouseNumber(?string $NeighbourHouseNumber = null): docTypeRef_OnDemandDeliveryOptions
 	{
 		$this->NeighbourHouseNumber = $NeighbourHouseNumber;
 		return $this;
 	}
 
 	/**
-	 * @return AuthorizerName
+	 * @return null|string
 	 */
-	public function getAuthorizerName()
+	public function getAuthorizerName(): ?string
 	{
 		return $this->AuthorizerName;
 	}
 
 	/**
-	 * @param AuthorizerName $AuthorizerName
-	 * @return \DHLExpress\docTypeRef_OnDemandDeliveryOptions
+	 * @param null|string $AuthorizerName
+	 * @return docTypeRef_OnDemandDeliveryOptions
 	 */
-	public function setAuthorizerName($AuthorizerName)
+	public function setAuthorizerName(?string $AuthorizerName = null): docTypeRef_OnDemandDeliveryOptions
 	{
 		$this->AuthorizerName = $AuthorizerName;
 		return $this;
 	}
 
 	/**
-	 * @return SelectedServicePointID
+	 * @return null|string
 	 */
-	public function getSelectedServicePointID()
+	public function getSelectedServicePointID(): ?string
 	{
 		return $this->SelectedServicePointID;
 	}
 
 	/**
-	 * @param SelectedServicePointID $SelectedServicePointID
-	 * @return \DHLExpress\docTypeRef_OnDemandDeliveryOptions
+	 * @param null|string $SelectedServicePointID
+	 * @return docTypeRef_OnDemandDeliveryOptions
 	 */
-	public function setSelectedServicePointID($SelectedServicePointID)
+	public function setSelectedServicePointID(?string $SelectedServicePointID = null): docTypeRef_OnDemandDeliveryOptions
 	{
 		$this->SelectedServicePointID = $SelectedServicePointID;
 		return $this;
 	}
 
 	/**
-	 * @return RequestedDeliveryDate
+	 * @return null|string
 	 */
-	public function getRequestedDeliveryDate()
+	public function getRequestedDeliveryDate(): ?string
 	{
 		return $this->RequestedDeliveryDate;
 	}
 
 	/**
-	 * @param RequestedDeliveryDate $RequestedDeliveryDate
-	 * @return \DHLExpress\docTypeRef_OnDemandDeliveryOptions
+	 * @param null|string $RequestedDeliveryDate
+	 * @return docTypeRef_OnDemandDeliveryOptions
 	 */
-	public function setRequestedDeliveryDate($RequestedDeliveryDate)
+	public function setRequestedDeliveryDate(?string $RequestedDeliveryDate = null): docTypeRef_OnDemandDeliveryOptions
 	{
 		$this->RequestedDeliveryDate = $RequestedDeliveryDate;
 		return $this;

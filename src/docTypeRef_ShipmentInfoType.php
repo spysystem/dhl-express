@@ -1,17 +1,15 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_ShipmentInfoType
- *
- * @package DHLExpress
  */
 class docTypeRef_ShipmentInfoType
 {
 
 	/**
-	 * @var DropOffType $DropOffType
+	 * @var string|DropOffType $DropOffType
 	 */
 	protected $DropOffType;
 
@@ -21,17 +19,17 @@ class docTypeRef_ShipmentInfoType
 	protected $ServiceType;
 
 	/**
-	 * @var string $Account
+	 * @var null|string $Account
 	 */
 	protected $Account;
 
 	/**
-	 * @var Billing $Billing
+	 * @var null|Billing $Billing
 	 */
 	protected $Billing;
 
 	/**
-	 * @var Services $SpecialServices
+	 * @var null|Services $SpecialServices
 	 */
 	protected $SpecialServices;
 
@@ -41,62 +39,62 @@ class docTypeRef_ShipmentInfoType
 	protected $Currency;
 
 	/**
-	 * @var UnitOfMeasurement $UnitOfMeasurement
+	 * @var string|UnitOfMeasurement $UnitOfMeasurement
 	 */
 	protected $UnitOfMeasurement;
 
 	/**
-	 * @var ShipmentIdentificationNumber2 $ShipmentIdentificationNumber
+	 * @var null|string $ShipmentIdentificationNumber
 	 */
 	protected $ShipmentIdentificationNumber;
 
 	/**
-	 * @var UseOwnShipmentIdentificationNumber $UseOwnShipmentIdentificationNumber
+	 * @var null|string $UseOwnShipmentIdentificationNumber
 	 */
 	protected $UseOwnShipmentIdentificationNumber;
 
 	/**
-	 * @var PackagesCount $PackagesCount
+	 * @var null|string $PackagesCount
 	 */
 	protected $PackagesCount;
 
 	/**
-	 * @var SendPackage $SendPackage
+	 * @var null|string $SendPackage
 	 */
 	protected $SendPackage;
 
 	/**
-	 * @var LabelType $LabelType
+	 * @var null|string|LabelType $LabelType
 	 */
 	protected $LabelType;
 
 	/**
-	 * @var LabelTemplate $LabelTemplate
+	 * @var null|string $LabelTemplate
 	 */
 	protected $LabelTemplate;
 
 	/**
-	 * @var ArchiveLabelTemplate $ArchiveLabelTemplate
+	 * @var null|string $ArchiveLabelTemplate
 	 */
 	protected $ArchiveLabelTemplate;
 
 	/**
-	 * @var boolean $PaperlessTradeEnabled
+	 * @var null|bool $PaperlessTradeEnabled
 	 */
 	protected $PaperlessTradeEnabled;
 
 	/**
-	 * @var base64Binary $PaperlessTradeImage
+	 * @var null|string $PaperlessTradeImage
 	 */
 	protected $PaperlessTradeImage;
 
 	/**
-	 * @param DropOffType $DropOffType
+	 * @param string|DropOffType $DropOffType
 	 * @param string $ServiceType
 	 * @param string $Currency
-	 * @param UnitOfMeasurement $UnitOfMeasurement
+	 * @param string|UnitOfMeasurement $UnitOfMeasurement
 	 */
-	public function __construct($DropOffType, $ServiceType, $Currency, $UnitOfMeasurement)
+	public function __construct($DropOffType, string $ServiceType, string $Currency, $UnitOfMeasurement)
 	{
 		$this->DropOffType = $DropOffType;
 		$this->ServiceType = $ServiceType;
@@ -105,7 +103,7 @@ class docTypeRef_ShipmentInfoType
 	}
 
 	/**
-	 * @return DropOffType
+	 * @return string|DropOffType
 	 */
 	public function getDropOffType()
 	{
@@ -113,10 +111,10 @@ class docTypeRef_ShipmentInfoType
 	}
 
 	/**
-	 * @param DropOffType $DropOffType
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @param string|DropOffType $DropOffType
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setDropOffType($DropOffType)
+	public function setDropOffType($DropOffType): docTypeRef_ShipmentInfoType
 	{
 		$this->DropOffType = $DropOffType;
 		return $this;
@@ -125,70 +123,70 @@ class docTypeRef_ShipmentInfoType
 	/**
 	 * @return string
 	 */
-	public function getServiceType()
+	public function getServiceType(): ?string
 	{
 		return $this->ServiceType;
 	}
 
 	/**
 	 * @param string $ServiceType
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setServiceType($ServiceType)
+	public function setServiceType(string $ServiceType): docTypeRef_ShipmentInfoType
 	{
 		$this->ServiceType = $ServiceType;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getAccount()
+	public function getAccount(): ?string
 	{
 		return $this->Account;
 	}
 
 	/**
-	 * @param string $Account
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @param null|string $Account
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setAccount($Account)
+	public function setAccount(?string $Account = null): docTypeRef_ShipmentInfoType
 	{
 		$this->Account = $Account;
 		return $this;
 	}
 
 	/**
-	 * @return Billing
+	 * @return null|Billing
 	 */
-	public function getBilling()
+	public function getBilling(): ?Billing
 	{
 		return $this->Billing;
 	}
 
 	/**
-	 * @param Billing $Billing
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @param null|Billing $Billing
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setBilling($Billing)
+	public function setBilling(?Billing $Billing = null): docTypeRef_ShipmentInfoType
 	{
 		$this->Billing = $Billing;
 		return $this;
 	}
 
 	/**
-	 * @return Services
+	 * @return null|Services
 	 */
-	public function getSpecialServices()
+	public function getSpecialServices(): ?Services
 	{
 		return $this->SpecialServices;
 	}
 
 	/**
-	 * @param Services $SpecialServices
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @param null|Services $SpecialServices
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setSpecialServices($SpecialServices)
+	public function setSpecialServices(?Services $SpecialServices = null): docTypeRef_ShipmentInfoType
 	{
 		$this->SpecialServices = $SpecialServices;
 		return $this;
@@ -197,23 +195,23 @@ class docTypeRef_ShipmentInfoType
 	/**
 	 * @return string
 	 */
-	public function getCurrency()
+	public function getCurrency(): ?string
 	{
 		return $this->Currency;
 	}
 
 	/**
 	 * @param string $Currency
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setCurrency($Currency)
+	public function setCurrency(string $Currency): docTypeRef_ShipmentInfoType
 	{
 		$this->Currency = $Currency;
 		return $this;
 	}
 
 	/**
-	 * @return UnitOfMeasurement
+	 * @return string|UnitOfMeasurement
 	 */
 	public function getUnitOfMeasurement()
 	{
@@ -221,89 +219,89 @@ class docTypeRef_ShipmentInfoType
 	}
 
 	/**
-	 * @param UnitOfMeasurement $UnitOfMeasurement
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @param string|UnitOfMeasurement $UnitOfMeasurement
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setUnitOfMeasurement($UnitOfMeasurement)
+	public function setUnitOfMeasurement($UnitOfMeasurement): docTypeRef_ShipmentInfoType
 	{
 		$this->UnitOfMeasurement = $UnitOfMeasurement;
 		return $this;
 	}
 
 	/**
-	 * @return ShipmentIdentificationNumber2
+	 * @return null|string
 	 */
-	public function getShipmentIdentificationNumber()
+	public function getShipmentIdentificationNumber(): ?string
 	{
 		return $this->ShipmentIdentificationNumber;
 	}
 
 	/**
-	 * @param ShipmentIdentificationNumber2 $ShipmentIdentificationNumber
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @param null|string $ShipmentIdentificationNumber
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setShipmentIdentificationNumber($ShipmentIdentificationNumber)
+	public function setShipmentIdentificationNumber(?string $ShipmentIdentificationNumber = null): docTypeRef_ShipmentInfoType
 	{
 		$this->ShipmentIdentificationNumber = $ShipmentIdentificationNumber;
 		return $this;
 	}
 
 	/**
-	 * @return UseOwnShipmentIdentificationNumber
+	 * @return null|string
 	 */
-	public function getUseOwnShipmentIdentificationNumber()
+	public function getUseOwnShipmentIdentificationNumber(): ?string
 	{
 		return $this->UseOwnShipmentIdentificationNumber;
 	}
 
 	/**
-	 * @param UseOwnShipmentIdentificationNumber $UseOwnShipmentIdentificationNumber
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @param null|string $UseOwnShipmentIdentificationNumber
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setUseOwnShipmentIdentificationNumber($UseOwnShipmentIdentificationNumber)
+	public function setUseOwnShipmentIdentificationNumber(?string $UseOwnShipmentIdentificationNumber = null): docTypeRef_ShipmentInfoType
 	{
 		$this->UseOwnShipmentIdentificationNumber = $UseOwnShipmentIdentificationNumber;
 		return $this;
 	}
 
 	/**
-	 * @return PackagesCount
+	 * @return null|string
 	 */
-	public function getPackagesCount()
+	public function getPackagesCount(): ?string
 	{
 		return $this->PackagesCount;
 	}
 
 	/**
-	 * @param PackagesCount $PackagesCount
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @param null|string $PackagesCount
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setPackagesCount($PackagesCount)
+	public function setPackagesCount(?string $PackagesCount = null): docTypeRef_ShipmentInfoType
 	{
 		$this->PackagesCount = $PackagesCount;
 		return $this;
 	}
 
 	/**
-	 * @return SendPackage
+	 * @return null|string
 	 */
-	public function getSendPackage()
+	public function getSendPackage(): ?string
 	{
 		return $this->SendPackage;
 	}
 
 	/**
-	 * @param SendPackage $SendPackage
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @param null|string $SendPackage
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setSendPackage($SendPackage)
+	public function setSendPackage(?string $SendPackage = null): docTypeRef_ShipmentInfoType
 	{
 		$this->SendPackage = $SendPackage;
 		return $this;
 	}
 
 	/**
-	 * @return LabelType
+	 * @return null|string|LabelType
 	 */
 	public function getLabelType()
 	{
@@ -311,82 +309,82 @@ class docTypeRef_ShipmentInfoType
 	}
 
 	/**
-	 * @param LabelType $LabelType
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @param null|string|LabelType $LabelType
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setLabelType($LabelType)
+	public function setLabelType($LabelType): docTypeRef_ShipmentInfoType
 	{
 		$this->LabelType = $LabelType;
 		return $this;
 	}
 
 	/**
-	 * @return LabelTemplate
+	 * @return null|string
 	 */
-	public function getLabelTemplate()
+	public function getLabelTemplate(): ?string
 	{
 		return $this->LabelTemplate;
 	}
 
 	/**
-	 * @param LabelTemplate $LabelTemplate
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @param null|string $LabelTemplate
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setLabelTemplate($LabelTemplate)
+	public function setLabelTemplate(?string $LabelTemplate = null): docTypeRef_ShipmentInfoType
 	{
 		$this->LabelTemplate = $LabelTemplate;
 		return $this;
 	}
 
 	/**
-	 * @return ArchiveLabelTemplate
+	 * @return null|string
 	 */
-	public function getArchiveLabelTemplate()
+	public function getArchiveLabelTemplate(): ?string
 	{
 		return $this->ArchiveLabelTemplate;
 	}
 
 	/**
-	 * @param ArchiveLabelTemplate $ArchiveLabelTemplate
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @param null|string $ArchiveLabelTemplate
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setArchiveLabelTemplate($ArchiveLabelTemplate)
+	public function setArchiveLabelTemplate(?string $ArchiveLabelTemplate = null): docTypeRef_ShipmentInfoType
 	{
 		$this->ArchiveLabelTemplate = $ArchiveLabelTemplate;
 		return $this;
 	}
 
 	/**
-	 * @return boolean
+	 * @return null|bool
 	 */
-	public function getPaperlessTradeEnabled()
+	public function getPaperlessTradeEnabled(): ?bool
 	{
 		return $this->PaperlessTradeEnabled;
 	}
 
 	/**
-	 * @param boolean $PaperlessTradeEnabled
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @param null|bool $PaperlessTradeEnabled
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setPaperlessTradeEnabled($PaperlessTradeEnabled)
+	public function setPaperlessTradeEnabled(?bool $PaperlessTradeEnabled = null): docTypeRef_ShipmentInfoType
 	{
 		$this->PaperlessTradeEnabled = $PaperlessTradeEnabled;
 		return $this;
 	}
 
 	/**
-	 * @return base64Binary
+	 * @return null|string
 	 */
-	public function getPaperlessTradeImage()
+	public function getPaperlessTradeImage(): ?string
 	{
 		return $this->PaperlessTradeImage;
 	}
 
 	/**
-	 * @param base64Binary $PaperlessTradeImage
-	 * @return \DHLExpress\docTypeRef_ShipmentInfoType
+	 * @param null|string $PaperlessTradeImage
+	 * @return docTypeRef_ShipmentInfoType
 	 */
-	public function setPaperlessTradeImage($PaperlessTradeImage)
+	public function setPaperlessTradeImage(?string $PaperlessTradeImage = null): docTypeRef_ShipmentInfoType
 	{
 		$this->PaperlessTradeImage = $PaperlessTradeImage;
 		return $this;

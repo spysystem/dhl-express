@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_ChargesType
- *
- * @package DHLExpress
  */
 class docTypeRef_ChargesType
 {
@@ -24,7 +22,7 @@ class docTypeRef_ChargesType
 	 * @param string $Currency
 	 * @param docTypeRef_ChargeType[] $Charge
 	 */
-	public function __construct($Currency, array $Charge)
+	public function __construct(string $Currency, array $Charge)
 	{
 		$this->Currency = $Currency;
 		$this->Charge = $Charge;
@@ -33,16 +31,16 @@ class docTypeRef_ChargesType
 	/**
 	 * @return string
 	 */
-	public function getCurrency()
+	public function getCurrency(): ?string
 	{
 		return $this->Currency;
 	}
 
 	/**
 	 * @param string $Currency
-	 * @return \DHLExpress\docTypeRef_ChargesType
+	 * @return docTypeRef_ChargesType
 	 */
-	public function setCurrency($Currency)
+	public function setCurrency(string $Currency): docTypeRef_ChargesType
 	{
 		$this->Currency = $Currency;
 		return $this;
@@ -51,16 +49,16 @@ class docTypeRef_ChargesType
 	/**
 	 * @return docTypeRef_ChargeType[]
 	 */
-	public function getCharge()
+	public function getCharge(): ?array
 	{
 		return $this->Charge;
 	}
 
 	/**
 	 * @param docTypeRef_ChargeType[] $Charge
-	 * @return \DHLExpress\docTypeRef_ChargesType
+	 * @return docTypeRef_ChargesType
 	 */
-	public function setCharge(array $Charge)
+	public function setCharge(array $Charge): docTypeRef_ChargesType
 	{
 		$this->Charge = $Charge;
 		return $this;

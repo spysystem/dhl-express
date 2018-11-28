@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class Billing
- *
- * @package DHLExpress
  */
 class Billing
 {
@@ -16,20 +14,20 @@ class Billing
 	protected $ShipperAccountNumber;
 
 	/**
-	 * @var ShipmentPaymentType $ShippingPaymentType
+	 * @var string|ShipmentPaymentType $ShippingPaymentType
 	 */
 	protected $ShippingPaymentType;
 
 	/**
-	 * @var string $BillingAccountNumber
+	 * @var null|string $BillingAccountNumber
 	 */
 	protected $BillingAccountNumber;
 
 	/**
 	 * @param string $ShipperAccountNumber
-	 * @param ShipmentPaymentType $ShippingPaymentType
+	 * @param string|ShipmentPaymentType $ShippingPaymentType
 	 */
-	public function __construct($ShipperAccountNumber, $ShippingPaymentType)
+	public function __construct(string $ShipperAccountNumber, $ShippingPaymentType)
 	{
 		$this->ShipperAccountNumber = $ShipperAccountNumber;
 		$this->ShippingPaymentType = $ShippingPaymentType;
@@ -38,23 +36,23 @@ class Billing
 	/**
 	 * @return string
 	 */
-	public function getShipperAccountNumber()
+	public function getShipperAccountNumber(): ?string
 	{
 		return $this->ShipperAccountNumber;
 	}
 
 	/**
 	 * @param string $ShipperAccountNumber
-	 * @return \DHLExpress\Billing
+	 * @return Billing
 	 */
-	public function setShipperAccountNumber($ShipperAccountNumber)
+	public function setShipperAccountNumber(string $ShipperAccountNumber): Billing
 	{
 		$this->ShipperAccountNumber = $ShipperAccountNumber;
 		return $this;
 	}
 
 	/**
-	 * @return ShipmentPaymentType
+	 * @return string|ShipmentPaymentType
 	 */
 	public function getShippingPaymentType()
 	{
@@ -62,28 +60,28 @@ class Billing
 	}
 
 	/**
-	 * @param ShipmentPaymentType $ShippingPaymentType
-	 * @return \DHLExpress\Billing
+	 * @param string|ShipmentPaymentType $ShippingPaymentType
+	 * @return Billing
 	 */
-	public function setShippingPaymentType($ShippingPaymentType)
+	public function setShippingPaymentType($ShippingPaymentType): Billing
 	{
 		$this->ShippingPaymentType = $ShippingPaymentType;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getBillingAccountNumber()
+	public function getBillingAccountNumber(): ?string
 	{
 		return $this->BillingAccountNumber;
 	}
 
 	/**
-	 * @param string $BillingAccountNumber
-	 * @return \DHLExpress\Billing
+	 * @param null|string $BillingAccountNumber
+	 * @return Billing
 	 */
-	public function setBillingAccountNumber($BillingAccountNumber)
+	public function setBillingAccountNumber(?string $BillingAccountNumber = null): Billing
 	{
 		$this->BillingAccountNumber = $BillingAccountNumber;
 		return $this;

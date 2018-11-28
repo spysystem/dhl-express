@@ -1,14 +1,17 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_ProviderType
- *
- * @package DHLExpress
  */
 class docTypeRef_ProviderType
 {
+
+	/**
+	 * @var null|ServiceHeaderType $ServiceHeader
+	 */
+	protected $ServiceHeader;
 
 	/**
 	 * @var docTypeRef_NotificationType3 $Notification
@@ -16,74 +19,92 @@ class docTypeRef_ProviderType
 	protected $Notification;
 
 	/**
-	 * @var docTypeRef_ServiceType[] $Service
+	 * @var null|docTypeRef_ServiceType[] $Service
 	 */
 	protected $Service;
 
 	/**
-	 * @var int $code
+	 * @var string $code
 	 */
 	protected $code;
 
 	/**
 	 * @param docTypeRef_NotificationType3 $Notification
-	 * @param int $code
+	 * @param string $code
 	 */
-	public function __construct($Notification, $code)
+	public function __construct(docTypeRef_NotificationType3 $Notification, string $code)
 	{
 		$this->Notification = $Notification;
 		$this->code = $code;
 	}
 
 	/**
+	 * @return null|ServiceHeaderType
+	 */
+	public function getServiceHeader(): ?ServiceHeaderType
+	{
+		return $this->ServiceHeader;
+	}
+
+	/**
+	 * @param null|ServiceHeaderType $ServiceHeader
+	 * @return docTypeRef_ProviderType
+	 */
+	public function setServiceHeader(?ServiceHeaderType $ServiceHeader = null): docTypeRef_ProviderType
+	{
+		$this->ServiceHeader = $ServiceHeader;
+		return $this;
+	}
+
+	/**
 	 * @return docTypeRef_NotificationType3
 	 */
-	public function getNotification()
+	public function getNotification(): ?docTypeRef_NotificationType3
 	{
 		return $this->Notification;
 	}
 
 	/**
 	 * @param docTypeRef_NotificationType3 $Notification
-	 * @return \DHLExpress\docTypeRef_ProviderType
+	 * @return docTypeRef_ProviderType
 	 */
-	public function setNotification($Notification)
+	public function setNotification(docTypeRef_NotificationType3 $Notification): docTypeRef_ProviderType
 	{
 		$this->Notification = $Notification;
 		return $this;
 	}
 
 	/**
-	 * @return docTypeRef_ServiceType[]
+	 * @return null|docTypeRef_ServiceType[]
 	 */
-	public function getService()
+	public function getService(): ?array
 	{
 		return $this->Service;
 	}
 
 	/**
-	 * @param docTypeRef_ServiceType[] $Service
-	 * @return \DHLExpress\docTypeRef_ProviderType
+	 * @param null|docTypeRef_ServiceType[] $Service
+	 * @return docTypeRef_ProviderType
 	 */
-	public function setService(array $Service = null)
+	public function setService(?array $Service = null): docTypeRef_ProviderType
 	{
 		$this->Service = $Service;
 		return $this;
 	}
 
 	/**
-	 * @return int
+	 * @return string
 	 */
-	public function getCode()
+	public function getCode(): ?string
 	{
 		return $this->code;
 	}
 
 	/**
-	 * @param int $code
-	 * @return \DHLExpress\docTypeRef_ProviderType
+	 * @param string $code
+	 * @return docTypeRef_ProviderType
 	 */
-	public function setCode($code)
+	public function setCode(string $code): docTypeRef_ProviderType
 	{
 		$this->code = $code;
 		return $this;

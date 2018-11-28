@@ -1,17 +1,15 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_PackageResultType
- *
- * @package DHLExpress
  */
 class docTypeRef_PackageResultType
 {
 
 	/**
-	 * @var TrackingNumber $TrackingNumber
+	 * @var string $TrackingNumber
 	 */
 	protected $TrackingNumber;
 
@@ -21,28 +19,28 @@ class docTypeRef_PackageResultType
 	protected $number;
 
 	/**
-	 * @param TrackingNumber $TrackingNumber
+	 * @param string $TrackingNumber
 	 * @param int $number
 	 */
-	public function __construct($TrackingNumber, $number)
+	public function __construct(string $TrackingNumber, int $number)
 	{
 		$this->TrackingNumber = $TrackingNumber;
 		$this->number = $number;
 	}
 
 	/**
-	 * @return TrackingNumber
+	 * @return string
 	 */
-	public function getTrackingNumber()
+	public function getTrackingNumber(): ?string
 	{
 		return $this->TrackingNumber;
 	}
 
 	/**
-	 * @param TrackingNumber $TrackingNumber
-	 * @return \DHLExpress\docTypeRef_PackageResultType
+	 * @param string $TrackingNumber
+	 * @return docTypeRef_PackageResultType
 	 */
-	public function setTrackingNumber($TrackingNumber)
+	public function setTrackingNumber(string $TrackingNumber): docTypeRef_PackageResultType
 	{
 		$this->TrackingNumber = $TrackingNumber;
 		return $this;
@@ -51,16 +49,16 @@ class docTypeRef_PackageResultType
 	/**
 	 * @return int
 	 */
-	public function getNumber()
+	public function getNumber(): ?int
 	{
 		return $this->number;
 	}
 
 	/**
 	 * @param int $number
-	 * @return \DHLExpress\docTypeRef_PackageResultType
+	 * @return docTypeRef_PackageResultType
 	 */
-	public function setNumber($number)
+	public function setNumber(int $number): docTypeRef_PackageResultType
 	{
 		$this->number = $number;
 		return $this;

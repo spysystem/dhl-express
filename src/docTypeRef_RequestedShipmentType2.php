@@ -1,22 +1,20 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_RequestedShipmentType2
- *
- * @package DHLExpress
  */
 class docTypeRef_RequestedShipmentType2
 {
 
 	/**
-	 * @var DropOffType2 $DropOffType
+	 * @var string|DropOffType2 $DropOffType
 	 */
 	protected $DropOffType;
 
 	/**
-	 * @var NextBusinessDay2 $NextBusinessDay
+	 * @var null|string|NextBusinessDay2 $NextBusinessDay
 	 */
 	protected $NextBusinessDay;
 
@@ -31,63 +29,78 @@ class docTypeRef_RequestedShipmentType2
 	protected $Packages;
 
 	/**
-	 * @var ShipTimestamp2 $ShipTimestamp
+	 * @var string $ShipTimestamp
 	 */
 	protected $ShipTimestamp;
 
 	/**
-	 * @var UnitOfMeasurement2 $UnitOfMeasurement
+	 * @var string|UnitOfMeasurement2 $UnitOfMeasurement
 	 */
 	protected $UnitOfMeasurement;
 
 	/**
-	 * @var Content2 $Content
+	 * @var null|string|Content2 $Content
 	 */
 	protected $Content;
 
 	/**
-	 * @var DeclaredValue $DeclaredValue
+	 * @var null|string $DeclaredValue
 	 */
 	protected $DeclaredValue;
 
 	/**
-	 * @var DeclaredValueCurrencyCode $DeclaredValueCurrencyCode
+	 * @var null|string $DeclaredValueCurrencyCode
 	 */
 	protected $DeclaredValueCurrencyCode;
 
 	/**
-	 * @var PaymentInfo2 $PaymentInfo
+	 * @var null|string|PaymentInfo2 $PaymentInfo
 	 */
 	protected $PaymentInfo;
 
 	/**
-	 * @var string $Account
+	 * @var null|string $Account
 	 */
 	protected $Account;
 
 	/**
-	 * @var Billing2 $Billing
+	 * @var null|Billing2 $Billing
 	 */
 	protected $Billing;
 
 	/**
-	 * @var Services2 $SpecialServices
+	 * @var null|Services2 $SpecialServices
 	 */
 	protected $SpecialServices;
 
 	/**
-	 * @var RequestValueAddedServices $RequestValueAddedServices
+	 * @var null|string $RequestValueAddedServices
 	 */
 	protected $RequestValueAddedServices;
 
 	/**
-	 * @param DropOffType2 $DropOffType
+	 * @var null|string $ServiceType
+	 */
+	protected $ServiceType;
+
+	/**
+	 * @var null|string $LocalServiceType
+	 */
+	protected $LocalServiceType;
+
+	/**
+	 * @var null|LandedCostType $LandedCost
+	 */
+	protected $LandedCost;
+
+	/**
+	 * @param string|DropOffType2 $DropOffType
 	 * @param docTypeRef_ShipType2 $Ship
 	 * @param docTypeRef_PackagesType2 $Packages
-	 * @param ShipTimestamp2 $ShipTimestamp
-	 * @param UnitOfMeasurement2 $UnitOfMeasurement
+	 * @param string $ShipTimestamp
+	 * @param string|UnitOfMeasurement2 $UnitOfMeasurement
 	 */
-	public function __construct($DropOffType, $Ship, $Packages, $ShipTimestamp, $UnitOfMeasurement)
+	public function __construct($DropOffType, docTypeRef_ShipType2 $Ship, docTypeRef_PackagesType2 $Packages, string $ShipTimestamp, $UnitOfMeasurement)
 	{
 		$this->DropOffType = $DropOffType;
 		$this->Ship = $Ship;
@@ -97,7 +110,7 @@ class docTypeRef_RequestedShipmentType2
 	}
 
 	/**
-	 * @return DropOffType2
+	 * @return string|DropOffType2
 	 */
 	public function getDropOffType()
 	{
@@ -105,17 +118,17 @@ class docTypeRef_RequestedShipmentType2
 	}
 
 	/**
-	 * @param DropOffType2 $DropOffType
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType2
+	 * @param string|DropOffType2 $DropOffType
+	 * @return docTypeRef_RequestedShipmentType2
 	 */
-	public function setDropOffType($DropOffType)
+	public function setDropOffType($DropOffType): docTypeRef_RequestedShipmentType2
 	{
 		$this->DropOffType = $DropOffType;
 		return $this;
 	}
 
 	/**
-	 * @return NextBusinessDay2
+	 * @return null|string|NextBusinessDay2
 	 */
 	public function getNextBusinessDay()
 	{
@@ -123,10 +136,10 @@ class docTypeRef_RequestedShipmentType2
 	}
 
 	/**
-	 * @param NextBusinessDay2 $NextBusinessDay
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType2
+	 * @param null|string|NextBusinessDay2 $NextBusinessDay
+	 * @return docTypeRef_RequestedShipmentType2
 	 */
-	public function setNextBusinessDay($NextBusinessDay)
+	public function setNextBusinessDay($NextBusinessDay): docTypeRef_RequestedShipmentType2
 	{
 		$this->NextBusinessDay = $NextBusinessDay;
 		return $this;
@@ -135,16 +148,16 @@ class docTypeRef_RequestedShipmentType2
 	/**
 	 * @return docTypeRef_ShipType2
 	 */
-	public function getShip()
+	public function getShip(): ?docTypeRef_ShipType2
 	{
 		return $this->Ship;
 	}
 
 	/**
 	 * @param docTypeRef_ShipType2 $Ship
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType2
+	 * @return docTypeRef_RequestedShipmentType2
 	 */
-	public function setShip($Ship)
+	public function setShip(docTypeRef_ShipType2 $Ship): docTypeRef_RequestedShipmentType2
 	{
 		$this->Ship = $Ship;
 		return $this;
@@ -153,41 +166,41 @@ class docTypeRef_RequestedShipmentType2
 	/**
 	 * @return docTypeRef_PackagesType2
 	 */
-	public function getPackages()
+	public function getPackages(): ?docTypeRef_PackagesType2
 	{
 		return $this->Packages;
 	}
 
 	/**
 	 * @param docTypeRef_PackagesType2 $Packages
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType2
+	 * @return docTypeRef_RequestedShipmentType2
 	 */
-	public function setPackages($Packages)
+	public function setPackages(docTypeRef_PackagesType2 $Packages): docTypeRef_RequestedShipmentType2
 	{
 		$this->Packages = $Packages;
 		return $this;
 	}
 
 	/**
-	 * @return ShipTimestamp2
+	 * @return string
 	 */
-	public function getShipTimestamp()
+	public function getShipTimestamp(): ?string
 	{
 		return $this->ShipTimestamp;
 	}
 
 	/**
-	 * @param ShipTimestamp2 $ShipTimestamp
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType2
+	 * @param string $ShipTimestamp
+	 * @return docTypeRef_RequestedShipmentType2
 	 */
-	public function setShipTimestamp($ShipTimestamp)
+	public function setShipTimestamp(string $ShipTimestamp): docTypeRef_RequestedShipmentType2
 	{
 		$this->ShipTimestamp = $ShipTimestamp;
 		return $this;
 	}
 
 	/**
-	 * @return UnitOfMeasurement2
+	 * @return string|UnitOfMeasurement2
 	 */
 	public function getUnitOfMeasurement()
 	{
@@ -195,17 +208,17 @@ class docTypeRef_RequestedShipmentType2
 	}
 
 	/**
-	 * @param UnitOfMeasurement2 $UnitOfMeasurement
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType2
+	 * @param string|UnitOfMeasurement2 $UnitOfMeasurement
+	 * @return docTypeRef_RequestedShipmentType2
 	 */
-	public function setUnitOfMeasurement($UnitOfMeasurement)
+	public function setUnitOfMeasurement($UnitOfMeasurement): docTypeRef_RequestedShipmentType2
 	{
 		$this->UnitOfMeasurement = $UnitOfMeasurement;
 		return $this;
 	}
 
 	/**
-	 * @return Content2
+	 * @return null|string|Content2
 	 */
 	public function getContent()
 	{
@@ -213,53 +226,53 @@ class docTypeRef_RequestedShipmentType2
 	}
 
 	/**
-	 * @param Content2 $Content
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType2
+	 * @param null|string|Content2 $Content
+	 * @return docTypeRef_RequestedShipmentType2
 	 */
-	public function setContent($Content)
+	public function setContent($Content): docTypeRef_RequestedShipmentType2
 	{
 		$this->Content = $Content;
 		return $this;
 	}
 
 	/**
-	 * @return DeclaredValue
+	 * @return null|string
 	 */
-	public function getDeclaredValue()
+	public function getDeclaredValue(): ?string
 	{
 		return $this->DeclaredValue;
 	}
 
 	/**
-	 * @param DeclaredValue $DeclaredValue
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType2
+	 * @param null|string $DeclaredValue
+	 * @return docTypeRef_RequestedShipmentType2
 	 */
-	public function setDeclaredValue($DeclaredValue)
+	public function setDeclaredValue(?string $DeclaredValue = null): docTypeRef_RequestedShipmentType2
 	{
 		$this->DeclaredValue = $DeclaredValue;
 		return $this;
 	}
 
 	/**
-	 * @return DeclaredValueCurrencyCode
+	 * @return null|string
 	 */
-	public function getDeclaredValueCurrencyCode()
+	public function getDeclaredValueCurrencyCode(): ?string
 	{
 		return $this->DeclaredValueCurrencyCode;
 	}
 
 	/**
-	 * @param DeclaredValueCurrencyCode $DeclaredValueCurrencyCode
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType2
+	 * @param null|string $DeclaredValueCurrencyCode
+	 * @return docTypeRef_RequestedShipmentType2
 	 */
-	public function setDeclaredValueCurrencyCode($DeclaredValueCurrencyCode)
+	public function setDeclaredValueCurrencyCode(?string $DeclaredValueCurrencyCode = null): docTypeRef_RequestedShipmentType2
 	{
 		$this->DeclaredValueCurrencyCode = $DeclaredValueCurrencyCode;
 		return $this;
 	}
 
 	/**
-	 * @return PaymentInfo2
+	 * @return null|string|PaymentInfo2
 	 */
 	public function getPaymentInfo()
 	{
@@ -267,84 +280,138 @@ class docTypeRef_RequestedShipmentType2
 	}
 
 	/**
-	 * @param PaymentInfo2 $PaymentInfo
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType2
+	 * @param null|string|PaymentInfo2 $PaymentInfo
+	 * @return docTypeRef_RequestedShipmentType2
 	 */
-	public function setPaymentInfo($PaymentInfo)
+	public function setPaymentInfo($PaymentInfo): docTypeRef_RequestedShipmentType2
 	{
 		$this->PaymentInfo = $PaymentInfo;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getAccount()
+	public function getAccount(): ?string
 	{
 		return $this->Account;
 	}
 
 	/**
-	 * @param string $Account
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType2
+	 * @param null|string $Account
+	 * @return docTypeRef_RequestedShipmentType2
 	 */
-	public function setAccount($Account)
+	public function setAccount(?string $Account = null): docTypeRef_RequestedShipmentType2
 	{
 		$this->Account = $Account;
 		return $this;
 	}
 
 	/**
-	 * @return Billing2
+	 * @return null|Billing2
 	 */
-	public function getBilling()
+	public function getBilling(): ?Billing2
 	{
 		return $this->Billing;
 	}
 
 	/**
-	 * @param Billing2 $Billing
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType2
+	 * @param null|Billing2 $Billing
+	 * @return docTypeRef_RequestedShipmentType2
 	 */
-	public function setBilling($Billing)
+	public function setBilling(?Billing2 $Billing = null): docTypeRef_RequestedShipmentType2
 	{
 		$this->Billing = $Billing;
 		return $this;
 	}
 
 	/**
-	 * @return Services2
+	 * @return null|Services2
 	 */
-	public function getSpecialServices()
+	public function getSpecialServices(): ?Services2
 	{
 		return $this->SpecialServices;
 	}
 
 	/**
-	 * @param Services2 $SpecialServices
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType2
+	 * @param null|Services2 $SpecialServices
+	 * @return docTypeRef_RequestedShipmentType2
 	 */
-	public function setSpecialServices($SpecialServices)
+	public function setSpecialServices(?Services2 $SpecialServices = null): docTypeRef_RequestedShipmentType2
 	{
 		$this->SpecialServices = $SpecialServices;
 		return $this;
 	}
 
 	/**
-	 * @return RequestValueAddedServices
+	 * @return null|string
 	 */
-	public function getRequestValueAddedServices()
+	public function getRequestValueAddedServices(): ?string
 	{
 		return $this->RequestValueAddedServices;
 	}
 
 	/**
-	 * @param RequestValueAddedServices $RequestValueAddedServices
-	 * @return \DHLExpress\docTypeRef_RequestedShipmentType2
+	 * @param null|string $RequestValueAddedServices
+	 * @return docTypeRef_RequestedShipmentType2
 	 */
-	public function setRequestValueAddedServices($RequestValueAddedServices)
+	public function setRequestValueAddedServices(?string $RequestValueAddedServices = null): docTypeRef_RequestedShipmentType2
 	{
 		$this->RequestValueAddedServices = $RequestValueAddedServices;
+		return $this;
+	}
+
+	/**
+	 * @return null|string
+	 */
+	public function getServiceType(): ?string
+	{
+		return $this->ServiceType;
+	}
+
+	/**
+	 * @param null|string $ServiceType
+	 * @return docTypeRef_RequestedShipmentType2
+	 */
+	public function setServiceType(?string $ServiceType = null): docTypeRef_RequestedShipmentType2
+	{
+		$this->ServiceType = $ServiceType;
+		return $this;
+	}
+
+	/**
+	 * @return null|string
+	 */
+	public function getLocalServiceType(): ?string
+	{
+		return $this->LocalServiceType;
+	}
+
+	/**
+	 * @param null|string $LocalServiceType
+	 * @return docTypeRef_RequestedShipmentType2
+	 */
+	public function setLocalServiceType(?string $LocalServiceType = null): docTypeRef_RequestedShipmentType2
+	{
+		$this->LocalServiceType = $LocalServiceType;
+		return $this;
+	}
+
+	/**
+	 * @return null|LandedCostType
+	 */
+	public function getLandedCost(): ?LandedCostType
+	{
+		return $this->LandedCost;
+	}
+
+	/**
+	 * @param null|LandedCostType $LandedCost
+	 * @return docTypeRef_RequestedShipmentType2
+	 */
+	public function setLandedCost(?LandedCostType $LandedCost = null): docTypeRef_RequestedShipmentType2
+	{
+		$this->LandedCost = $LandedCost;
 		return $this;
 	}
 

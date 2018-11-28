@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_TotalNetType
- *
- * @package DHLExpress
  */
 class docTypeRef_TotalNetType
 {
@@ -24,7 +22,7 @@ class docTypeRef_TotalNetType
 	 * @param string $Currency
 	 * @param string $Amount
 	 */
-	public function __construct($Currency, $Amount)
+	public function __construct(string $Currency, string $Amount)
 	{
 		$this->Currency = $Currency;
 		$this->Amount = $Amount;
@@ -33,16 +31,16 @@ class docTypeRef_TotalNetType
 	/**
 	 * @return string
 	 */
-	public function getCurrency()
+	public function getCurrency(): ?string
 	{
 		return $this->Currency;
 	}
 
 	/**
 	 * @param string $Currency
-	 * @return \DHLExpress\docTypeRef_TotalNetType
+	 * @return docTypeRef_TotalNetType
 	 */
-	public function setCurrency($Currency)
+	public function setCurrency(string $Currency): docTypeRef_TotalNetType
 	{
 		$this->Currency = $Currency;
 		return $this;
@@ -51,16 +49,16 @@ class docTypeRef_TotalNetType
 	/**
 	 * @return string
 	 */
-	public function getAmount()
+	public function getAmount(): ?string
 	{
 		return $this->Amount;
 	}
 
 	/**
 	 * @param string $Amount
-	 * @return \DHLExpress\docTypeRef_TotalNetType
+	 * @return docTypeRef_TotalNetType
 	 */
-	public function setAmount($Amount)
+	public function setAmount(string $Amount): docTypeRef_TotalNetType
 	{
 		$this->Amount = $Amount;
 		return $this;

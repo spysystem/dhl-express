@@ -1,46 +1,44 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_ContactType
- *
- * @package DHLExpress
  */
 class docTypeRef_ContactType
 {
 
 	/**
-	 * @var PersonName $PersonName
+	 * @var string $PersonName
 	 */
 	protected $PersonName;
 
 	/**
-	 * @var CompanyName $CompanyName
+	 * @var string $CompanyName
 	 */
 	protected $CompanyName;
 
 	/**
-	 * @var PhoneNumber $PhoneNumber
+	 * @var string $PhoneNumber
 	 */
 	protected $PhoneNumber;
 
 	/**
-	 * @var EmailAddress $EmailAddress
+	 * @var null|string $EmailAddress
 	 */
 	protected $EmailAddress;
 
 	/**
-	 * @var MobilePhoneNumber $MobilePhoneNumber
+	 * @var null|string $MobilePhoneNumber
 	 */
 	protected $MobilePhoneNumber;
 
 	/**
-	 * @param PersonName $PersonName
-	 * @param CompanyName $CompanyName
-	 * @param PhoneNumber $PhoneNumber
+	 * @param string $PersonName
+	 * @param string $CompanyName
+	 * @param string $PhoneNumber
 	 */
-	public function __construct($PersonName, $CompanyName, $PhoneNumber)
+	public function __construct(string $PersonName, string $CompanyName, string $PhoneNumber)
 	{
 		$this->PersonName = $PersonName;
 		$this->CompanyName = $CompanyName;
@@ -48,90 +46,90 @@ class docTypeRef_ContactType
 	}
 
 	/**
-	 * @return PersonName
+	 * @return string
 	 */
-	public function getPersonName()
+	public function getPersonName(): ?string
 	{
 		return $this->PersonName;
 	}
 
 	/**
-	 * @param PersonName $PersonName
-	 * @return \DHLExpress\docTypeRef_ContactType
+	 * @param string $PersonName
+	 * @return docTypeRef_ContactType
 	 */
-	public function setPersonName($PersonName)
+	public function setPersonName(string $PersonName): docTypeRef_ContactType
 	{
 		$this->PersonName = $PersonName;
 		return $this;
 	}
 
 	/**
-	 * @return CompanyName
+	 * @return string
 	 */
-	public function getCompanyName()
+	public function getCompanyName(): ?string
 	{
 		return $this->CompanyName;
 	}
 
 	/**
-	 * @param CompanyName $CompanyName
-	 * @return \DHLExpress\docTypeRef_ContactType
+	 * @param string $CompanyName
+	 * @return docTypeRef_ContactType
 	 */
-	public function setCompanyName($CompanyName)
+	public function setCompanyName(string $CompanyName): docTypeRef_ContactType
 	{
 		$this->CompanyName = $CompanyName;
 		return $this;
 	}
 
 	/**
-	 * @return PhoneNumber
+	 * @return string
 	 */
-	public function getPhoneNumber()
+	public function getPhoneNumber(): ?string
 	{
 		return $this->PhoneNumber;
 	}
 
 	/**
-	 * @param PhoneNumber $PhoneNumber
-	 * @return \DHLExpress\docTypeRef_ContactType
+	 * @param string $PhoneNumber
+	 * @return docTypeRef_ContactType
 	 */
-	public function setPhoneNumber($PhoneNumber)
+	public function setPhoneNumber(string $PhoneNumber): docTypeRef_ContactType
 	{
 		$this->PhoneNumber = $PhoneNumber;
 		return $this;
 	}
 
 	/**
-	 * @return EmailAddress
+	 * @return null|string
 	 */
-	public function getEmailAddress()
+	public function getEmailAddress(): ?string
 	{
 		return $this->EmailAddress;
 	}
 
 	/**
-	 * @param EmailAddress $EmailAddress
-	 * @return \DHLExpress\docTypeRef_ContactType
+	 * @param null|string $EmailAddress
+	 * @return docTypeRef_ContactType
 	 */
-	public function setEmailAddress($EmailAddress)
+	public function setEmailAddress(?string $EmailAddress = null): docTypeRef_ContactType
 	{
 		$this->EmailAddress = $EmailAddress;
 		return $this;
 	}
 
 	/**
-	 * @return MobilePhoneNumber
+	 * @return null|string
 	 */
-	public function getMobilePhoneNumber()
+	public function getMobilePhoneNumber(): ?string
 	{
 		return $this->MobilePhoneNumber;
 	}
 
 	/**
-	 * @param MobilePhoneNumber $MobilePhoneNumber
-	 * @return \DHLExpress\docTypeRef_ContactType
+	 * @param null|string $MobilePhoneNumber
+	 * @return docTypeRef_ContactType
 	 */
-	public function setMobilePhoneNumber($MobilePhoneNumber)
+	public function setMobilePhoneNumber(?string $MobilePhoneNumber = null): docTypeRef_ContactType
 	{
 		$this->MobilePhoneNumber = $MobilePhoneNumber;
 		return $this;

@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_ShipmentDetailType
- *
- * @package DHLExpress
  */
 class docTypeRef_ShipmentDetailType
 {
@@ -16,22 +14,22 @@ class docTypeRef_ShipmentDetailType
 	protected $Notification;
 
 	/**
-	 * @var docTypeRef_PackagesResultsType $PackagesResult
+	 * @var null|docTypeRef_PackagesResultsType $PackagesResult
 	 */
 	protected $PackagesResult;
 
 	/**
-	 * @var docTypeRef_LabelImageType[] $LabelImage
+	 * @var null|docTypeRef_LabelImageType[] $LabelImage
 	 */
 	protected $LabelImage;
 
 	/**
-	 * @var ShipmentIdentificationNumber3 $ShipmentIdentificationNumber
+	 * @var null|string $ShipmentIdentificationNumber
 	 */
 	protected $ShipmentIdentificationNumber;
 
 	/**
-	 * @var string $DispatchConfirmationNumber
+	 * @var null|string $DispatchConfirmationNumber
 	 */
 	protected $DispatchConfirmationNumber;
 
@@ -46,88 +44,88 @@ class docTypeRef_ShipmentDetailType
 	/**
 	 * @return docTypeRef_NotificationType2[]
 	 */
-	public function getNotification()
+	public function getNotification(): ?array
 	{
 		return $this->Notification;
 	}
 
 	/**
 	 * @param docTypeRef_NotificationType2[] $Notification
-	 * @return \DHLExpress\docTypeRef_ShipmentDetailType
+	 * @return docTypeRef_ShipmentDetailType
 	 */
-	public function setNotification(array $Notification)
+	public function setNotification(array $Notification): docTypeRef_ShipmentDetailType
 	{
 		$this->Notification = $Notification;
 		return $this;
 	}
 
 	/**
-	 * @return docTypeRef_PackagesResultsType
+	 * @return null|docTypeRef_PackagesResultsType
 	 */
-	public function getPackagesResult()
+	public function getPackagesResult(): ?docTypeRef_PackagesResultsType
 	{
 		return $this->PackagesResult;
 	}
 
 	/**
-	 * @param docTypeRef_PackagesResultsType $PackagesResult
-	 * @return \DHLExpress\docTypeRef_ShipmentDetailType
+	 * @param null|docTypeRef_PackagesResultsType $PackagesResult
+	 * @return docTypeRef_ShipmentDetailType
 	 */
-	public function setPackagesResult($PackagesResult)
+	public function setPackagesResult(?docTypeRef_PackagesResultsType $PackagesResult = null): docTypeRef_ShipmentDetailType
 	{
 		$this->PackagesResult = $PackagesResult;
 		return $this;
 	}
 
 	/**
-	 * @return docTypeRef_LabelImageType[]
+	 * @return null|docTypeRef_LabelImageType[]
 	 */
-	public function getLabelImage()
+	public function getLabelImage(): ?array
 	{
 		return $this->LabelImage;
 	}
 
 	/**
-	 * @param docTypeRef_LabelImageType[] $LabelImage
-	 * @return \DHLExpress\docTypeRef_ShipmentDetailType
+	 * @param null|docTypeRef_LabelImageType[] $LabelImage
+	 * @return docTypeRef_ShipmentDetailType
 	 */
-	public function setLabelImage(array $LabelImage = null)
+	public function setLabelImage(?array $LabelImage = null): docTypeRef_ShipmentDetailType
 	{
 		$this->LabelImage = $LabelImage;
 		return $this;
 	}
 
 	/**
-	 * @return ShipmentIdentificationNumber3
+	 * @return null|string
 	 */
-	public function getShipmentIdentificationNumber()
+	public function getShipmentIdentificationNumber(): ?string
 	{
 		return $this->ShipmentIdentificationNumber;
 	}
 
 	/**
-	 * @param ShipmentIdentificationNumber3 $ShipmentIdentificationNumber
-	 * @return \DHLExpress\docTypeRef_ShipmentDetailType
+	 * @param null|string $ShipmentIdentificationNumber
+	 * @return docTypeRef_ShipmentDetailType
 	 */
-	public function setShipmentIdentificationNumber($ShipmentIdentificationNumber)
+	public function setShipmentIdentificationNumber(?string $ShipmentIdentificationNumber = null): docTypeRef_ShipmentDetailType
 	{
 		$this->ShipmentIdentificationNumber = $ShipmentIdentificationNumber;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getDispatchConfirmationNumber()
+	public function getDispatchConfirmationNumber(): ?string
 	{
 		return $this->DispatchConfirmationNumber;
 	}
 
 	/**
-	 * @param string $DispatchConfirmationNumber
-	 * @return \DHLExpress\docTypeRef_ShipmentDetailType
+	 * @param null|string $DispatchConfirmationNumber
+	 * @return docTypeRef_ShipmentDetailType
 	 */
-	public function setDispatchConfirmationNumber($DispatchConfirmationNumber)
+	public function setDispatchConfirmationNumber(?string $DispatchConfirmationNumber = null): docTypeRef_ShipmentDetailType
 	{
 		$this->DispatchConfirmationNumber = $DispatchConfirmationNumber;
 		return $this;

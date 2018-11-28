@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_InternationDetailType
- *
- * @package DHLExpress
  */
 class docTypeRef_InternationDetailType
 {
@@ -16,19 +14,19 @@ class docTypeRef_InternationDetailType
 	protected $Commodities;
 
 	/**
-	 * @var Content $Content
+	 * @var null|string|Content $Content
 	 */
 	protected $Content;
 
 	/**
-	 * @var ExportReference $ExportReference
+	 * @var null|string $ExportReference
 	 */
 	protected $ExportReference;
 
 	/**
 	 * @param docTypeRef_CommoditiesType $Commodities
 	 */
-	public function __construct($Commodities)
+	public function __construct(docTypeRef_CommoditiesType $Commodities)
 	{
 		$this->Commodities = $Commodities;
 	}
@@ -36,23 +34,23 @@ class docTypeRef_InternationDetailType
 	/**
 	 * @return docTypeRef_CommoditiesType
 	 */
-	public function getCommodities()
+	public function getCommodities(): ?docTypeRef_CommoditiesType
 	{
 		return $this->Commodities;
 	}
 
 	/**
 	 * @param docTypeRef_CommoditiesType $Commodities
-	 * @return \DHLExpress\docTypeRef_InternationDetailType
+	 * @return docTypeRef_InternationDetailType
 	 */
-	public function setCommodities($Commodities)
+	public function setCommodities(docTypeRef_CommoditiesType $Commodities): docTypeRef_InternationDetailType
 	{
 		$this->Commodities = $Commodities;
 		return $this;
 	}
 
 	/**
-	 * @return Content
+	 * @return null|string|Content
 	 */
 	public function getContent()
 	{
@@ -60,28 +58,28 @@ class docTypeRef_InternationDetailType
 	}
 
 	/**
-	 * @param Content $Content
-	 * @return \DHLExpress\docTypeRef_InternationDetailType
+	 * @param null|string|Content $Content
+	 * @return docTypeRef_InternationDetailType
 	 */
-	public function setContent($Content)
+	public function setContent($Content): docTypeRef_InternationDetailType
 	{
 		$this->Content = $Content;
 		return $this;
 	}
 
 	/**
-	 * @return ExportReference
+	 * @return null|string
 	 */
-	public function getExportReference()
+	public function getExportReference(): ?string
 	{
 		return $this->ExportReference;
 	}
 
 	/**
-	 * @param ExportReference $ExportReference
-	 * @return \DHLExpress\docTypeRef_InternationDetailType
+	 * @param null|string $ExportReference
+	 * @return docTypeRef_InternationDetailType
 	 */
-	public function setExportReference($ExportReference)
+	public function setExportReference(?string $ExportReference = null): docTypeRef_InternationDetailType
 	{
 		$this->ExportReference = $ExportReference;
 		return $this;

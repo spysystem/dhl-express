@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_ContactInfoType
- *
- * @package DHLExpress
  */
 class docTypeRef_ContactInfoType
 {
@@ -21,7 +19,7 @@ class docTypeRef_ContactInfoType
 	protected $Address;
 
 	/**
-	 * @var docTypeRef_RegistrationNumbers $RegistrationNumbers
+	 * @var null|docTypeRef_RegistrationNumbers $RegistrationNumbers
 	 */
 	protected $RegistrationNumbers;
 
@@ -29,7 +27,7 @@ class docTypeRef_ContactInfoType
 	 * @param docTypeRef_ContactType $Contact
 	 * @param docTypeRef_AddressType $Address
 	 */
-	public function __construct($Contact, $Address)
+	public function __construct(docTypeRef_ContactType $Contact, docTypeRef_AddressType $Address)
 	{
 		$this->Contact = $Contact;
 		$this->Address = $Address;
@@ -38,16 +36,16 @@ class docTypeRef_ContactInfoType
 	/**
 	 * @return docTypeRef_ContactType
 	 */
-	public function getContact()
+	public function getContact(): ?docTypeRef_ContactType
 	{
 		return $this->Contact;
 	}
 
 	/**
 	 * @param docTypeRef_ContactType $Contact
-	 * @return \DHLExpress\docTypeRef_ContactInfoType
+	 * @return docTypeRef_ContactInfoType
 	 */
-	public function setContact($Contact)
+	public function setContact(docTypeRef_ContactType $Contact): docTypeRef_ContactInfoType
 	{
 		$this->Contact = $Contact;
 		return $this;
@@ -56,34 +54,34 @@ class docTypeRef_ContactInfoType
 	/**
 	 * @return docTypeRef_AddressType
 	 */
-	public function getAddress()
+	public function getAddress(): ?docTypeRef_AddressType
 	{
 		return $this->Address;
 	}
 
 	/**
 	 * @param docTypeRef_AddressType $Address
-	 * @return \DHLExpress\docTypeRef_ContactInfoType
+	 * @return docTypeRef_ContactInfoType
 	 */
-	public function setAddress($Address)
+	public function setAddress(docTypeRef_AddressType $Address): docTypeRef_ContactInfoType
 	{
 		$this->Address = $Address;
 		return $this;
 	}
 
 	/**
-	 * @return docTypeRef_RegistrationNumbers
+	 * @return null|docTypeRef_RegistrationNumbers
 	 */
-	public function getRegistrationNumbers()
+	public function getRegistrationNumbers(): ?docTypeRef_RegistrationNumbers
 	{
 		return $this->RegistrationNumbers;
 	}
 
 	/**
-	 * @param docTypeRef_RegistrationNumbers $RegistrationNumbers
-	 * @return \DHLExpress\docTypeRef_ContactInfoType
+	 * @param null|docTypeRef_RegistrationNumbers $RegistrationNumbers
+	 * @return docTypeRef_ContactInfoType
 	 */
-	public function setRegistrationNumbers($RegistrationNumbers)
+	public function setRegistrationNumbers(?docTypeRef_RegistrationNumbers $RegistrationNumbers = null): docTypeRef_ContactInfoType
 	{
 		$this->RegistrationNumbers = $RegistrationNumbers;
 		return $this;

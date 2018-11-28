@@ -1,17 +1,15 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_ChargeType
- *
- * @package DHLExpress
  */
 class docTypeRef_ChargeType
 {
 
 	/**
-	 * @var string $ChargeCode
+	 * @var null|string $ChargeCode
 	 */
 	protected $ChargeCode;
 
@@ -26,28 +24,38 @@ class docTypeRef_ChargeType
 	protected $ChargeAmount;
 
 	/**
+	 * @var null|string $ChargeName
+	 */
+	protected $ChargeName;
+
+	/**
+	 * @var null|string $ChargeCurrencyCode
+	 */
+	protected $ChargeCurrencyCode;
+
+	/**
 	 * @param string $ChargeType
 	 * @param string $ChargeAmount
 	 */
-	public function __construct($ChargeType, $ChargeAmount)
+	public function __construct(string $ChargeType, string $ChargeAmount)
 	{
 		$this->ChargeType = $ChargeType;
 		$this->ChargeAmount = $ChargeAmount;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getChargeCode()
+	public function getChargeCode(): ?string
 	{
 		return $this->ChargeCode;
 	}
 
 	/**
-	 * @param string $ChargeCode
-	 * @return \DHLExpress\docTypeRef_ChargeType
+	 * @param null|string $ChargeCode
+	 * @return docTypeRef_ChargeType
 	 */
-	public function setChargeCode($ChargeCode)
+	public function setChargeCode(?string $ChargeCode = null): docTypeRef_ChargeType
 	{
 		$this->ChargeCode = $ChargeCode;
 		return $this;
@@ -56,16 +64,16 @@ class docTypeRef_ChargeType
 	/**
 	 * @return string
 	 */
-	public function getChargeType()
+	public function getChargeType(): ?string
 	{
 		return $this->ChargeType;
 	}
 
 	/**
 	 * @param string $ChargeType
-	 * @return \DHLExpress\docTypeRef_ChargeType
+	 * @return docTypeRef_ChargeType
 	 */
-	public function setChargeType($ChargeType)
+	public function setChargeType(string $ChargeType): docTypeRef_ChargeType
 	{
 		$this->ChargeType = $ChargeType;
 		return $this;
@@ -74,18 +82,54 @@ class docTypeRef_ChargeType
 	/**
 	 * @return string
 	 */
-	public function getChargeAmount()
+	public function getChargeAmount(): ?string
 	{
 		return $this->ChargeAmount;
 	}
 
 	/**
 	 * @param string $ChargeAmount
-	 * @return \DHLExpress\docTypeRef_ChargeType
+	 * @return docTypeRef_ChargeType
 	 */
-	public function setChargeAmount($ChargeAmount)
+	public function setChargeAmount(string $ChargeAmount): docTypeRef_ChargeType
 	{
 		$this->ChargeAmount = $ChargeAmount;
+		return $this;
+	}
+
+	/**
+	 * @return null|string
+	 */
+	public function getChargeName(): ?string
+	{
+		return $this->ChargeName;
+	}
+
+	/**
+	 * @param null|string $ChargeName
+	 * @return docTypeRef_ChargeType
+	 */
+	public function setChargeName(?string $ChargeName = null): docTypeRef_ChargeType
+	{
+		$this->ChargeName = $ChargeName;
+		return $this;
+	}
+
+	/**
+	 * @return null|string
+	 */
+	public function getChargeCurrencyCode(): ?string
+	{
+		return $this->ChargeCurrencyCode;
+	}
+
+	/**
+	 * @param null|string $ChargeCurrencyCode
+	 * @return docTypeRef_ChargeType
+	 */
+	public function setChargeCurrencyCode(?string $ChargeCurrencyCode = null): docTypeRef_ChargeType
+	{
+		$this->ChargeCurrencyCode = $ChargeCurrencyCode;
 		return $this;
 	}
 

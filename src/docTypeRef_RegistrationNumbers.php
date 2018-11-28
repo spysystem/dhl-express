@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_RegistrationNumbers
- *
- * @package DHLExpress
  */
 class docTypeRef_RegistrationNumbers
 {
@@ -26,16 +24,16 @@ class docTypeRef_RegistrationNumbers
 	/**
 	 * @return docTypeRef_RegistrationNumber[]
 	 */
-	public function getRegistrationNumber()
+	public function getRegistrationNumber(): ?array
 	{
 		return $this->RegistrationNumber;
 	}
 
 	/**
 	 * @param docTypeRef_RegistrationNumber[] $RegistrationNumber
-	 * @return \DHLExpress\docTypeRef_RegistrationNumbers
+	 * @return docTypeRef_RegistrationNumbers
 	 */
-	public function setRegistrationNumber(array $RegistrationNumber)
+	public function setRegistrationNumber(array $RegistrationNumber): docTypeRef_RegistrationNumbers
 	{
 		$this->RegistrationNumber = $RegistrationNumber;
 		return $this;

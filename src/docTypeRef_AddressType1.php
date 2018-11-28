@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_AddressType1
- *
- * @package DHLExpress
  */
 class docTypeRef_AddressType1
 {
@@ -16,32 +14,32 @@ class docTypeRef_AddressType1
 	protected $StreetLines;
 
 	/**
-	 * @var string $StreetName
+	 * @var null|string $StreetName
 	 */
 	protected $StreetName;
 
 	/**
-	 * @var string $BuildingName
+	 * @var null|string $BuildingName
 	 */
 	protected $BuildingName;
 
 	/**
-	 * @var string $StreetNumber
+	 * @var null|string $StreetNumber
 	 */
 	protected $StreetNumber;
 
 	/**
-	 * @var string $StreetLines2
+	 * @var null|string $StreetLines2
 	 */
 	protected $StreetLines2;
 
 	/**
-	 * @var string $StreetLines3
+	 * @var null|string $StreetLines3
 	 */
 	protected $StreetLines3;
 
 	/**
-	 * @var string $CityDistrict
+	 * @var null|string $CityDistrict
 	 */
 	protected $CityDistrict;
 
@@ -51,7 +49,7 @@ class docTypeRef_AddressType1
 	protected $City;
 
 	/**
-	 * @var string $StateOrProvinceCode
+	 * @var null|string $StateOrProvinceCode
 	 */
 	protected $StateOrProvinceCode;
 
@@ -61,7 +59,7 @@ class docTypeRef_AddressType1
 	protected $PostalCode;
 
 	/**
-	 * @var string $CountryName
+	 * @var null|string $CountryName
 	 */
 	protected $CountryName;
 
@@ -76,7 +74,7 @@ class docTypeRef_AddressType1
 	 * @param string $PostalCode
 	 * @param string $CountryCode
 	 */
-	public function __construct($StreetLines, $City, $PostalCode, $CountryCode)
+	public function __construct(string $StreetLines, string $City, string $PostalCode, string $CountryCode)
 	{
 		$this->StreetLines = $StreetLines;
 		$this->City = $City;
@@ -87,124 +85,124 @@ class docTypeRef_AddressType1
 	/**
 	 * @return string
 	 */
-	public function getStreetLines()
+	public function getStreetLines(): ?string
 	{
 		return $this->StreetLines;
 	}
 
 	/**
 	 * @param string $StreetLines
-	 * @return \DHLExpress\docTypeRef_AddressType1
+	 * @return docTypeRef_AddressType1
 	 */
-	public function setStreetLines($StreetLines)
+	public function setStreetLines(string $StreetLines): docTypeRef_AddressType1
 	{
 		$this->StreetLines = $StreetLines;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getStreetName()
+	public function getStreetName(): ?string
 	{
 		return $this->StreetName;
 	}
 
 	/**
-	 * @param string $StreetName
-	 * @return \DHLExpress\docTypeRef_AddressType1
+	 * @param null|string $StreetName
+	 * @return docTypeRef_AddressType1
 	 */
-	public function setStreetName($StreetName)
+	public function setStreetName(?string $StreetName = null): docTypeRef_AddressType1
 	{
 		$this->StreetName = $StreetName;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getBuildingName()
+	public function getBuildingName(): ?string
 	{
 		return $this->BuildingName;
 	}
 
 	/**
-	 * @param string $BuildingName
-	 * @return \DHLExpress\docTypeRef_AddressType1
+	 * @param null|string $BuildingName
+	 * @return docTypeRef_AddressType1
 	 */
-	public function setBuildingName($BuildingName)
+	public function setBuildingName(?string $BuildingName = null): docTypeRef_AddressType1
 	{
 		$this->BuildingName = $BuildingName;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getStreetNumber()
+	public function getStreetNumber(): ?string
 	{
 		return $this->StreetNumber;
 	}
 
 	/**
-	 * @param string $StreetNumber
-	 * @return \DHLExpress\docTypeRef_AddressType1
+	 * @param null|string $StreetNumber
+	 * @return docTypeRef_AddressType1
 	 */
-	public function setStreetNumber($StreetNumber)
+	public function setStreetNumber(?string $StreetNumber = null): docTypeRef_AddressType1
 	{
 		$this->StreetNumber = $StreetNumber;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getStreetLines2()
+	public function getStreetLines2(): ?string
 	{
 		return $this->StreetLines2;
 	}
 
 	/**
-	 * @param string $StreetLines2
-	 * @return \DHLExpress\docTypeRef_AddressType1
+	 * @param null|string $StreetLines2
+	 * @return docTypeRef_AddressType1
 	 */
-	public function setStreetLines2($StreetLines2)
+	public function setStreetLines2(?string $StreetLines2 = null): docTypeRef_AddressType1
 	{
 		$this->StreetLines2 = $StreetLines2;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getStreetLines3()
+	public function getStreetLines3(): ?string
 	{
 		return $this->StreetLines3;
 	}
 
 	/**
-	 * @param string $StreetLines3
-	 * @return \DHLExpress\docTypeRef_AddressType1
+	 * @param null|string $StreetLines3
+	 * @return docTypeRef_AddressType1
 	 */
-	public function setStreetLines3($StreetLines3)
+	public function setStreetLines3(?string $StreetLines3 = null): docTypeRef_AddressType1
 	{
 		$this->StreetLines3 = $StreetLines3;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getCityDistrict()
+	public function getCityDistrict(): ?string
 	{
 		return $this->CityDistrict;
 	}
 
 	/**
-	 * @param string $CityDistrict
-	 * @return \DHLExpress\docTypeRef_AddressType1
+	 * @param null|string $CityDistrict
+	 * @return docTypeRef_AddressType1
 	 */
-	public function setCityDistrict($CityDistrict)
+	public function setCityDistrict(?string $CityDistrict = null): docTypeRef_AddressType1
 	{
 		$this->CityDistrict = $CityDistrict;
 		return $this;
@@ -213,34 +211,34 @@ class docTypeRef_AddressType1
 	/**
 	 * @return string
 	 */
-	public function getCity()
+	public function getCity(): ?string
 	{
 		return $this->City;
 	}
 
 	/**
 	 * @param string $City
-	 * @return \DHLExpress\docTypeRef_AddressType1
+	 * @return docTypeRef_AddressType1
 	 */
-	public function setCity($City)
+	public function setCity(string $City): docTypeRef_AddressType1
 	{
 		$this->City = $City;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getStateOrProvinceCode()
+	public function getStateOrProvinceCode(): ?string
 	{
 		return $this->StateOrProvinceCode;
 	}
 
 	/**
-	 * @param string $StateOrProvinceCode
-	 * @return \DHLExpress\docTypeRef_AddressType1
+	 * @param null|string $StateOrProvinceCode
+	 * @return docTypeRef_AddressType1
 	 */
-	public function setStateOrProvinceCode($StateOrProvinceCode)
+	public function setStateOrProvinceCode(?string $StateOrProvinceCode = null): docTypeRef_AddressType1
 	{
 		$this->StateOrProvinceCode = $StateOrProvinceCode;
 		return $this;
@@ -249,34 +247,34 @@ class docTypeRef_AddressType1
 	/**
 	 * @return string
 	 */
-	public function getPostalCode()
+	public function getPostalCode(): ?string
 	{
 		return $this->PostalCode;
 	}
 
 	/**
 	 * @param string $PostalCode
-	 * @return \DHLExpress\docTypeRef_AddressType1
+	 * @return docTypeRef_AddressType1
 	 */
-	public function setPostalCode($PostalCode)
+	public function setPostalCode(string $PostalCode): docTypeRef_AddressType1
 	{
 		$this->PostalCode = $PostalCode;
 		return $this;
 	}
 
 	/**
-	 * @return string
+	 * @return null|string
 	 */
-	public function getCountryName()
+	public function getCountryName(): ?string
 	{
 		return $this->CountryName;
 	}
 
 	/**
-	 * @param string $CountryName
-	 * @return \DHLExpress\docTypeRef_AddressType1
+	 * @param null|string $CountryName
+	 * @return docTypeRef_AddressType1
 	 */
-	public function setCountryName($CountryName)
+	public function setCountryName(?string $CountryName = null): docTypeRef_AddressType1
 	{
 		$this->CountryName = $CountryName;
 		return $this;
@@ -285,16 +283,16 @@ class docTypeRef_AddressType1
 	/**
 	 * @return string
 	 */
-	public function getCountryCode()
+	public function getCountryCode(): ?string
 	{
 		return $this->CountryCode;
 	}
 
 	/**
 	 * @param string $CountryCode
-	 * @return \DHLExpress\docTypeRef_AddressType1
+	 * @return docTypeRef_AddressType1
 	 */
-	public function setCountryCode($CountryCode)
+	public function setCountryCode(string $CountryCode): docTypeRef_AddressType1
 	{
 		$this->CountryCode = $CountryCode;
 		return $this;

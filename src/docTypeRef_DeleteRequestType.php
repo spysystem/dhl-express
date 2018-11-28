@@ -1,17 +1,15 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_DeleteRequestType
- *
- * @package DHLExpress
  */
 class docTypeRef_DeleteRequestType
 {
 
 	/**
-	 * @var docTypeRef_ClientDetailType $ClientDetail
+	 * @var null|docTypeRef_ClientDetailType $ClientDetail
 	 */
 	protected $ClientDetail;
 
@@ -26,27 +24,27 @@ class docTypeRef_DeleteRequestType
 	protected $PickupCountry;
 
 	/**
-	 * @var ConfirmationNumberType $DispatchConfirmationNumber
+	 * @var string $DispatchConfirmationNumber
 	 */
 	protected $DispatchConfirmationNumber;
 
 	/**
-	 * @var PersonName3 $RequestorName
+	 * @var string $RequestorName
 	 */
 	protected $RequestorName;
 
 	/**
-	 * @var CustomerReferences $Reason
+	 * @var null|string $Reason
 	 */
 	protected $Reason;
 
 	/**
 	 * @param string $PickupDate
 	 * @param string $PickupCountry
-	 * @param ConfirmationNumberType $DispatchConfirmationNumber
-	 * @param PersonName3 $RequestorName
+	 * @param string $DispatchConfirmationNumber
+	 * @param string $RequestorName
 	 */
-	public function __construct($PickupDate, $PickupCountry, $DispatchConfirmationNumber, $RequestorName)
+	public function __construct(string $PickupDate, string $PickupCountry, string $DispatchConfirmationNumber, string $RequestorName)
 	{
 		$this->PickupDate = $PickupDate;
 		$this->PickupCountry = $PickupCountry;
@@ -55,18 +53,18 @@ class docTypeRef_DeleteRequestType
 	}
 
 	/**
-	 * @return docTypeRef_ClientDetailType
+	 * @return null|docTypeRef_ClientDetailType
 	 */
-	public function getClientDetail()
+	public function getClientDetail(): ?docTypeRef_ClientDetailType
 	{
 		return $this->ClientDetail;
 	}
 
 	/**
-	 * @param docTypeRef_ClientDetailType $ClientDetail
-	 * @return \DHLExpress\docTypeRef_DeleteRequestType
+	 * @param null|docTypeRef_ClientDetailType $ClientDetail
+	 * @return docTypeRef_DeleteRequestType
 	 */
-	public function setClientDetail($ClientDetail)
+	public function setClientDetail(?docTypeRef_ClientDetailType $ClientDetail = null): docTypeRef_DeleteRequestType
 	{
 		$this->ClientDetail = $ClientDetail;
 		return $this;
@@ -75,16 +73,16 @@ class docTypeRef_DeleteRequestType
 	/**
 	 * @return string
 	 */
-	public function getPickupDate()
+	public function getPickupDate(): ?string
 	{
 		return $this->PickupDate;
 	}
 
 	/**
 	 * @param string $PickupDate
-	 * @return \DHLExpress\docTypeRef_DeleteRequestType
+	 * @return docTypeRef_DeleteRequestType
 	 */
-	public function setPickupDate($PickupDate)
+	public function setPickupDate(string $PickupDate): docTypeRef_DeleteRequestType
 	{
 		$this->PickupDate = $PickupDate;
 		return $this;
@@ -93,70 +91,70 @@ class docTypeRef_DeleteRequestType
 	/**
 	 * @return string
 	 */
-	public function getPickupCountry()
+	public function getPickupCountry(): ?string
 	{
 		return $this->PickupCountry;
 	}
 
 	/**
 	 * @param string $PickupCountry
-	 * @return \DHLExpress\docTypeRef_DeleteRequestType
+	 * @return docTypeRef_DeleteRequestType
 	 */
-	public function setPickupCountry($PickupCountry)
+	public function setPickupCountry(string $PickupCountry): docTypeRef_DeleteRequestType
 	{
 		$this->PickupCountry = $PickupCountry;
 		return $this;
 	}
 
 	/**
-	 * @return ConfirmationNumberType
+	 * @return string
 	 */
-	public function getDispatchConfirmationNumber()
+	public function getDispatchConfirmationNumber(): ?string
 	{
 		return $this->DispatchConfirmationNumber;
 	}
 
 	/**
-	 * @param ConfirmationNumberType $DispatchConfirmationNumber
-	 * @return \DHLExpress\docTypeRef_DeleteRequestType
+	 * @param string $DispatchConfirmationNumber
+	 * @return docTypeRef_DeleteRequestType
 	 */
-	public function setDispatchConfirmationNumber($DispatchConfirmationNumber)
+	public function setDispatchConfirmationNumber(string $DispatchConfirmationNumber): docTypeRef_DeleteRequestType
 	{
 		$this->DispatchConfirmationNumber = $DispatchConfirmationNumber;
 		return $this;
 	}
 
 	/**
-	 * @return PersonName3
+	 * @return string
 	 */
-	public function getRequestorName()
+	public function getRequestorName(): ?string
 	{
 		return $this->RequestorName;
 	}
 
 	/**
-	 * @param PersonName3 $RequestorName
-	 * @return \DHLExpress\docTypeRef_DeleteRequestType
+	 * @param string $RequestorName
+	 * @return docTypeRef_DeleteRequestType
 	 */
-	public function setRequestorName($RequestorName)
+	public function setRequestorName(string $RequestorName): docTypeRef_DeleteRequestType
 	{
 		$this->RequestorName = $RequestorName;
 		return $this;
 	}
 
 	/**
-	 * @return CustomerReferences
+	 * @return null|string
 	 */
-	public function getReason()
+	public function getReason(): ?string
 	{
 		return $this->Reason;
 	}
 
 	/**
-	 * @param CustomerReferences $Reason
-	 * @return \DHLExpress\docTypeRef_DeleteRequestType
+	 * @param null|string $Reason
+	 * @return docTypeRef_DeleteRequestType
 	 */
-	public function setReason($Reason)
+	public function setReason(?string $Reason = null): docTypeRef_DeleteRequestType
 	{
 		$this->Reason = $Reason;
 		return $this;

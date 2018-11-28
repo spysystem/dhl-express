@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class Services
- *
- * @package DHLExpress
  */
 class Services
 {
@@ -26,16 +24,16 @@ class Services
 	/**
 	 * @return Service[]
 	 */
-	public function getService()
+	public function getService(): ?array
 	{
 		return $this->Service;
 	}
 
 	/**
 	 * @param Service[] $Service
-	 * @return \DHLExpress\Services
+	 * @return Services
 	 */
-	public function setService(array $Service)
+	public function setService(array $Service): Services
 	{
 		$this->Service = $Service;
 		return $this;

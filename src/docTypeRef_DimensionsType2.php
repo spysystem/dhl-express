@@ -1,36 +1,34 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_DimensionsType2
- *
- * @package DHLExpress
  */
 class docTypeRef_DimensionsType2
 {
 
 	/**
-	 * @var Length2 $Length
+	 * @var string $Length
 	 */
 	protected $Length;
 
 	/**
-	 * @var Width2 $Width
+	 * @var string $Width
 	 */
 	protected $Width;
 
 	/**
-	 * @var Height2 $Height
+	 * @var string $Height
 	 */
 	protected $Height;
 
 	/**
-	 * @param Length2 $Length
-	 * @param Width2 $Width
-	 * @param Height2 $Height
+	 * @param string $Length
+	 * @param string $Width
+	 * @param string $Height
 	 */
-	public function __construct($Length, $Width, $Height)
+	public function __construct(string $Length, string $Width, string $Height)
 	{
 		$this->Length = $Length;
 		$this->Width = $Width;
@@ -38,54 +36,54 @@ class docTypeRef_DimensionsType2
 	}
 
 	/**
-	 * @return Length2
+	 * @return string
 	 */
-	public function getLength()
+	public function getLength(): ?string
 	{
 		return $this->Length;
 	}
 
 	/**
-	 * @param Length2 $Length
-	 * @return \DHLExpress\docTypeRef_DimensionsType2
+	 * @param string $Length
+	 * @return docTypeRef_DimensionsType2
 	 */
-	public function setLength($Length)
+	public function setLength(string $Length): docTypeRef_DimensionsType2
 	{
 		$this->Length = $Length;
 		return $this;
 	}
 
 	/**
-	 * @return Width2
+	 * @return string
 	 */
-	public function getWidth()
+	public function getWidth(): ?string
 	{
 		return $this->Width;
 	}
 
 	/**
-	 * @param Width2 $Width
-	 * @return \DHLExpress\docTypeRef_DimensionsType2
+	 * @param string $Width
+	 * @return docTypeRef_DimensionsType2
 	 */
-	public function setWidth($Width)
+	public function setWidth(string $Width): docTypeRef_DimensionsType2
 	{
 		$this->Width = $Width;
 		return $this;
 	}
 
 	/**
-	 * @return Height2
+	 * @return string
 	 */
-	public function getHeight()
+	public function getHeight(): ?string
 	{
 		return $this->Height;
 	}
 
 	/**
-	 * @param Height2 $Height
-	 * @return \DHLExpress\docTypeRef_DimensionsType2
+	 * @param string $Height
+	 * @return docTypeRef_DimensionsType2
 	 */
-	public function setHeight($Height)
+	public function setHeight(string $Height): docTypeRef_DimensionsType2
 	{
 		$this->Height = $Height;
 		return $this;

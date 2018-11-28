@@ -1,36 +1,34 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_Content
- *
- * @package DHLExpress
  */
 class docTypeRef_Content
 {
 
 	/**
-	 * @var ContentID $ContentID
+	 * @var string $ContentID
 	 */
 	protected $ContentID;
 
 	/**
-	 * @var DryIceTotalNetWeight $DryIceTotalNetWeight
+	 * @var string $DryIceTotalNetWeight
 	 */
 	protected $DryIceTotalNetWeight;
 
 	/**
-	 * @var UNCode $UNCode
+	 * @var string $UNCode
 	 */
 	protected $UNCode;
 
 	/**
-	 * @param ContentID $ContentID
-	 * @param DryIceTotalNetWeight $DryIceTotalNetWeight
-	 * @param UNCode $UNCode
+	 * @param string $ContentID
+	 * @param string $DryIceTotalNetWeight
+	 * @param string $UNCode
 	 */
-	public function __construct($ContentID, $DryIceTotalNetWeight, $UNCode)
+	public function __construct(string $ContentID, string $DryIceTotalNetWeight, string $UNCode)
 	{
 		$this->ContentID = $ContentID;
 		$this->DryIceTotalNetWeight = $DryIceTotalNetWeight;
@@ -38,54 +36,54 @@ class docTypeRef_Content
 	}
 
 	/**
-	 * @return ContentID
+	 * @return string|null
 	 */
-	public function getContentID()
+	public function getContentID(): ?string
 	{
 		return $this->ContentID;
 	}
 
 	/**
-	 * @param ContentID $ContentID
-	 * @return \DHLExpress\docTypeRef_Content
+	 * @param string $ContentID
+	 * @return docTypeRef_Content
 	 */
-	public function setContentID($ContentID)
+	public function setContentID(string $ContentID): docTypeRef_Content
 	{
 		$this->ContentID = $ContentID;
 		return $this;
 	}
 
 	/**
-	 * @return DryIceTotalNetWeight
+	 * @return string|null
 	 */
-	public function getDryIceTotalNetWeight()
+	public function getDryIceTotalNetWeight(): ?string
 	{
 		return $this->DryIceTotalNetWeight;
 	}
 
 	/**
-	 * @param DryIceTotalNetWeight $DryIceTotalNetWeight
-	 * @return \DHLExpress\docTypeRef_Content
+	 * @param string $DryIceTotalNetWeight
+	 * @return docTypeRef_Content
 	 */
-	public function setDryIceTotalNetWeight($DryIceTotalNetWeight)
+	public function setDryIceTotalNetWeight(string $DryIceTotalNetWeight): docTypeRef_Content
 	{
 		$this->DryIceTotalNetWeight = $DryIceTotalNetWeight;
 		return $this;
 	}
 
 	/**
-	 * @return UNCode
+	 * @return string
 	 */
-	public function getUNCode()
+	public function getUNCode(): ?string
 	{
 		return $this->UNCode;
 	}
 
 	/**
-	 * @param UNCode $UNCode
-	 * @return \DHLExpress\docTypeRef_Content
+	 * @param string $UNCode
+	 * @return docTypeRef_Content
 	 */
-	public function setUNCode($UNCode)
+	public function setUNCode(string $UNCode): docTypeRef_Content
 	{
 		$this->UNCode = $UNCode;
 		return $this;

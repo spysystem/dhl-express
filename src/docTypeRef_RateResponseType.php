@@ -1,17 +1,15 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_RateResponseType
- *
- * @package DHLExpress
  */
 class docTypeRef_RateResponseType
 {
 
 	/**
-	 * @var docTypeRef_ProviderType[] $Provider
+	 * @var null|docTypeRef_ProviderType[] $Provider
 	 */
 	protected $Provider;
 
@@ -22,18 +20,18 @@ class docTypeRef_RateResponseType
 	}
 
 	/**
-	 * @return docTypeRef_ProviderType[]
+	 * @return null|docTypeRef_ProviderType[]
 	 */
-	public function getProvider()
+	public function getProvider(): ?array
 	{
 		return $this->Provider;
 	}
 
 	/**
-	 * @param docTypeRef_ProviderType[] $Provider
-	 * @return \DHLExpress\docTypeRef_RateResponseType
+	 * @param null|docTypeRef_ProviderType[] $Provider
+	 * @return docTypeRef_RateResponseType
 	 */
-	public function setProvider(array $Provider = null)
+	public function setProvider(?array $Provider = null): docTypeRef_RateResponseType
 	{
 		$this->Provider = $Provider;
 		return $this;

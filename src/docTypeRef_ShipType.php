@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_ShipType
- *
- * @package DHLExpress
  */
 class docTypeRef_ShipType
 {
@@ -16,17 +14,17 @@ class docTypeRef_ShipType
 	protected $Shipper;
 
 	/**
-	 * @var docTypeRef_ContactInfoType $Pickup
+	 * @var null|docTypeRef_ContactInfoType $Pickup
 	 */
 	protected $Pickup;
 
 	/**
-	 * @var docTypeRef_ContactInfoType $BookingRequestor
+	 * @var null|docTypeRef_ContactInfoType $BookingRequestor
 	 */
 	protected $BookingRequestor;
 
 	/**
-	 * @var docTypeRef_ContactInfoType1 $Buyer
+	 * @var null|docTypeRef_ContactInfoType1 $Buyer
 	 */
 	protected $Buyer;
 
@@ -39,7 +37,7 @@ class docTypeRef_ShipType
 	 * @param docTypeRef_ContactInfoType $Shipper
 	 * @param docTypeRef_ContactInfoType $Recipient
 	 */
-	public function __construct($Shipper, $Recipient)
+	public function __construct(docTypeRef_ContactInfoType $Shipper, docTypeRef_ContactInfoType $Recipient)
 	{
 		$this->Shipper = $Shipper;
 		$this->Recipient = $Recipient;
@@ -48,70 +46,70 @@ class docTypeRef_ShipType
 	/**
 	 * @return docTypeRef_ContactInfoType
 	 */
-	public function getShipper()
+	public function getShipper(): ?docTypeRef_ContactInfoType
 	{
 		return $this->Shipper;
 	}
 
 	/**
 	 * @param docTypeRef_ContactInfoType $Shipper
-	 * @return \DHLExpress\docTypeRef_ShipType
+	 * @return docTypeRef_ShipType
 	 */
-	public function setShipper($Shipper)
+	public function setShipper(docTypeRef_ContactInfoType $Shipper): docTypeRef_ShipType
 	{
 		$this->Shipper = $Shipper;
 		return $this;
 	}
 
 	/**
-	 * @return docTypeRef_ContactInfoType
+	 * @return null|docTypeRef_ContactInfoType
 	 */
-	public function getPickup()
+	public function getPickup(): ?docTypeRef_ContactInfoType
 	{
 		return $this->Pickup;
 	}
 
 	/**
-	 * @param docTypeRef_ContactInfoType $Pickup
-	 * @return \DHLExpress\docTypeRef_ShipType
+	 * @param null|docTypeRef_ContactInfoType $Pickup
+	 * @return docTypeRef_ShipType
 	 */
-	public function setPickup($Pickup)
+	public function setPickup(?docTypeRef_ContactInfoType $Pickup = null): docTypeRef_ShipType
 	{
 		$this->Pickup = $Pickup;
 		return $this;
 	}
 
 	/**
-	 * @return docTypeRef_ContactInfoType
+	 * @return null|docTypeRef_ContactInfoType
 	 */
-	public function getBookingRequestor()
+	public function getBookingRequestor(): ?docTypeRef_ContactInfoType
 	{
 		return $this->BookingRequestor;
 	}
 
 	/**
-	 * @param docTypeRef_ContactInfoType $BookingRequestor
-	 * @return \DHLExpress\docTypeRef_ShipType
+	 * @param null|docTypeRef_ContactInfoType $BookingRequestor
+	 * @return docTypeRef_ShipType
 	 */
-	public function setBookingRequestor($BookingRequestor)
+	public function setBookingRequestor(?docTypeRef_ContactInfoType $BookingRequestor = null): docTypeRef_ShipType
 	{
 		$this->BookingRequestor = $BookingRequestor;
 		return $this;
 	}
 
 	/**
-	 * @return docTypeRef_ContactInfoType1
+	 * @return null|docTypeRef_ContactInfoType1
 	 */
-	public function getBuyer()
+	public function getBuyer(): ?docTypeRef_ContactInfoType1
 	{
 		return $this->Buyer;
 	}
 
 	/**
-	 * @param docTypeRef_ContactInfoType1 $Buyer
-	 * @return \DHLExpress\docTypeRef_ShipType
+	 * @param null|docTypeRef_ContactInfoType1 $Buyer
+	 * @return docTypeRef_ShipType
 	 */
-	public function setBuyer($Buyer)
+	public function setBuyer(?docTypeRef_ContactInfoType1 $Buyer = null): docTypeRef_ShipType
 	{
 		$this->Buyer = $Buyer;
 		return $this;
@@ -120,16 +118,16 @@ class docTypeRef_ShipType
 	/**
 	 * @return docTypeRef_ContactInfoType
 	 */
-	public function getRecipient()
+	public function getRecipient(): ?docTypeRef_ContactInfoType
 	{
 		return $this->Recipient;
 	}
 
 	/**
 	 * @param docTypeRef_ContactInfoType $Recipient
-	 * @return \DHLExpress\docTypeRef_ShipType
+	 * @return docTypeRef_ShipType
 	 */
-	public function setRecipient($Recipient)
+	public function setRecipient(docTypeRef_ContactInfoType $Recipient): docTypeRef_ShipType
 	{
 		$this->Recipient = $Recipient;
 		return $this;

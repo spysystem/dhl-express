@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_DeleteResponseType
- *
- * @package DHLExpress
  */
 class docTypeRef_DeleteResponseType
 {
@@ -18,7 +16,7 @@ class docTypeRef_DeleteResponseType
 	/**
 	 * @param docTypeRef_NotificationType $Notification
 	 */
-	public function __construct($Notification)
+	public function __construct(docTypeRef_NotificationType $Notification)
 	{
 		$this->Notification = $Notification;
 	}
@@ -26,16 +24,16 @@ class docTypeRef_DeleteResponseType
 	/**
 	 * @return docTypeRef_NotificationType
 	 */
-	public function getNotification()
+	public function getNotification(): ?docTypeRef_NotificationType
 	{
 		return $this->Notification;
 	}
 
 	/**
 	 * @param docTypeRef_NotificationType $Notification
-	 * @return \DHLExpress\docTypeRef_DeleteResponseType
+	 * @return docTypeRef_DeleteResponseType
 	 */
-	public function setNotification($Notification)
+	public function setNotification(docTypeRef_NotificationType $Notification): docTypeRef_DeleteResponseType
 	{
 		$this->Notification = $Notification;
 		return $this;

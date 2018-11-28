@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_RegistrationNumber
- *
- * @package DHLExpress
  */
 class docTypeRef_RegistrationNumber
 {
@@ -16,21 +14,21 @@ class docTypeRef_RegistrationNumber
 	protected $Number;
 
 	/**
-	 * @var NumberTypeCode $NumberTypeCode
+	 * @var string $NumberTypeCode
 	 */
 	protected $NumberTypeCode;
 
 	/**
-	 * @var NumberIssuerCountryCode $NumberIssuerCountryCode
+	 * @var string $NumberIssuerCountryCode
 	 */
 	protected $NumberIssuerCountryCode;
 
 	/**
-	 * @param Number $Number
-	 * @param NumberTypeCode $NumberTypeCode
-	 * @param NumberIssuerCountryCode $NumberIssuerCountryCode
+	 * @param string $Number
+	 * @param string $NumberTypeCode
+	 * @param string $NumberIssuerCountryCode
 	 */
-	public function __construct($Number, $NumberTypeCode, $NumberIssuerCountryCode)
+	public function __construct(string $Number, string $NumberTypeCode, string $NumberIssuerCountryCode)
 	{
 		$this->Number = $Number;
 		$this->NumberTypeCode = $NumberTypeCode;
@@ -38,54 +36,54 @@ class docTypeRef_RegistrationNumber
 	}
 
 	/**
-	 * @return Number
+	 * @return string
 	 */
-	public function getNumber()
+	public function getNumber(): ?string
 	{
 		return $this->Number;
 	}
 
 	/**
-	 * @param Number $Number
-	 * @return \DHLExpress\docTypeRef_RegistrationNumber
+	 * @param string $Number
+	 * @return docTypeRef_RegistrationNumber
 	 */
-	public function setNumber($Number)
+	public function setNumber(string $Number): docTypeRef_RegistrationNumber
 	{
 		$this->Number = $Number;
 		return $this;
 	}
 
 	/**
-	 * @return NumberTypeCode
+	 * @return string
 	 */
-	public function getNumberTypeCode()
+	public function string(): ?string
 	{
 		return $this->NumberTypeCode;
 	}
 
 	/**
-	 * @param NumberTypeCode $NumberTypeCode
-	 * @return \DHLExpress\docTypeRef_RegistrationNumber
+	 * @param string $NumberTypeCode
+	 * @return docTypeRef_RegistrationNumber
 	 */
-	public function setNumberTypeCode($NumberTypeCode)
+	public function setNumberTypeCode(string $NumberTypeCode): docTypeRef_RegistrationNumber
 	{
 		$this->NumberTypeCode = $NumberTypeCode;
 		return $this;
 	}
 
 	/**
-	 * @return NumberIssuerCountryCode
+	 * @return string
 	 */
-	public function getNumberIssuerCountryCode()
+	public function getNumberIssuerCountryCode(): ?string
 	{
 		return $this->NumberIssuerCountryCode;
 	}
 
 	/**
-	 * @param NumberIssuerCountryCode $NumberIssuerCountryCode
-	 * @return \DHLExpress\docTypeRef_RegistrationNumber
+	 * @param string $NumberIssuerCountryCode
+	 * @return docTypeRef_RegistrationNumber
 	 */
-	public function setNumberIssuerCountryCode($NumberIssuerCountryCode)
+	public function setNumberIssuerCountryCode(string $NumberIssuerCountryCode): docTypeRef_RegistrationNumber
 	{
 		$this->NumberIssuerCountryCode = $NumberIssuerCountryCode;
 		return $this;

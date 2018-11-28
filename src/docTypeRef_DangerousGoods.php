@@ -1,11 +1,9 @@
 <?php
-
 namespace DHLExpress;
+
 
 /**
  * Class docTypeRef_DangerousGoods
- *
- * @package DHLExpress
  */
 class docTypeRef_DangerousGoods
 {
@@ -18,7 +16,7 @@ class docTypeRef_DangerousGoods
 	/**
 	 * @param docTypeRef_Content $Content
 	 */
-	public function __construct($Content)
+	public function __construct(docTypeRef_Content $Content)
 	{
 		$this->Content = $Content;
 	}
@@ -26,16 +24,16 @@ class docTypeRef_DangerousGoods
 	/**
 	 * @return docTypeRef_Content
 	 */
-	public function getContent()
+	public function getContent(): ?docTypeRef_Content
 	{
 		return $this->Content;
 	}
 
 	/**
 	 * @param docTypeRef_Content $Content
-	 * @return \DHLExpress\docTypeRef_DangerousGoods
+	 * @return docTypeRef_DangerousGoods
 	 */
-	public function setContent($Content)
+	public function setContent(docTypeRef_Content $Content): docTypeRef_DangerousGoods
 	{
 		$this->Content = $Content;
 		return $this;
