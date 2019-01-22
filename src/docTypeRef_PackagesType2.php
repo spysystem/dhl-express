@@ -22,7 +22,7 @@ class docTypeRef_PackagesType2
 	}
 
 	/**
-	 * @return docTypeRef_RequestedPackagesType2[]
+	 * @return null|docTypeRef_RequestedPackagesType2[]
 	 */
 	public function getRequestedPackages(): ?array
 	{
@@ -30,10 +30,10 @@ class docTypeRef_PackagesType2
 	}
 
 	/**
-	 * @param docTypeRef_RequestedPackagesType2[] $RequestedPackages
+	 * @param null|docTypeRef_RequestedPackagesType2[] $RequestedPackages
 	 * @return docTypeRef_PackagesType2
 	 */
-	public function setRequestedPackages(array $RequestedPackages): docTypeRef_PackagesType2
+	public function setRequestedPackages(?array $RequestedPackages): docTypeRef_PackagesType2
 	{
 		$this->RequestedPackages = $RequestedPackages;
 		return $this;
