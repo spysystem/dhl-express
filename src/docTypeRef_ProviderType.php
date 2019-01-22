@@ -14,7 +14,7 @@ class docTypeRef_ProviderType
 	protected $ServiceHeader;
 
 	/**
-	 * @var docTypeRef_NotificationType3 $Notification
+	 * @var docTypeRef_NotificationType3|docTypeRef_NotificationType3[]|null $Notification
 	 */
 	protected $Notification;
 
@@ -29,10 +29,10 @@ class docTypeRef_ProviderType
 	protected $code;
 
 	/**
-	 * @param docTypeRef_NotificationType3 $Notification
+	 * @param docTypeRef_NotificationType3|docTypeRef_NotificationType3[]|null $Notification
 	 * @param string $code
 	 */
-	public function __construct(docTypeRef_NotificationType3 $Notification, string $code)
+	public function __construct($Notification, string $code)
 	{
 		$this->Notification = $Notification;
 		$this->code = $code;
@@ -57,18 +57,18 @@ class docTypeRef_ProviderType
 	}
 
 	/**
-	 * @return docTypeRef_NotificationType3
+	 * @return docTypeRef_NotificationType3|docTypeRef_NotificationType3[]|null
 	 */
-	public function getNotification(): ?docTypeRef_NotificationType3
+	public function getNotification()
 	{
 		return $this->Notification;
 	}
 
 	/**
-	 * @param docTypeRef_NotificationType3 $Notification
+	 * @param docTypeRef_NotificationType3|docTypeRef_NotificationType3[]|null $Notification
 	 * @return docTypeRef_ProviderType
 	 */
-	public function setNotification(docTypeRef_NotificationType3 $Notification): docTypeRef_ProviderType
+	public function setNotification($Notification): docTypeRef_ProviderType
 	{
 		$this->Notification = $Notification;
 		return $this;
