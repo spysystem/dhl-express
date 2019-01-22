@@ -9,31 +9,31 @@ class docTypeRef_PackagesType
 {
 
 	/**
-	 * @var docTypeRef_RequestedPackagesType[] $RequestedPackages
+	 * @var docTypeRef_RequestedPackagesType $RequestedPackages
 	 */
 	protected $RequestedPackages;
 
 	/**
-	 * @param docTypeRef_RequestedPackagesType[] $RequestedPackages
+	 * @param docTypeRef_RequestedPackagesType $RequestedPackages
 	 */
-	public function __construct(array $RequestedPackages)
+	public function __construct($RequestedPackages)
 	{
 		$this->RequestedPackages = $RequestedPackages;
 	}
 
 	/**
-	 * @return null|docTypeRef_RequestedPackagesType[]
+	 * @return null|docTypeRef_RequestedPackagesType
 	 */
-	public function getRequestedPackages(): ?array
+	public function getRequestedPackages(): ?docTypeRef_RequestedPackagesType
 	{
 		return $this->RequestedPackages;
 	}
 
 	/**
-	 * @param null|docTypeRef_RequestedPackagesType[] $RequestedPackages
+	 * @param null|docTypeRef_RequestedPackagesType $RequestedPackages
 	 * @return docTypeRef_PackagesType
 	 */
-	public function setRequestedPackages(?array $RequestedPackages): docTypeRef_PackagesType
+	public function setRequestedPackages(?docTypeRef_RequestedPackagesType $RequestedPackages): docTypeRef_PackagesType
 	{
 		$this->RequestedPackages = $RequestedPackages;
 		return $this;
